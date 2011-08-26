@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding = "Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="INSTALL"
+	ProjectGUID="{AD0B05F6-5658-42A6-A43F-682AB48E0272}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="INSTALL.dir\Debug"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				ExceptionHandling="0"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
+				AssemblerListingLocation="Debug"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$(OutDir) -P cmake_install.cmake&#x0D;&#x0A;if errorlevel 1 goto VCReportError"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="INSTALL.dir\Release"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				ExceptionHandling="0"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
+				AssemblerListingLocation="Release"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$(OutDir) -P cmake_install.cmake&#x0D;&#x0A;if errorlevel 1 goto VCReportError"/>
+		</Configuration>
+		<Configuration
+			Name="MinSizeRel|Win32"
+			OutputDirectory="MinSizeRel"
+			IntermediateDirectory="INSTALL.dir\MinSizeRel"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				ExceptionHandling="0"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
+				AssemblerListingLocation="MinSizeRel"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$(OutDir) -P cmake_install.cmake&#x0D;&#x0A;if errorlevel 1 goto VCReportError"/>
+		</Configuration>
+		<Configuration
+			Name="RelWithDebInfo|Win32"
+			OutputDirectory="RelWithDebInfo"
+			IntermediateDirectory="INSTALL.dir\RelWithDebInfo"
+			ConfigurationType="10"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				ExceptionHandling="0"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
+				AssemblerListingLocation="RelWithDebInfo"
+				ObjectFile="$(IntDir)\"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$(OutDir) -P cmake_install.cmake&#x0D;&#x0A;if errorlevel 1 goto VCReportError"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+			<File
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/test/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/test/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MinSizeRel|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/test/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="RelWithDebInfo|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/test/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+			</File>
+		<Filter
+			Name="CMake Rules"
+			Filter="">
+			<File
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force.rule">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description=" "
+					CommandLine="cd .&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force.rule"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description=" "
+					CommandLine="cd .&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force.rule"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MinSizeRel|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description=" "
+					CommandLine="cd .&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force.rule"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="RelWithDebInfo|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description=" "
+					CommandLine="cd .&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force.rule"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\test\CMakeFiles\INSTALL_force"/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
