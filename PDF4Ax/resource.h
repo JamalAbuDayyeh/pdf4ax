@@ -10,7 +10,7 @@
 #define IDR_MAINFRAME                   128
 #define IDS_PDF4AX_PPG_CAPTION          200
 #define IDD_PROPPAGE_PDF4AX             200
-#define IDR_MENU1                       201
+#define IDC_STATIC_VER                  201
 #define ID_PAGE_UP                      32771
 #define ID_PAGE_DOWN                    32772
 #define ID_PAGE_FITW                    32775
@@ -26,7 +26,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        202
 #define _APS_NEXT_COMMAND_VALUE         32791
-#define _APS_NEXT_CONTROL_VALUE         201
+#define _APS_NEXT_CONTROL_VALUE         202
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

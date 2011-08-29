@@ -9,8 +9,8 @@
 
 !define APP "PDF4Ax"
 
-!define VER "0.0.1"
-!define APV "0_0_1"
+!define VER "0.0.2"
+!define APV "0_0_2"
 
 !define CLSID "{FE687896-F410-4D10-8740-D584DA23C74D}"
 !define EXT ".pdf"
@@ -34,9 +34,12 @@ RequestExecutionLevel admin
 
 ; Pages
 
+Page license
 Page directory
 Page components
 Page instfiles
+
+LicenseData GNUGPL2.txt
 
 ;--------------------------------
 
@@ -48,8 +51,12 @@ Section "" ;No components page, name is not important
   
   ; Put file there
   File "..\Release\PDF4Ax.ocx"
+  File "..\Release\PDF4Ax.pdb"
 
   RegDLL "$INSTDIR\PDF4Ax.ocx"
+
+  SetOutPath "$INSTDIR\share\poppler"
+  File /r /x ".svn" "..\poppler-data\*.*"
 
 SectionEnd ; end the section
 
