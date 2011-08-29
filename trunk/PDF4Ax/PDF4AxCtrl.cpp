@@ -4,7 +4,9 @@
 #include "PDF4Ax.h"
 #include "PDF4AxCtrl.h"
 #include "PDF4AxPropPage.h"
+#include "AboutDlg.h"
 
+#pragma comment(lib, "Version.lib")
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -285,10 +287,9 @@ void CPDF4AxCtrl::OnResetState()
 
 // CPDF4AxCtrl::AboutBox - "バージョン情報" ボックスをユーザーに表示します。
 
-void CPDF4AxCtrl::AboutBox()
-{
-	CDialog dlgAbout(IDD_ABOUTBOX_PDF4AX);
-	dlgAbout.DoModal();
+void CPDF4AxCtrl::AboutBox() {
+	CAboutDlg wndDlg;
+	wndDlg.DoModal();
 }
 
 

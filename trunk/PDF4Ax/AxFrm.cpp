@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "resource.h"
 #include "AxFrm.h"
+#include "AboutDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -129,7 +130,7 @@ void CAxFrame::PostNcDestroy() {
 }
 
 void CAxFrame::OnAppAbout() {
-	CDialog wndDlg(IDD_ABOUTBOX_PDF4AX);
+	CAboutDlg wndDlg;
 	wndDlg.DoModal();
 }
 
