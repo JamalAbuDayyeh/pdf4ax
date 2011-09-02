@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding = "Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
 	Name="pdftohtml"
 	ProjectGUID="{C28AF516-D7F2-4A6E-AC4D-47669104606F}"
-	RootNamespace="pdftohtml"
-	Keyword="Win32Proj"
-	>
+	Keyword="Win32Proj">
 	<Platforms>
 		<Platform
-			Name="Win32"
-		/>
+			Name="Win32"/>
 	</Platforms>
-	<ToolFiles>
-	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
@@ -21,101 +16,63 @@
 			IntermediateDirectory="pdftohtml.dir\Debug"
 			ConfigurationType="1"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				BasicRuntimeChecks="3"
+				CompileAs="2"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="0"
+				Optimization="0"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
+				AssemblerListingLocation="Debug"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Debug/pdftohtml.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
-				MkTypLibCompatible="false"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="0"
-				InlineFunctionExpansion="0"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
-				ExceptionHandling="1"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="Debug"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Debug/pdftohtml.pdb"
-				WarningLevel="3"
-				DebugInformationFormat="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLinkerTool"
 				LinkLibraryDependencies="false"
 				AdditionalOptions=" /STACK:10000000 /machine:X86 /debug"
-				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\Debug\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\Debug\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
 				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Debug\pdftohtml.exe"
 				Version="0.0"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories=""
-				GenerateDebugInformation="true"
 				ProgramDatabaseFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Debug/pdftohtml.pdb"
+				GenerateDebugInformation="TRUE"
 				SubSystem="1"
-				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Debug\pdftohtml.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Debug\pdftohtml.lib"/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
@@ -123,98 +80,60 @@
 			IntermediateDirectory="pdftohtml.dir\Release"
 			ConfigurationType="1"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				CompileAs="2"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="2"
+				Optimization="2"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
+				AssemblerListingLocation="Release"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Release/pdftohtml.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
-				MkTypLibCompatible="false"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="2"
-				InlineFunctionExpansion="2"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
-				ExceptionHandling="1"
-				RuntimeLibrary="0"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="Release"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Release/pdftohtml.pdb"
-				WarningLevel="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLinkerTool"
 				LinkLibraryDependencies="false"
 				AdditionalOptions=" /STACK:10000000 /machine:X86"
-				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\Release\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\Release\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
 				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Release\pdftohtml.exe"
 				Version="0.0"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories=""
 				ProgramDatabaseFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Release/pdftohtml.pdb"
 				SubSystem="1"
-				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Release\pdftohtml.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\Release\pdftohtml.lib"/>
 		</Configuration>
 		<Configuration
 			Name="MinSizeRel|Win32"
@@ -222,98 +141,60 @@
 			IntermediateDirectory="pdftohtml.dir\MinSizeRel"
 			ConfigurationType="1"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				CompileAs="2"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="1"
+				Optimization="1"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
+				AssemblerListingLocation="MinSizeRel"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\MinSizeRel/pdftohtml.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
-				MkTypLibCompatible="false"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="1"
-				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
-				ExceptionHandling="1"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="MinSizeRel"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\MinSizeRel/pdftohtml.pdb"
-				WarningLevel="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLinkerTool"
 				LinkLibraryDependencies="false"
 				AdditionalOptions=" /STACK:10000000 /machine:X86"
-				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\MinSizeRel\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\MinSizeRel\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
 				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\MinSizeRel\pdftohtml.exe"
 				Version="0.0"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories=""
 				ProgramDatabaseFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\MinSizeRel/pdftohtml.pdb"
 				SubSystem="1"
-				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\MinSizeRel\pdftohtml.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\MinSizeRel\pdftohtml.lib"/>
 		</Configuration>
 		<Configuration
 			Name="RelWithDebInfo|Win32"
@@ -321,177 +202,123 @@
 			IntermediateDirectory="pdftohtml.dir\RelWithDebInfo"
 			ConfigurationType="1"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				CompileAs="2"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="1"
+				Optimization="2"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
+				AssemblerListingLocation="RelWithDebInfo"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\RelWithDebInfo/pdftohtml.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
-				MkTypLibCompatible="false"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="2"
-				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
-				ExceptionHandling="1"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="RelWithDebInfo"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\RelWithDebInfo/pdftohtml.pdb"
-				WarningLevel="3"
-				DebugInformationFormat="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLinkerTool"
 				LinkLibraryDependencies="false"
 				AdditionalOptions=" /STACK:10000000 /machine:X86 /debug"
-				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\RelWithDebInfo\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  ..\RelWithDebInfo\poppler.lib C:\msys\1.0\home\KU\2\freetype-2.4.6\objs\win32\vc2005\freetype246MT.lib C:\msys\1.0\home\KU\2\jpeg-8b\libjpeg\Release\libjpeg.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib C:\msys\1.0\home\KU\2\zlib-1.2.5\bin\release\zlib.lib C:\msys\1.0\home\KU\2\lcms2-2.2\Projects\VC2005\Release\lcms2_static.lib gdi32.lib C:\msys\1.0\home\KU\2\libpng-1.5.4\projects\visualc71\Win32_LIB_Release\libpng.lib "
 				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\RelWithDebInfo\pdftohtml.exe"
 				Version="0.0"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories=""
-				GenerateDebugInformation="true"
 				ProgramDatabaseFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\RelWithDebInfo/pdftohtml.pdb"
+				GenerateDebugInformation="TRUE"
 				SubSystem="1"
-				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\RelWithDebInfo\pdftohtml.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCManifestTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCAppVerifierTool"
-			/>
-			<Tool
-				Name="VCWebDeploymentTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				ImportLibrary="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\RelWithDebInfo\pdftohtml.lib"/>
 		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
+			<File
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MinSizeRel|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="RelWithDebInfo|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError"
+					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
+					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+			</File>
 		<Filter
 			Name="Source Files"
-			>
+			Filter="">
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\HtmlFonts.cc"
-				>
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\parseargs.cc">
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\HtmlLinks.cc"
-				>
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\pdftohtml.cc">
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\HtmlOutputDev.cc"
-				>
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\HtmlFonts.cc">
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\parseargs.cc"
-				>
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\HtmlLinks.cc">
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\pdftohtml.cc"
-				>
+				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\HtmlOutputDev.cc">
 			</File>
 		</Filter>
-		<File
-			RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt"
-			>
-			<FileConfiguration
-				Name="Debug|Win32"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="Release|Win32"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="MinSizeRel|Win32"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="RelWithDebInfo|Win32"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/utils/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\utils\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-		</File>
 	</Files>
 	<Globals>
 	</Globals>

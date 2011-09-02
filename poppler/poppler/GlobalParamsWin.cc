@@ -57,7 +57,7 @@ description for all fonts available in Windows. That's how MuPDF works.
 #  define unlockCMapCache
 #endif
 
-#define DEFAULT_SUBSTITUTE_FONT "ÇlÇr ÉSÉVÉbÉN"
+#define DEFAULT_SUBSTITUTE_FONT "Helvetica"
 
 static struct {
     char *name;

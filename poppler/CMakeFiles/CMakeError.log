@@ -611,3 +611,30 @@ Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
 ========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
 
 
+Find lcms version failed with the following output:
+Change Dir: C:/msys/1.0/home/KU/2/poppler-0.16.7/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MID05A~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.762.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /I "C:\msys\1.0\home\KU\2\lcms2-2.2\include" /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /EHsc /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TP   /Zm1000
+1>   "..\..\CMakeTmp\FindLCMS.cxx"
+1>FindLCMS.cxx
+1>..\..\CMakeTmp\FindLCMS.cxx(1) : fatal error C1083: include ファイルを開けません。'lcms.h': No such file or directory
+1>ビルドログは "file://c:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+FindLCMS.cxx:
+#include <lcms.h>
+ int main()
+ {
+ return LCMS_VERSION;
+ }
+
+

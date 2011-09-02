@@ -9,8 +9,8 @@
 
 !define APP "PDF4Ax"
 
-!define VER "0.0.2"
-!define APV "0_0_2"
+!define VER "0.0.3"
+!define APV "0_0_3"
 
 !define CLSID "{FE687896-F410-4D10-8740-D584DA23C74D}"
 !define EXT ".pdf"

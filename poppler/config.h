@@ -136,25 +136,25 @@
 #define OPI_SUPPORT 1
 
 /* Name of package */
-//#define PACKAGE "poppler"
+#define PACKAGE "poppler"
 
 /* Define to the address where bug reports for this package should be sent. */
-//#define PACKAGE_BUGREPORT "https://bugs.freedesktop.org/enter_bug.cgi?product=poppler"
+#define PACKAGE_BUGREPORT "https://bugs.freedesktop.org/enter_bug.cgi?product=poppler"
 
 /* Define to the full name of this package. */
-//#define PACKAGE_NAME "poppler"
+#define PACKAGE_NAME "poppler"
 
 /* Define to the full name and version of this package. */
-//#define PACKAGE_STRING "poppler 0.16.7"
+#define PACKAGE_STRING "poppler 0.16.7"
 
 /* Define to the one symbol short name of this package. */
-//#define PACKAGE_TARNAME "poppler"
+#define PACKAGE_TARNAME "poppler"
 
 /* Define to the home page for this package. */
-//#define PACKAGE_URL ""
+#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-//#define PACKAGE_VERSION "0.16.7"
+#define PACKAGE_VERSION "0.16.7"
 
 /* Poppler data dir */
 #define POPPLER_DATADIR "C:/Program Files/poppler/share/poppler"

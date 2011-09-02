@@ -20,7 +20,7 @@
 			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				ExceptionHandling="0"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
 				AssemblerListingLocation="Debug"
@@ -30,7 +30,7 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
@@ -62,7 +62,7 @@ CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$
 			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				ExceptionHandling="0"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
 				AssemblerListingLocation="Release"
@@ -72,7 +72,7 @@ CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
@@ -104,7 +104,7 @@ CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$
 			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				ExceptionHandling="0"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
 				AssemblerListingLocation="MinSizeRel"
@@ -114,7 +114,7 @@ CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
@@ -146,7 +146,7 @@ CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$
 			CharacterSet="2">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				ExceptionHandling="0"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
 				AssemblerListingLocation="RelWithDebInfo"
@@ -156,7 +156,7 @@ CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -DBUILD_TYPE=$
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;"
+				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
 				PreprocessorDefinitions="HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
