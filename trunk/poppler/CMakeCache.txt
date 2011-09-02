@@ -163,7 +163,7 @@ ENABLE_ABIWORD:BOOL=OFF
 ENABLE_CPP:BOOL=ON
 
 //Use liblcms for color management.
-ENABLE_LCMS:BOOL=OFF
+ENABLE_LCMS:BOOL=ON
 
 //Build libcurl based HTTP support.
 ENABLE_LIBCURL:BOOL=OFF
@@ -209,6 +209,12 @@ JPEG_INCLUDE_DIR:PATH=C:/msys/1.0/home/KU/2/jpeg-8b
 
 //Path to a library.
 JPEG_LIBRARY:FILEPATH=C:/msys/1.0/home/KU/2/jpeg-8b/libjpeg/Release/libjpeg.lib
+
+//Path to a file.
+LCMS_INCLUDE_DIR:PATH=C:/msys/1.0/home/KU/2/lcms2-2.2/include
+
+//Path to a library.
+LCMS_LIBRARIES:FILEPATH=C:/msys/1.0/home/KU/2/lcms2-2.2/Projects/VC2005/Release/lcms2_static.lib
 
 //Define suffix of directory name (32/64)
 LIB_SUFFIX:STRING=
@@ -281,7 +287,7 @@ poppler-cpp_LIB_DEPENDS:STATIC=general;poppler;general;ICONV_LIBRARIES-NOTFOUND;
 poppler_BINARY_DIR:STATIC=C:/msys/1.0/home/KU/2/poppler-0.16.7
 
 //Dependencies for the target
-poppler_LIB_DEPENDS:STATIC=general;C:/msys/1.0/home/KU/2/freetype-2.4.6/objs/win32/vc2005/freetype246MT.lib;general;C:/msys/1.0/home/KU/2/jpeg-8b/libjpeg/Release/libjpeg.lib;general;C:/msys/1.0/home/KU/2/zlib-1.2.5/bin/release/zlib.lib;general;gdi32;general;C:/msys/1.0/home/KU/2/libpng-1.5.4/projects/visualc71/Win32_LIB_Release/libpng.lib;general;C:/msys/1.0/home/KU/2/zlib-1.2.5/bin/release/zlib.lib;
+poppler_LIB_DEPENDS:STATIC=general;C:/msys/1.0/home/KU/2/freetype-2.4.6/objs/win32/vc2005/freetype246MT.lib;general;C:/msys/1.0/home/KU/2/jpeg-8b/libjpeg/Release/libjpeg.lib;general;C:/msys/1.0/home/KU/2/zlib-1.2.5/bin/release/zlib.lib;general;C:/msys/1.0/home/KU/2/lcms2-2.2/Projects/VC2005/Release/lcms2_static.lib;general;gdi32;general;C:/msys/1.0/home/KU/2/libpng-1.5.4/projects/visualc71/Win32_LIB_Release/libpng.lib;general;C:/msys/1.0/home/KU/2/zlib-1.2.5/bin/release/zlib.lib;
 
 //Value Computed by CMake
 poppler_SOURCE_DIR:STATIC=C:/msys/1.0/home/KU/2/poppler-0.16.7
@@ -496,6 +502,12 @@ INSTALL_GUID_CMAKE:INTERNAL=AD0B05F6-5658-42A6-A43F-682AB48E0272
 JPEG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JPEG_LIBRARY
 JPEG_LIBRARY-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+LCMS_COMPILE_RESULT:INTERNAL=FALSE
+//ADVANCED property for variable: LCMS_INCLUDE_DIR
+LCMS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LCMS_LIBRARIES
+LCMS_LIBRARIES-ADVANCED:INTERNAL=1
 //Have library rt
 LIB_RT_HAS_NANOSLEEP:INTERNAL=
 //Stored GUID

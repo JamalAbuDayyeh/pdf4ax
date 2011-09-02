@@ -144,7 +144,7 @@ authorization from SunSoft Inc.
  */
 
 
-#ifdef PACKAGE_NAME
+#if 0 && defined(PACKAGE_NAME)
 /*
   June 9, 2003, Adapted for use with configure by Bob Friesenhahn
   Added the stupid check for autoconf by Marti Maria. 
