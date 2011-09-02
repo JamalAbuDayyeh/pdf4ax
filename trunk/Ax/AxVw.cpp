@@ -53,7 +53,9 @@ BOOL CAxVw::PreCreateWindow(CREATESTRUCT& cs)
 }
 
 CRect CAxVw::GetPageRect(int top) {
-	Page *page = m_pdfdoc->getPage(1 +top);
+	Page *page = NULL;
+	if (m_pdfdoc != NULL)
+		page = m_pdfdoc->getPage(1 +top);
 	if (page != NULL) {
 		PDFRectangle *prc = page->getMediaBox();
 		switch (page->getRotate()) {

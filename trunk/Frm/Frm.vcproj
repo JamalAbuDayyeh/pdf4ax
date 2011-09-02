@@ -68,7 +68,6 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="vc-libpoppler-glib-6.lib vc-libglib-2.0-0.lib vc-libgobject-2.0-0.lib vc-libcairo-2.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\MinGW\lib"
 				GenerateDebugInformation="true"

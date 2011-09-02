@@ -350,403 +350,404 @@
 			Name="Source Files"
 			>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Annot.cc"
+				RelativePath="poppler\Annot.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Array.cc"
+				RelativePath="poppler\Array.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\BuiltinFont.cc"
+				RelativePath="poppler\BuiltinFont.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\BuiltinFontTables.cc"
+				RelativePath="poppler\BuiltinFontTables.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\CachedFile.cc"
+				RelativePath="poppler\CachedFile.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Catalog.cc"
+				RelativePath="poppler\Catalog.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\CharCodeToUnicode.cc"
+				RelativePath="poppler\CharCodeToUnicode.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\CMap.cc"
+				RelativePath="poppler\CMap.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\DateInfo.cc"
+				RelativePath="poppler\DateInfo.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\DCTStream.cc"
+				RelativePath="poppler\DCTStream.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Decrypt.cc"
+				RelativePath="poppler\Decrypt.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Dict.cc"
+				RelativePath="poppler\Dict.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Error.cc"
+				RelativePath="poppler\Error.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\FileSpec.cc"
+				RelativePath="poppler\FileSpec.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\FixedPoint.cc"
+				RelativePath="goo\FixedPoint.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\FlateStream.cc"
+				RelativePath="poppler\FlateStream.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi\FoFiBase.cc"
+				RelativePath="fofi\FoFiBase.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi\FoFiEncodings.cc"
+				RelativePath="fofi\FoFiEncodings.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi\FoFiTrueType.cc"
+				RelativePath="fofi\FoFiTrueType.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi\FoFiType1.cc"
+				RelativePath="fofi\FoFiType1.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi\FoFiType1C.cc"
+				RelativePath="fofi\FoFiType1C.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\FontEncodingTables.cc"
+				RelativePath="poppler\FontEncodingTables.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\FontInfo.cc"
+				RelativePath="poppler\FontInfo.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Form.cc"
+				RelativePath="poppler\Form.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Function.cc"
+				RelativePath="poppler\Function.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\gfile.cc"
+				RelativePath="goo\gfile.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Gfx.cc"
+				RelativePath="poppler\Gfx.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\GfxFont.cc"
+				RelativePath="poppler\GfxFont.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\GfxState.cc"
+				RelativePath="poppler\GfxState.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\GlobalParams.cc"
+				RelativePath="poppler\GlobalParams.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\gmem.cc"
+				RelativePath="goo\gmem.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\gmempp.cc"
+				RelativePath="goo\gmempp.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\GooHash.cc"
+				RelativePath="goo\GooHash.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\GooList.cc"
+				RelativePath="goo\GooList.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\GooString.cc"
+				RelativePath="goo\GooString.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\GooTimer.cc"
+				RelativePath="goo\GooTimer.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\gstrtod.cc"
+				RelativePath="goo\gstrtod.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Hints.cc"
+				RelativePath="poppler\Hints.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\ImgWriter.cc"
+				RelativePath="goo\ImgWriter.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\JArithmeticDecoder.cc"
+				RelativePath="poppler\JArithmeticDecoder.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\JBIG2Stream.cc"
+				RelativePath="poppler\JBIG2Stream.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\JpegWriter.cc"
+				RelativePath="goo\JpegWriter.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\JPXStream.cc"
+				RelativePath="poppler\JPXStream.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Lexer.cc"
+				RelativePath="poppler\Lexer.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Linearization.cc"
+				RelativePath="poppler\Linearization.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Link.cc"
+				RelativePath="poppler\Link.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\LocalPDFDocBuilder.cc"
+				RelativePath="poppler\LocalPDFDocBuilder.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Movie.cc"
+				RelativePath="poppler\Movie.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\NameToCharCode.cc"
+				RelativePath="poppler\NameToCharCode.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Object.cc"
+				RelativePath="poppler\Object.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\OptionalContent.cc"
+				RelativePath="poppler\OptionalContent.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Outline.cc"
+				RelativePath="poppler\Outline.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\OutputDev.cc"
+				RelativePath="poppler\OutputDev.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Page.cc"
+				RelativePath="poppler\Page.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PageLabelInfo.cc"
+				RelativePath="poppler\PageLabelInfo.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PageTransition.cc"
+				RelativePath="poppler\PageTransition.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Parser.cc"
+				RelativePath="poppler\Parser.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PDFDoc.cc"
+				RelativePath="poppler\PDFDoc.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PDFDocEncoding.cc"
+				RelativePath="poppler\PDFDocEncoding.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PDFDocFactory.cc"
+				RelativePath="poppler\PDFDocFactory.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\goo\PNGWriter.cc"
+				RelativePath="goo\PNGWriter.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PopplerCache.cc"
+				RelativePath="poppler\PopplerCache.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PreScanOutputDev.cc"
+				RelativePath="poppler\PreScanOutputDev.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\ProfileData.cc"
+				RelativePath="poppler\ProfileData.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PSOutputDev.cc"
+				RelativePath="poppler\PSOutputDev.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\PSTokenizer.cc"
+				RelativePath="poppler\PSTokenizer.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Rendition.cc"
+				RelativePath="poppler\Rendition.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\SecurityHandler.cc"
+				RelativePath="poppler\SecurityHandler.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Sound.cc"
+				RelativePath="poppler\Sound.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\Splash.cc"
+				RelativePath="splash\Splash.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashBitmap.cc"
+				RelativePath="splash\SplashBitmap.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashClip.cc"
+				RelativePath="splash\SplashClip.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashFont.cc"
+				RelativePath="splash\SplashFont.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashFontEngine.cc"
+				RelativePath="splash\SplashFontEngine.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashFontFile.cc"
+				RelativePath="splash\SplashFontFile.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashFontFileID.cc"
+				RelativePath="splash\SplashFontFileID.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashFTFont.cc"
+				RelativePath="splash\SplashFTFont.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashFTFontEngine.cc"
+				RelativePath="splash\SplashFTFontEngine.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashFTFontFile.cc"
+				RelativePath="splash\SplashFTFontFile.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\SplashOutputDev.cc"
+				RelativePath="poppler\SplashOutputDev.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashPath.cc"
+				RelativePath="splash\SplashPath.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashPattern.cc"
+				RelativePath="splash\SplashPattern.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashScreen.cc"
+				RelativePath="splash\SplashScreen.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashState.cc"
+				RelativePath="splash\SplashState.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashT1Font.cc"
+				RelativePath="splash\SplashT1Font.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashT1FontEngine.cc"
+				RelativePath="splash\SplashT1FontEngine.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashT1FontFile.cc"
+				RelativePath="splash\SplashT1FontFile.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashXPath.cc"
+				RelativePath="splash\SplashXPath.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\splash\SplashXPathScanner.cc"
+				RelativePath="splash\SplashXPathScanner.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\StdinCachedFile.cc"
+				RelativePath="poppler\StdinCachedFile.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\StdinPDFDocBuilder.cc"
+				RelativePath="poppler\StdinPDFDocBuilder.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\Stream.cc"
+				RelativePath="poppler\Stream.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\strtok_r.cpp"
+				RelativePath="poppler\strtok_r.cpp"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\TextOutputDev.cc"
+				RelativePath="poppler\TextOutputDev.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\UnicodeMap.cc"
+				RelativePath="poppler\UnicodeMap.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\UnicodeTypeTable.cc"
+				RelativePath="poppler\UnicodeTypeTable.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\XpdfPluginAPI.cc"
+				RelativePath="poppler\XpdfPluginAPI.cc"
 				>
 			</File>
 			<File
-				RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\XRef.cc"
+				RelativePath="poppler\XRef.cc"
 				>
 			</File>
 		</Filter>
 		<File
-			RelativePath="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt"
+			RelativePath="CMakeLists.txt"
 			>
 			<FileConfiguration
 				Name="Debug|Win32"
+				ExcludedFromBuild="true"
 				>
 				<Tool
 					Name="VCCustomBuildTool"
@@ -758,6 +759,7 @@
 			</FileConfiguration>
 			<FileConfiguration
 				Name="Release|Win32"
+				ExcludedFromBuild="true"
 				>
 				<Tool
 					Name="VCCustomBuildTool"
@@ -769,6 +771,7 @@
 			</FileConfiguration>
 			<FileConfiguration
 				Name="MinSizeRel|Win32"
+				ExcludedFromBuild="true"
 				>
 				<Tool
 					Name="VCCustomBuildTool"
@@ -780,6 +783,7 @@
 			</FileConfiguration>
 			<FileConfiguration
 				Name="RelWithDebInfo|Win32"
+				ExcludedFromBuild="true"
 				>
 				<Tool
 					Name="VCCustomBuildTool"
