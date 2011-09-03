@@ -72,7 +72,8 @@ int CAxFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	//m_wndView.LoadPDF(_T("C:\\Documents and Settings\\KU\\My Documents\\PDFs\\デジタルドルフィンズバージョンアップ.pdf.pdf"));
 	//m_wndView.LoadPDF(_T("O:\\DL\\saitama.pdf"));
-	m_wndView.LoadPDF(_T("O:\\DL\\map_tokyo.pdf"));
+	//m_wndView.LoadPDF(_T("O:\\DL\\map_tokyo.pdf"));
+	m_wndView.LoadPDF(_T("H:\\DL\\OpenGL\\GDC2003_OGL_ARBFragmentProgram.pdf"));
 
 	return 0;
 }
