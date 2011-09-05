@@ -33,9 +33,9 @@ public:
 #endif
 
 protected:  // コントロール バー用メンバ
-	CStatusBar  m_wndStatusBar;
-	CReBar      m_wndReBar;
-	CToolBar    m_wndToolBar;
+//	CStatusBar  m_wndStatusBar;
+//	CReBar      m_wndReBar;
+//	CToolBar    m_wndToolBar;
 
 public:
 	CAxVw    m_wndView;
