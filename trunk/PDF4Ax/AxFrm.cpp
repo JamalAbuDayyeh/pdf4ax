@@ -50,30 +50,30 @@ int CAxFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 	}
 	
-	if (false
-		|| !m_wndToolBar.CreateEx(this, TBSTYLE_FLAT | TBSTYLE_TRANSPARENT)
-		|| !m_wndToolBar.LoadToolBar(IDR_MAINFRAME)
-	) {
-		return -1;
-	}
+//	if (false
+//		|| !m_wndToolBar.CreateEx(this, TBSTYLE_FLAT | TBSTYLE_TRANSPARENT)
+//		|| !m_wndToolBar.LoadToolBar(IDR_MAINFRAME)
+//	) {
+//		return -1;
+//	}
 
-	if (false
-		|| !m_wndReBar.Create(this)
-		|| !m_wndReBar.AddBar(&m_wndToolBar)
-	) {
-		return -1;      // 作成できませんでした。
-	}
+//	if (false
+//		|| !m_wndReBar.Create(this)
+//		|| !m_wndReBar.AddBar(&m_wndToolBar)
+//	) {
+//		return -1;      // 作成できませんでした。
+//	}
 
-	if (false
-		|| !m_wndStatusBar.Create(this)
-		|| !m_wndStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT))
-	) {
-		return -1;      // 作成できませんでした。
-	}
+//	if (false
+//		|| !m_wndStatusBar.Create(this)
+//		|| !m_wndStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT))
+//	) {
+//		return -1;      // 作成できませんでした。
+//	}
 
-	SetTimer(0x0100, 100, NULL);
+//	SetTimer(0x0100, 100, NULL);
 
-	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() | CBRS_TOOLTIPS | CBRS_FLYBY);
+//	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() | CBRS_TOOLTIPS | CBRS_FLYBY);
 
 	//m_wndView.LoadPDF(_T("C:\\Documents and Settings\\KU\\My Documents\\PDFs\\デジタルドルフィンズバージョンアップ.pdf.pdf"));
 
@@ -137,9 +137,9 @@ void CAxFrame::OnAppAbout() {
 #define WM_IDLEUPDATECMDUI  0x0363  // wParam == bDisableIfNoHandler
 
 void CAxFrame::OnTimer(UINT_PTR nIDEvent) {
-	if (nIDEvent == 0x0100) {
-		m_wndToolBar.SendMessage(WM_IDLEUPDATECMDUI, 1);
-	}
+//	if (nIDEvent == 0x0100) {
+//		m_wndToolBar.SendMessage(WM_IDLEUPDATECMDUI, 1);
+//	}
 
 	CFrameWnd::OnTimer(nIDEvent);
 }

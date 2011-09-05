@@ -16,6 +16,7 @@ IMPLEMENT_DYNAMIC(CAxFrame, CFrameWnd)
 BEGIN_MESSAGE_MAP(CAxFrame, CFrameWnd)
 	ON_WM_CREATE()
 	ON_WM_SETFOCUS()
+	ON_WM_MOUSEACTIVATE()
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -47,33 +48,34 @@ int CAxFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 	}
 	
-	if (false
-		|| !m_wndToolBar.CreateEx(this, TBSTYLE_FLAT | TBSTYLE_TRANSPARENT)
-		|| !m_wndToolBar.LoadToolBar(IDR_MAINFRAME)
-	) {
-		return -1;
-	}
+//	if (false
+//		|| !m_wndToolBar.CreateEx(this, TBSTYLE_FLAT | TBSTYLE_TRANSPARENT)
+//		|| !m_wndToolBar.LoadToolBar(IDR_MAINFRAME)
+//	) {
+//		return -1;
+//	}
 
-	if (false
-		|| !m_wndReBar.Create(this)
-		|| !m_wndReBar.AddBar(&m_wndToolBar)
-	) {
-		return -1;      // 作成できませんでした。
-	}
+//	if (false
+//		|| !m_wndReBar.Create(this)
+//		|| !m_wndReBar.AddBar(&m_wndToolBar)
+//	) {
+//		return -1;      // 作成できませんでした。
+//	}
 
-	if (false
-		|| !m_wndStatusBar.Create(this)
-		|| !m_wndStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT))
-	) {
-		return -1;      // 作成できませんでした。
-	}
+//	if (false
+//		|| !m_wndStatusBar.Create(this)
+//		|| !m_wndStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT))
+//	) {
+//		return -1;      // 作成できませんでした。
+//	}
 
-	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() | CBRS_TOOLTIPS | CBRS_FLYBY);
+//	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() | CBRS_TOOLTIPS | CBRS_FLYBY);
 
 	//m_wndView.LoadPDF(_T("C:\\Documents and Settings\\KU\\My Documents\\PDFs\\デジタルドルフィンズバージョンアップ.pdf.pdf"));
 	//m_wndView.LoadPDF(_T("O:\\DL\\saitama.pdf"));
 	//m_wndView.LoadPDF(_T("O:\\DL\\map_tokyo.pdf"));
-	m_wndView.LoadPDF(_T("H:\\DL\\OpenGL\\GDC2003_OGL_ARBFragmentProgram.pdf"));
+	//m_wndView.LoadPDF(_T("H:\\DL\\OpenGL\\GDC2003_OGL_ARBFragmentProgram.pdf"));
+	m_wndView.LoadPDF(_T("O:\\DL\\TIFF6.pdf"));
 
 	return 0;
 }
@@ -122,4 +124,12 @@ BOOL CAxFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO* p
 
 	// それ以外の場合は、既定の処理を行います。
 	return CFrameWnd::OnCmdMsg(nID, nCode, pExtra, pHandlerInfo);
+}
+
+int CAxFrame::OnMouseActivate(CWnd* pDesktopWnd, UINT nHitTest, UINT message) {
+//	if (nHitTest == HTCLIENT) {
+//		return MA_ACTIVATEANDEAT;
+//	}
+
+	return CFrameWnd::OnMouseActivate(pDesktopWnd, nHitTest, message);
 }

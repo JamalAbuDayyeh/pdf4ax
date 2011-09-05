@@ -38,7 +38,7 @@
 #include <afxwin.h>         // MFC のコアおよび標準コンポーネント
 #include <afxext.h>         // MFC の拡張部分
 
-
+#include <atlcoll.h>
 
 
 

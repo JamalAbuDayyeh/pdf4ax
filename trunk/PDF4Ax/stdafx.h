@@ -51,6 +51,8 @@
 
 #endif // _WIN64
 
+#include <atlcoll.h>
+
 #include <objsafe.h>
 #include <shlwapi.h>
 

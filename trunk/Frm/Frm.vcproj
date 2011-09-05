@@ -44,7 +44,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".;../Ax;../zlib;../libpng;../jpeg;../freetype/include/freetype;../poppler/poppler;../poppler"
+				AdditionalIncludeDirectories=".;../Ax;../zlib;../libpng;../jpeg;../freetype/include/freetype;../poppler/poppler;../poppler;../res"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -128,7 +128,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".;../Ax;../zlib;../libpng;../jpeg;../freetype/include/freetype;../poppler/poppler;../poppler"
+				AdditionalIncludeDirectories=".;../Ax;../zlib;../libpng;../jpeg;../freetype/include/freetype;../poppler/poppler;../poppler;../res"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG"
 				MinimalRebuild="false"
 				RuntimeLibrary="2"
@@ -255,6 +255,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\res\AxRes.h"
+				>
+			</File>
+			<File
 				RelativePath="..\Ax\AxVw.h"
 				>
 			</File>
@@ -285,6 +289,18 @@
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
 			<File
+				RelativePath="..\res\about.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\AxRes.rc"
+				>
+			</File>
+			<File
+				RelativePath="..\res\disp.bmp"
+				>
+			</File>
+			<File
 				RelativePath=".\res\Frm.ico"
 				>
 			</File>
@@ -297,7 +313,35 @@
 				>
 			</File>
 			<File
+				RelativePath="..\res\mag.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\magbtn.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\move.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\movebtn.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\next.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\prev.bmp"
+				>
+			</File>
+			<File
 				RelativePath=".\res\Toolbar.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\zoomval.bmp"
 				>
 			</File>
 		</Filter>
