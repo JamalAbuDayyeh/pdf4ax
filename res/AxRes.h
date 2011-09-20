@@ -2,6 +2,10 @@
 // Microsoft Visual C++ generated include file.
 // Used by AxRes.rc
 //
+#define IDC_POINTER                     104
+#define IDC_ZOOM_IN                     105
+#define IDC_ZOOM_OUT                    106
+#define IDC_ZOOM                        107
 #define IDB_MAGBTN                      301
 #define IDB_MOVEBTN                     302
 #define IDB_NEXT                        303
@@ -27,8 +31,8 @@
 #define IDC_FITWH                       40013
 #define IDC_HORZ                        40014
 #define IDC_VERT                        40015
-#define IDC_PAGE1 40016
-#define IDC_PAGE1000 41016
+#define IDC_PAGE1                       40016
+#define IDC_PAGE1000                    41016
 
 // Next default values for new objects
 // 
