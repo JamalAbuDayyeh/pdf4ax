@@ -106,6 +106,7 @@ public:
     else {
         assert(displayFontTT == kind);
         tt.fileName = fileNameA;
+		tt.faceIndex = 0;
     }
   }  
   virtual ~DisplayFontParam();

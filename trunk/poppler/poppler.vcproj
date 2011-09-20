@@ -146,6 +146,7 @@
 				ObjectFile="$(IntDir)\"
 				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\Release/poppler.pdb"
 				WarningLevel="3"
+				DebugInformationFormat="3"
 				CompileAs="2"
 			/>
 			<Tool
