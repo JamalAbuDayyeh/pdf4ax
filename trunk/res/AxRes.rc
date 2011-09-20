@@ -86,6 +86,15 @@ BEGIN
     END
 END
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_ZOOM_IN             CURSOR                  "zoomin.cur"
+IDC_ZOOM_OUT            CURSOR                  "zoomout.cur"
+IDC_ZOOM                CURSOR                  "zoom.cur"
 #endif    // “ú–{Œê resources
 /////////////////////////////////////////////////////////////////////////////
 

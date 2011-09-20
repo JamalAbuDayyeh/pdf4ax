@@ -15,6 +15,8 @@
 #define new DEBUG_NEW
 #endif
 
+#define WM_SET_RENDERINF (WM_APP+0x0010)
+
 // CPvMenu
 
 class CPvMenu : public CMenu {
@@ -101,6 +103,8 @@ BEGIN_MESSAGE_MAP(CAxVw, CWnd)
 	ON_WM_LBUTTONDBLCLK()
 	ON_WM_RBUTTONDBLCLK()
 	ON_WM_MOUSEACTIVATE()
+	ON_WM_SETCURSOR()
+	ON_MESSAGE(WM_SET_RENDERINF, OnSetRenderInf)
 END_MESSAGE_MAP()
 
 // CAxVw メッセージ ハンドラ
@@ -146,6 +150,70 @@ CRect CAxVw::GetPageRect(int top) const {
 	return CRect();
 }
 
+UINT DrawPDFProc(LPVOID lpv) {
+	std::auto_ptr<CRenderInf> inf(reinterpret_cast<CRenderInf *>(lpv));
+
+	SplashColor paperColor;
+	paperColor[0] = 255;
+	paperColor[1] = 255;
+	paperColor[2] = 255;
+	std::auto_ptr<SplashOutputDev> splashOut;
+	splashOut.reset(new SplashOutputDev(splashModeRGB8, 4, gFalse, paperColor));
+	splashOut->startDoc(inf->pdfdoc->getXRef());
+
+	double dpi = inf->dpi;
+	int iPage = inf->iPage;
+	CSize sizeIn = inf->sizeIn;
+	CRect rcOut = inf->rcPartial;
+	if (sizeIn.cx * sizeIn.cy * 3 > 1024*1024*20) {
+		inf->partial = true;
+	}
+	else {
+		inf->partial = false;
+
+		rcOut = CRect(CPoint(0, 0), inf->sizeIn);
+	}
+
+	inf->pdfdoc->displayPageSlice(
+		splashOut.get(), 
+		1 +iPage, dpi, dpi, 
+		0,
+		gTrue, gFalse, gFalse,
+		rcOut.left, rcOut.top, rcOut.Width(), rcOut.Height()
+		);
+	SplashBitmap *bitmap = splashOut->getBitmap();
+	int pcx = bitmap->getWidth();
+	int pcy = bitmap->getHeight();
+	BITMAPINFO bi;
+	ZeroMemory(&bi, sizeof(bi));
+	bi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
+	bi.bmiHeader.biWidth = pcx;
+	bi.bmiHeader.biHeight = -pcy;
+	bi.bmiHeader.biBitCount = 24;
+	bi.bmiHeader.biPlanes = 1;
+
+	for (int y=0; y<pcy; y++) {
+		SplashColorPtr pRow = bitmap->getDataPtr() + bitmap->getRowSize() * y;
+		for (int x=0; x<pcx; x++, pRow += 3) {
+			Guchar tmp = pRow[2];
+			pRow[2] = pRow[0];
+			pRow[0] = tmp;
+		}
+	}
+
+	inf->dpi = dpi;
+	inf->splashOut = splashOut;
+	inf->bi = bi;
+	if (::PostMessage(inf->hwndCb, inf->nMsg, 0, reinterpret_cast<LPARAM>(inf.get()))) {
+		inf.release();
+	}
+	else {
+
+	}
+
+	return 0;
+}
+
 void CAxVw::OnPaint() 
 {
 	CPaintDC dc(this);
@@ -172,59 +240,90 @@ void CAxVw::OnPaint()
 			yp = (m_rcPaint.Height() - cy) / 2;
 		}
 
-		double scale = Getzf();
-
-		double dpi = 72 * scale;
-
-		SplashColor paperColor;
-		paperColor[0] = 255;
-		paperColor[1] = 255;
-		paperColor[2] = 255;
-		std::auto_ptr<SplashOutputDev> splashOut;
-		splashOut.reset(new SplashOutputDev(splashModeRGB8, 4, gFalse, paperColor));
-		splashOut->startDoc(m_pdfdoc->getXRef());
 
 		int vx = std::max(0, -xp);
 		int vy = std::max(0, -yp);
 
-		int slw = std::max(1, std::min(rc.Width(), int(size.cx + vx)));
-		int slh = std::max(1, std::min(rc.Height(), int(size.cy + vy)));
-		m_pdfdoc->displayPageSlice(
-			splashOut.get(), 
-			1 +m_iPage, dpi, dpi, 
-			0,
-			gTrue, gFalse, gFalse,
-			vx, vy, slw, slh
-			);
-		SplashBitmap *bitmap = splashOut->getBitmap();
-		int pcx = bitmap->getWidth();
-		int pcy = bitmap->getHeight();
-		BITMAPINFO bi;
-		ZeroMemory(&bi, sizeof(bi));
-		bi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
-		bi.bmiHeader.biWidth = pcx;
-		bi.bmiHeader.biHeight = -pcy;
-		bi.bmiHeader.biBitCount = 24;
-		bi.bmiHeader.biPlanes = 1;
-
-		for (int y=0; y<pcy; y++) {
-			SplashColorPtr pRow = bitmap->getDataPtr() + bitmap->getRowSize() * y;
-			for (int x=0; x<pcx; x++, pRow += 3) {
-				Guchar tmp = pRow[2];
-				pRow[2] = pRow[0];
-				pRow[0] = tmp;
-			}
-		}
-
 		int dx = std::max(0, xp - vx);
 		int dy = std::max(0, yp - vy);
 
-		SetDIBitsToDevice(
-			dc, dx, dy, pcx, pcy, 0, 0, 0, pcy, bitmap->getDataPtr(), &bi, DIB_RGB_COLORS
-			);
+		double scale = Getzf();
+
+		double dpi = 72 * scale;
+
+		bool need = false;
+		bool drawwip = false;
+
+		int tx = std::max(m_hsc.nPos, 0);
+		int ty = std::max(m_vsc.nPos, 0);
+		int tcx = std::min(cx, rc.Width());
+		int tcy = std::min(cy, rc.Height());
+		CRect rcPartial(tx, ty, tx+tcx, ty+tcy);
+
+		if (m_renderPart.get() != NULL && m_renderPart->iPage == m_iPage && m_renderPart->rcPartial == rcPartial) {
+			SplashBitmap *bitmap = m_renderPart->splashOut->getBitmap();
+			int pcx = bitmap->getWidth();
+			int pcy = bitmap->getHeight();
+
+			int state = dc.SaveDC();
+			dc.IntersectClipRect(m_rcPaint);
+			dc.SetStretchBltMode(HALFTONE);
+			dc.SetBrushOrg(xp, yp);
+			SetDIBitsToDevice(
+				dc, xp +rcPartial.left, yp +rcPartial.top, rcPartial.Width(), rcPartial.Height(), 0, 0, 0, rcPartial.Height(), bitmap->getDataPtr(), &m_renderPart->bi, DIB_RGB_COLORS
+				);
+			if (state != 0) dc.RestoreDC(state);
+		}
+		else if (m_renderAll.get() != NULL && m_renderAll->iPage == m_iPage) {
+			SplashBitmap *bitmap = m_renderAll->splashOut->getBitmap();
+			int pcx = bitmap->getWidth();
+			int pcy = bitmap->getHeight();
+
+			int state = dc.SaveDC();
+			dc.IntersectClipRect(m_rcPaint);
+			dc.SetStretchBltMode(HALFTONE);
+			dc.SetBrushOrg(xp, yp);
+			StretchDIBits(
+				dc, xp, yp, cx, cy, 0, 0, pcx, pcy, bitmap->getDataPtr(), &m_renderAll->bi, DIB_RGB_COLORS, SRCCOPY
+				);
+			if (state != 0) dc.RestoreDC(state);
+
+			if (fabs(m_renderAll->dpi - dpi) > 10) {
+				need = true;
+			}
+		}
+		else {
+			need = true;
+			drawwip = true;
+		}
+
+		if (need) {
+			if (cntBGDraw == 0) {
+				CRenderInf *inf = new CRenderInf();
+				inf->sizeIn = size;
+				inf->rcPartial = rcPartial;
+				inf->iPage = m_iPage;
+				inf->dpi = dpi;
+				inf->pdfdoc = m_pdfdoc;
+				inf->hwndCb = *this;
+				inf->nMsg = WM_SET_RENDERINF;
+
+				AfxBeginThread(DrawPDFProc, inf);
+			}
+			cntBGDraw++;
+		}
+
+		if (drawwip) {
+			CRect rc(dx, dy, dx + cx, dy + cy);
+			CBrush br0;
+			br0.CreateStockObject(WHITE_BRUSH);
+			dc.FillRect(rc, &br0);
+			dc.SelectStockObject(DEFAULT_GUI_FONT);
+			dc.DrawText(_T("お待ちください..."), rc, DT_SINGLELINE|DT_CENTER|DT_VCENTER);
+		}
 
 		int state = dc.SaveDC();
-		dc.ExcludeClipRect(dx, dy, dx + pcx, dy + pcy);
+		dc.ExcludeClipRect(dx, dy, dx + cx, dy + cy);
 		CBrush br;
 		br.CreateStockObject(GRAY_BRUSH);
 		dc.FillRect(m_rcPaint, &br);
@@ -425,6 +524,11 @@ int CAxVw::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		)
 		return -1;
 
+	if (false
+		|| (m_hcZoom = AfxGetApp()->LoadCursor(IDC_ZOOM)) == NULL
+		)
+		return -1;
+
 	ZeroMemory(&m_hsc, sizeof(m_hsc));
 	ZeroMemory(&m_vsc, sizeof(m_vsc));
 
@@ -439,6 +543,8 @@ int CAxVw::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_fFitOnSmall = true;
 	m_iPage = 0;
 	m_pThumbs.RemoveAll();
+
+	cntBGDraw = 0;
 
 	LayoutClient();
 	return 0;
@@ -555,6 +661,16 @@ void CAxVw::LayoutClient() {
 		m_rcAbout.bottom = rc.bottom;
 		m_rcAbout.right = (curx += 24);
 		m_rcAbout.top = rc.bottom - cyBar;
+	}
+
+	int cex = (rc.Width() - curx) / 2;
+	if (cex > 0) {
+		m_rcMMSel.OffsetRect(cex, 0);
+		m_rcZoomVal.OffsetRect(cex, 0);
+		m_rcPrev.OffsetRect(cex, 0);
+		m_rcDisp.OffsetRect(cex, 0);
+		m_rcNext.OffsetRect(cex, 0);
+		m_rcAbout.OffsetRect(cex, 0);
 	}
 
 	rc.bottom -= cyBar;
@@ -987,7 +1103,7 @@ void CAxVw::OnUpdatePageSel(CCmdUI *pUI) {
 }
 
 CBitmap *CAxVw::GetThumb(int iPage, int cx) {
-	if (m_pThumbs.GetCount() <= iPage || m_pThumbs[iPage] == NULL) {
+	if (m_pThumbs.GetCount() <= (size_t)iPage || m_pThumbs[iPage] == NULL) {
 		CRect rcDraw(0, 0, cx, cx);
 		CRect rcPage = GetPageRect(iPage);
 		float scale = (float)cx / std::max(rcPage.Height(), rcPage.Width());
@@ -1049,7 +1165,7 @@ CBitmap *CAxVw::GetThumb(int iPage, int cx) {
 		}
 	}
 
-	if (m_pThumbs.GetCount() <= iPage)
+	if (m_pThumbs.GetCount() <= (size_t)iPage)
 		return NULL;
 
 	return static_cast<CBitmap *>(m_pThumbs[iPage]);
@@ -1057,4 +1173,32 @@ CBitmap *CAxVw::GetThumb(int iPage, int cx) {
 
 int CAxVw::OnMouseActivate(CWnd* pDesktopWnd, UINT nHitTest, UINT message) {
 	return CWnd::OnMouseActivate(pDesktopWnd, nHitTest, message);
+}
+
+BOOL CAxVw::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message) {
+	if (nHitTest == HTCLIENT) {
+		DWORD xy = GetMessagePos();
+		CPoint pt(GET_X_LPARAM(xy), GET_Y_LPARAM(xy));
+		ScreenToClient(&pt);
+		if (m_rcPaint.PtInRect(pt)) {
+			if (m_toolZoom) {
+				SetCursor(m_hcZoom);
+				return true;
+			}
+		}
+	}
+	return CWnd::OnSetCursor(pWnd, nHitTest, message);
+}
+
+LRESULT CAxVw::OnSetRenderInf(WPARAM, LPARAM lParam) {
+	cntBGDraw = 0;
+	CRenderInf *inf = reinterpret_cast<CRenderInf *>(lParam);
+	if (inf->partial) {
+		m_renderPart.reset(inf);
+	}
+	else {
+		m_renderAll.reset(inf);
+	}
+	InvalidateRect(m_rcPaint);
+	return 0;
 }

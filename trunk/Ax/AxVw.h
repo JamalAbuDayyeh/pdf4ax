@@ -10,6 +10,21 @@ public:
 	virtual CBitmap *GetThumb(int iPage, int cx) = NULL;
 };
 
+class CRenderInf {
+public:
+	int iPage; // in. zero based
+	double dpi; // in
+	CSize sizeIn; // in
+	CRect rcPartial; // in
+	std::auto_ptr<SplashOutputDev> splashOut; // out
+	BITMAPINFO bi; // out
+	bool partial; // out
+	PDFDoc *pdfdoc; // in
+
+	HWND hwndCb; // in
+	UINT nMsg; // in
+};
+
 // CAxVw ウィンドウ
 
 class CAxVw : public CWnd, public CPvRender
@@ -33,6 +48,8 @@ protected:
 	} FitMode;
 	FitMode m_ft;
 	SCROLLINFO m_hsc, m_vsc;
+	std::auto_ptr<CRenderInf> m_renderAll;
+	std::auto_ptr<CRenderInf> m_renderPart;
 
 	CBitmap m_bmPrev, m_bmNext, m_bmAbout, m_bmMag, m_bmMagBtn, m_bmMove, m_bmMoveBtn, m_bmZoomVal, m_bmPageDisp;
 	CRect m_rcPaint, m_rcPrev, m_rcNext, m_rcDisp, m_rcAbout, m_rcFitWH, m_rcFitW;
@@ -43,6 +60,8 @@ protected:
 	CScrollBar m_sbH, m_sbV;
 	bool m_fFitOnSmall;
 	CAutoPtrArray<CBitmap> m_pThumbs;
+	HCURSOR m_hcZoom;
+	int cntBGDraw;
 
 // 操作
 public:
@@ -111,7 +130,7 @@ public:
 			float centery = ((float)rcMax.top + rcMax.bottom) / 2;
             if (frMax >= frBox) {
                 // 縦長
-                float v = rcBox.cx * rcMax.Height() / rcBox.cy / 2;
+                float v = (float)rcBox.cx * rcMax.Height() / rcBox.cy / 2;
                 return CRect(
                     int(centerx - v),
                     int(rcMax.top),
@@ -121,7 +140,7 @@ public:
             }
             else {
                 // 横長
-                float v = rcBox.cy * rcMax.Width() / rcBox.cx / 2;
+                float v = (float)rcBox.cy * rcMax.Width() / rcBox.cx / 2;
                 return CRect(
                     int(rcMax.left),
                     int(centery - v),
@@ -166,4 +185,6 @@ public:
 	afx_msg BOOL OnPageSel(UINT nID);
 	afx_msg void OnUpdatePageSel(CCmdUI *pUI);
 	afx_msg int OnMouseActivate(CWnd* pDesktopWnd, UINT nHitTest, UINT message);
+	afx_msg BOOL OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);
+	afx_msg LRESULT OnSetRenderInf(WPARAM, LPARAM);
 };

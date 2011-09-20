@@ -341,6 +341,18 @@
 				>
 			</File>
 			<File
+				RelativePath="..\res\zoom.cur"
+				>
+			</File>
+			<File
+				RelativePath="..\res\zoomin.cur"
+				>
+			</File>
+			<File
+				RelativePath="..\res\zoomout.cur"
+				>
+			</File>
+			<File
 				RelativePath="..\res\zoomval.bmp"
 				>
 			</File>
