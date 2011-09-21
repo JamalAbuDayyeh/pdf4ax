@@ -366,6 +366,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\res\mask10.bmp"
+				>
+			</File>
+			<File
 				RelativePath="..\res\move.bmp"
 				>
 			</File>
@@ -395,6 +399,18 @@
 			</File>
 			<File
 				RelativePath=".\res\Toolbar.bmp"
+				>
+			</File>
+			<File
+				RelativePath="..\res\zoom.cur"
+				>
+			</File>
+			<File
+				RelativePath="..\res\zoomin.cur"
+				>
+			</File>
+			<File
+				RelativePath="..\res\zoomout.cur"
 				>
 			</File>
 			<File

@@ -19,6 +19,8 @@
 
 // CPvMenu
 
+CMutex s_lockpdf;
+
 class CPvMenu : public CMenu {
 	CPvRender &pv;
 	int cxThumb;
@@ -151,6 +153,7 @@ CRect CAxVw::GetPageRect(int top) const {
 }
 
 UINT DrawPDFProc(LPVOID lpv) {
+	CSingleLock lck(&s_lockpdf);
 	std::auto_ptr<CRenderInf> inf(reinterpret_cast<CRenderInf *>(lpv));
 
 	SplashColor paperColor;
@@ -181,6 +184,9 @@ UINT DrawPDFProc(LPVOID lpv) {
 		gTrue, gFalse, gFalse,
 		rcOut.left, rcOut.top, rcOut.Width(), rcOut.Height()
 		);
+
+	lck.Unlock();
+
 	SplashBitmap *bitmap = splashOut->getBitmap();
 	int pcx = bitmap->getWidth();
 	int pcy = bitmap->getHeight();
@@ -240,7 +246,6 @@ void CAxVw::OnPaint()
 			yp = (m_rcPaint.Height() - cy) / 2;
 		}
 
-
 		int vx = std::max(0, -xp);
 		int vy = std::max(0, -yp);
 
@@ -253,6 +258,7 @@ void CAxVw::OnPaint()
 
 		bool need = false;
 		bool drawwip = false;
+		bool clear = false;
 
 		int tx = std::max(m_hsc.nPos, 0);
 		int ty = std::max(m_vsc.nPos, 0);
@@ -274,7 +280,7 @@ void CAxVw::OnPaint()
 				);
 			if (state != 0) dc.RestoreDC(state);
 		}
-		else if (m_renderAll.get() != NULL && m_renderAll->iPage == m_iPage) {
+		else if (m_renderAll.get() != NULL) {
 			SplashBitmap *bitmap = m_renderAll->splashOut->getBitmap();
 			int pcx = bitmap->getWidth();
 			int pcy = bitmap->getHeight();
@@ -288,11 +294,16 @@ void CAxVw::OnPaint()
 				);
 			if (state != 0) dc.RestoreDC(state);
 
-			if (fabs(m_renderAll->dpi - dpi) > 10) {
+			if (fabs(m_renderAll->dpi - dpi) > 1) {
 				need = true;
+			}
+			if (m_renderAll->iPage != m_iPage) {
+				need = true;
+				drawwip = true;
 			}
 		}
 		else {
+			clear = true;
 			need = true;
 			drawwip = true;
 		}
@@ -315,11 +326,40 @@ void CAxVw::OnPaint()
 
 		if (drawwip) {
 			CRect rc(dx, dy, dx + cx, dy + cy);
-			CBrush br0;
-			br0.CreateStockObject(WHITE_BRUSH);
-			dc.FillRect(rc, &br0);
-			dc.SelectStockObject(DEFAULT_GUI_FONT);
-			dc.DrawText(_T("‚¨‘Ò‚¿‚­‚¾‚³‚¢..."), rc, DT_SINGLELINE|DT_CENTER|DT_VCENTER);
+			CRect rc2;
+			if (rc2.IntersectRect(rc, m_rcPaint))
+				rc = rc2;
+			if (clear) {
+				CBrush br0;
+				br0.CreateStockObject(WHITE_BRUSH);
+				dc.FillRect(rc, &br0);
+			}
+			else {
+#if 0
+				CDC dcMem;
+				dcMem.CreateCompatibleDC(&dc);
+				CBitmap *pOrg = dcMem.SelectObject(&m_bmMask10);
+				for (int by = rc.top; by < rc.bottom; by += 64) {
+					for (int bx = rc.left; bx < rc.right; bx += 64) {
+						dc.BitBlt(bx, by, std::min((int)rc.right - bx, 64), std::min((int)rc.bottom - by, 64), &dcMem, 0, 0, SRCPAINT);
+					}
+				}
+				dcMem.SelectObject(pOrg);
+#endif
+			}
+			CFont font;
+			font.CreateStockObject(DEFAULT_GUI_FONT);
+			LOGFONT lf;
+			if (0 != font.GetLogFont(&lf)) {
+				lf.lfHeight *= 3;
+				font.DeleteObject();
+				font.CreateFontIndirect(&lf);
+			}
+			{
+				CFont *pOrg = dc.SelectObject(&font);
+				dc.DrawText(_T("‚¨‘Ò‚¿‚­‚¾‚³‚¢..."), rc, DT_SINGLELINE|DT_CENTER|DT_VCENTER);
+				dc.SelectObject(pOrg);
+			}
 		}
 
 		int state = dc.SaveDC();
@@ -420,10 +460,8 @@ void CAxVw::OnPaint()
 }
 
 void CAxVw::UnloadPDF() {
-	if (m_pdfdoc != NULL) {
-		delete m_pdfdoc;
-		m_pdfdoc = NULL;
-	}
+	m_pdfdoc = NULL;
+	m_prefpdf.Release();
 
 	m_strUrl.Empty();
 }
@@ -442,6 +480,9 @@ HRESULT CAxVw::LoadPDF(LPCTSTR newVal) {
 		UnloadPDF();
 		return E_FAIL;
 	}
+
+	m_prefpdf.Release();
+	m_prefpdf.Attach(new CPDFRef(m_pdfdoc));
 
 	m_iPage = 0;
 	m_ft = ftW;
@@ -521,6 +562,7 @@ int CAxVw::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		|| !m_bmMoveBtn.LoadBitmap(IDB_MOVEBTN)
 		|| !m_bmZoomVal.LoadBitmap(IDB_ZOOMVAL)
 		|| !m_bmPageDisp.LoadBitmap(IDB_PAGE_DISP)
+		|| !m_bmMask10.LoadBitmap(IDB_MASK10)
 		)
 		return -1;
 
@@ -1104,6 +1146,8 @@ void CAxVw::OnUpdatePageSel(CCmdUI *pUI) {
 
 CBitmap *CAxVw::GetThumb(int iPage, int cx) {
 	if (m_pThumbs.GetCount() <= (size_t)iPage || m_pThumbs[iPage] == NULL) {
+		CSingleLock lck(&s_lockpdf);
+
 		CRect rcDraw(0, 0, cx, cx);
 		CRect rcPage = GetPageRect(iPage);
 		float scale = (float)cx / std::max(rcPage.Height(), rcPage.Width());
@@ -1135,6 +1179,9 @@ CBitmap *CAxVw::GetThumb(int iPage, int cx) {
 			gTrue, gFalse, gFalse,
 			slx, sly, rcDst.Width(), rcDst.Height()
 			);
+
+		lck.Unlock();
+
 		SplashBitmap *bitmap = splashOut->getBitmap();
 		int pcx = bitmap->getWidth();
 		int pcy = bitmap->getHeight();
