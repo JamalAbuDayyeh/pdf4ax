@@ -20,12 +20,56 @@ public:
 	BITMAPINFO bi; // out
 	bool partial; // out
 	PDFDoc *pdfdoc; // in
+	CComPtr<IUnknown> prefcnt;
 
 	HWND hwndCb; // in
 	UINT nMsg; // in
 };
 
 // CAxVw ウィンドウ
+
+class CPDFRef : public IUnknown {
+public:
+	LONG locks;
+	PDFDoc *ref_pdfdoc;
+
+	CPDFRef(PDFDoc *ref_pdfdoc)
+		: locks(0)
+		, ref_pdfdoc(ref_pdfdoc)
+	{
+
+	}
+	virtual ~CPDFRef() {
+		delete ref_pdfdoc;
+	}
+
+    virtual HRESULT STDMETHODCALLTYPE QueryInterface( 
+        /* [in] */ REFIID riid,
+		/* [iid_is][out] */ __RPC__deref_out void __RPC_FAR *__RPC_FAR *ppvObject) {
+			if (ppvObject == NULL)
+				return E_POINTER;
+			if (riid == IID_IUnknown) {
+				*ppvObject = static_cast<IUnknown *>(this);
+			}
+			else {
+				*ppvObject = NULL;
+				return E_NOINTERFACE;
+			}
+			AddRef();
+			return S_OK;
+	}
+
+	virtual ULONG STDMETHODCALLTYPE AddRef( void) {
+		return InterlockedIncrement(&locks);
+	}
+
+	virtual ULONG STDMETHODCALLTYPE Release( void) {
+		ULONG x = InterlockedDecrement(&locks);
+		if (x == 0)
+			delete this;
+		return x;
+	}
+};
 
 class CAxVw : public CWnd, public CPvRender
 {
@@ -38,6 +82,7 @@ public:
 	CString m_strUrl;
 
 protected:
+	CComPtr<CPDFRef> m_prefpdf;
 	PDFDoc *m_pdfdoc;
 	int m_iPage;
 	float m_fZoom;
@@ -50,6 +95,7 @@ protected:
 	SCROLLINFO m_hsc, m_vsc;
 	std::auto_ptr<CRenderInf> m_renderAll;
 	std::auto_ptr<CRenderInf> m_renderPart;
+	CBitmap m_bmMask10;
 
 	CBitmap m_bmPrev, m_bmNext, m_bmAbout, m_bmMag, m_bmMagBtn, m_bmMove, m_bmMoveBtn, m_bmZoomVal, m_bmPageDisp;
 	CRect m_rcPaint, m_rcPrev, m_rcNext, m_rcDisp, m_rcAbout, m_rcFitWH, m_rcFitW;

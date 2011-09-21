@@ -52,6 +52,7 @@
 #endif // _WIN64
 
 #include <atlcoll.h>
+#include <afxmt.h>
 
 #include <objsafe.h>
 #include <shlwapi.h>

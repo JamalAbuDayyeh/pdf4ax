@@ -9,8 +9,8 @@
 
 !define APP "PDF4Ax"
 
-!define VER "0.0.6"
-!define APV "0_0_6"
+!define VER "0.0.7"
+!define APV "0_0_7"
 
 !define CLSID "{FE687896-F410-4D10-8740-D584DA23C74D}"
 !define EXT ".pdf"
@@ -45,8 +45,34 @@ LicenseData GNUGPL2.txt
 
 ;--------------------------------
 
+InstType "導入"
+InstType "削除"
+InstType "再導入"
+
+Section "PDF ActiveX 関連付け 削除"
+  SectionIn 2 3
+
+  WriteRegStr HKCR "${EXT}" "Content Type" "${MIME}"
+
+  DeleteRegValue HKCR "Mime\Database\Content Type\${MIME}" "CLSID"
+SectionEnd
+
+Section "PDF4Ax 削除"
+  SectionIn 2 3
+
+  UnRegDLL "$INSTDIR\PDF4Ax.ocx"
+
+  Delete "$INSTDIR\PDF4Ax.ocx"
+  Delete "$INSTDIR\PDF4Ax.pdb"
+
+  RMDir /r "$INSTDIR\share\poppler"
+  RMDir    "$INSTDIR\share"
+  RMDir    "$INSTDIR"
+SectionEnd
+
 ; The stuff to install
-Section "" ;No components page, name is not important
+Section "PDF4Ax 本体" ;No components page, name is not important
+  SectionIn 1 3
 
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
@@ -62,7 +88,9 @@ Section "" ;No components page, name is not important
 
 SectionEnd ; end the section
 
-Section "PDF ActiveX 関連付け"
+Section "PDF ActiveX 関連付け 設定"
+  SectionIn 1 3
+
   WriteRegStr HKCR "${EXT}" "Content Type" "${MIME}"
   
   WriteRegStr HKCR "Mime\Database\Content Type\${MIME}" "CLSID" "${CLSID}"
