@@ -9,6 +9,9 @@
 /* Use libopenjpeg instead of builtin jpeg2000 decoder. */
 /* #undef ENABLE_LIBOPENJPEG */
 
+/* Build against libtiff. */
+/* #undef ENABLE_LIBTIFF */
+
 /* Build against libpng. */
 #define ENABLE_LIBPNG 1
 
@@ -145,7 +148,7 @@
 #define PACKAGE_NAME "poppler"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "poppler 0.16.7"
+#define PACKAGE_STRING "poppler 0.18.1"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "poppler"
@@ -154,16 +157,13 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.16.7"
+#define PACKAGE_VERSION "0.18.1"
 
 /* Poppler data dir */
-#define POPPLER_DATADIR "C:/Program Files/poppler/share/poppler"
+#define POPPLER_DATADIR "C:/Program Files (x86)/poppler/share/poppler"
 
 /* Support for curl based doc builder is compiled in. */
 /* #undef POPPLER_HAS_CURL_SUPPORT */
-
-/* Have GDK */
-/* #undef POPPLER_WITH_GDK */
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
@@ -181,7 +181,7 @@
 /* #undef USE_FLOAT */
 
 /* Version number of package */
-#define VERSION "0.16.7"
+#define VERSION "0.18.1"
 
 /* Use fontconfig font configuration backend */
 /* #undef WITH_FONTCONFIGURATION_FONTCONFIG */

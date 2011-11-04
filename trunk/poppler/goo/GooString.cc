@@ -129,8 +129,8 @@ void inline GooString::resize(int newLength) {
       } else {
         memcpy(s1, s, length);
       }
-	  if (s != sStatic)
-		delete[] s;
+      if (s != sStatic)
+        delete[] s;
     }
   }
 
