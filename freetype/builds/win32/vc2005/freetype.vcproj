@@ -70,7 +70,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\win32\vc2005\freetype246.lib"
+				OutputFile="..\..\..\objs\win32\vc2005\freetype247.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -145,7 +145,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\win32\vc2005\freetype246MT.lib"
+				OutputFile="..\..\..\objs\win32\vc2005\freetype247MT.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -196,7 +196,7 @@
 				AdditionalIncludeDirectories="..\..\..\include"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY"
 				StringPooling="true"
-				RuntimeLibrary="2"
+				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
 				DisableLanguageExtensions="true"
 				PrecompiledHeaderFile=".\..\..\..\objs\release_st/freetype.pch"
@@ -220,7 +220,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\win32\vc2005\freetype246ST.lib"
+				OutputFile="..\..\..\objs\win32\vc2005\freetype247ST.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -292,7 +292,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\win32\vc2005\freetype246_D.lib"
+				OutputFile="..\..\..\objs\win32\vc2005\freetype247_D.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -342,7 +342,7 @@
 				AdditionalIncludeDirectories="..\..\..\include"
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;_CRT_SECURE_NO_WARNINGS;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				DisableLanguageExtensions="true"
 				PrecompiledHeaderFile=".\..\..\..\objs\debug_st/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\debug_st/"
@@ -365,7 +365,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\win32\vc2005\freetype246ST_D.lib"
+				OutputFile="..\..\..\objs\win32\vc2005\freetype247ST_D.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -416,7 +416,7 @@
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;_CRT_SECURE_NO_WARNINGS;FT_DEBUG_LEVEL_ERROR;FT_DEBUG_LEVEL_TRACE;FT2_BUILD_LIBRARY;_CRT_SECURE_NO_DEPRECATE"
 				GeneratePreprocessedFile="0"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
+				RuntimeLibrary="1"
 				DisableLanguageExtensions="true"
 				PrecompiledHeaderFile=".\..\..\..\objs\debug_mt/freetype.pch"
 				AssemblerListingLocation=".\..\..\..\objs\debug_mt/"
@@ -439,7 +439,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="..\..\..\objs\win32\vc2005\freetype246MT_D.lib"
+				OutputFile="..\..\..\objs\win32\vc2005\freetype247MT_D.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool

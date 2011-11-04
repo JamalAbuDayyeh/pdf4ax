@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding = "Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
 	Name="poppler"
-	ProjectGUID="{E2DED601-6003-4F0A-879E-C438CE20BBF4}"
-	RootNamespace="poppler"
-	Keyword="Win32Proj"
-	>
+	ProjectGUID="{FA8F5DF3-7654-4921-ACB1-28DAF6B7C881}"
+	Keyword="Win32Proj">
 	<Platforms>
 		<Platform
-			Name="Win32"
-		/>
+			Name="Win32"/>
 	</Platforms>
-	<ToolFiles>
-	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
@@ -21,82 +16,53 @@
 			IntermediateDirectory="poppler.dir\Debug"
 			ConfigurationType="4"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				BasicRuntimeChecks="3"
+				CompileAs="2"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="0"
+				Optimization="0"
+				RuntimeLibrary="3"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
+				AssemblerListingLocation="Debug"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\Proj\PDF4Ax\poppler\Debug/poppler.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
-				MkTypLibCompatible="false"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="0"
-				InlineFunctionExpansion="0"
-				AdditionalIncludeDirectories=".;./fofi;./goo;./poppler;../freetype/include;../freetype/include/freetype;../zlib;../jpeg;../libpng;../lcms/include"
-				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
-				ExceptionHandling="1"
-				BasicRuntimeChecks="3"
-				RuntimeLibrary="3"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="Debug"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\Debug/poppler.pdb"
-				WarningLevel="3"
-				DebugInformationFormat="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Debug\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\Debug\poppler.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				OutputFile="C:\Proj\PDF4Ax\poppler\Debug\poppler.lib"/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
@@ -104,81 +70,51 @@
 			IntermediateDirectory="poppler.dir\Release"
 			ConfigurationType="4"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				CompileAs="2"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="2"
+				Optimization="2"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
+				AssemblerListingLocation="Release"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\Proj\PDF4Ax\poppler\Release/poppler.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
-				MkTypLibCompatible="false"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="2"
-				InlineFunctionExpansion="2"
-				AdditionalIncludeDirectories=".;./fofi;./goo;./poppler;../freetype/include;../freetype/include/freetype;../zlib;../jpeg;../libpng;../lcms/include"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
-				ExceptionHandling="1"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="Release"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\Release/poppler.pdb"
-				WarningLevel="3"
-				DebugInformationFormat="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;Release\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\Release\poppler.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				OutputFile="C:\Proj\PDF4Ax\poppler\Release\poppler.lib"/>
 		</Configuration>
 		<Configuration
 			Name="MinSizeRel|Win32"
@@ -186,80 +122,51 @@
 			IntermediateDirectory="poppler.dir\MinSizeRel"
 			ConfigurationType="4"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				CompileAs="2"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="1"
+				Optimization="1"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
+				AssemblerListingLocation="MinSizeRel"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\Proj\PDF4Ax\poppler\MinSizeRel/poppler.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
-				MkTypLibCompatible="false"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="1"
-				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories=".;./fofi;./goo;./poppler;../freetype/include;../freetype/include/freetype;../zlib;../jpeg;../libpng;../lcms/include"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
-				ExceptionHandling="1"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="MinSizeRel"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\MinSizeRel/poppler.pdb"
-				WarningLevel="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\MinSizeRel\poppler.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				OutputFile="C:\Proj\PDF4Ax\poppler\MinSizeRel\poppler.lib"/>
 		</Configuration>
 		<Configuration
 			Name="RelWithDebInfo|Win32"
@@ -267,534 +174,398 @@
 			IntermediateDirectory="poppler.dir\RelWithDebInfo"
 			ConfigurationType="4"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
-			>
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
 			<Tool
-				Name="VCPreBuildEventTool"
-			/>
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				CompileAs="2"
+				DebugInformationFormat="3"
+				ExceptionHandling="1"
+				InlineFunctionExpansion="1"
+				Optimization="2"
+				RuntimeLibrary="2"
+				RuntimeTypeInfo="TRUE"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
+				AssemblerListingLocation="RelWithDebInfo"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\Proj\PDF4Ax\poppler\RelWithDebInfo/poppler.pdb"
+/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
+				Name="VCCustomBuildTool"/>
 			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"/>
 			<Tool
 				Name="VCMIDLTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
-				MkTypLibCompatible="false"
+				AdditionalIncludeDirectories="C:\Proj\PDF4Ax\poppler;C:\Proj\PDF4Ax\poppler\fofi;C:\Proj\PDF4Ax\poppler\goo;C:\Proj\PDF4Ax\poppler\poppler;C:\Proj\PDF4Ax\freetype\include;C:\Proj\PDF4Ax\freetype\include\freetype;C:\Proj\PDF4Ax\zlib;C:\Proj\PDF4Ax\jpeg;C:\Proj\PDF4Ax\libpng;C:\Proj\PDF4Ax\lcms\include;"
+				MkTypLibCompatible="FALSE"
 				TargetEnvironment="1"
-				GenerateStublessProxies="true"
+				GenerateStublessProxies="TRUE"
 				TypeLibraryName="$(InputName).tlb"
 				OutputDirectory="$(IntDir)"
 				HeaderFileName="$(InputName).h"
 				DLLDataFileName=""
 				InterfaceIdentifierFileName="$(InputName)_i.c"
-				ProxyFileName="$(InputName)_p.c"
-			/>
+				ProxyFileName="$(InputName)_p.c"/>
 			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions=" /Zm1000"
-				Optimization="2"
-				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories=".;./fofi;./goo;./poppler;../freetype/include;../freetype/include/freetype;../zlib;../jpeg;../libpng;../lcms/include"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
-				ExceptionHandling="1"
-				RuntimeLibrary="2"
-				RuntimeTypeInfo="true"
-				AssemblerListingLocation="RelWithDebInfo"
-				ObjectFile="$(IntDir)\"
-				ProgramDataBaseFileName="C:\msys\1.0\home\KU\2\poppler-0.16.7\RelWithDebInfo/poppler.pdb"
-				WarningLevel="3"
-				DebugInformationFormat="3"
-				CompileAs="2"
-			/>
+				Name="VCPreBuildEventTool"/>
 			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
+				Name="VCPreLinkEventTool"/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;QT_NO_DEBUG;HAVE_CONFIG_H=1;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
-				AdditionalIncludeDirectories="C:\msys\1.0\home\KU\2\poppler-0.16.7;C:\msys\1.0\home\KU\2\poppler-0.16.7\fofi;C:\msys\1.0\home\KU\2\poppler-0.16.7\goo;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler;C:\msys\1.0\home\KU\2\freetype-2.4.6\include;C:\msys\1.0\home\KU\2\freetype-2.4.6\include\freetype;C:\msys\1.0\home\KU\2\zlib-1.2.5;C:\msys\1.0\home\KU\2\jpeg-8b;C:\msys\1.0\home\KU\2\libpng-1.5.4;C:\msys\1.0\home\KU\2\lcms2-2.2\include;"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
+				Name="VCPostBuildEventTool"/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="C:\msys\1.0\home\KU\2\poppler-0.16.7\RelWithDebInfo\poppler.lib"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
+				OutputFile="C:\Proj\PDF4Ax\poppler\RelWithDebInfo\poppler.lib"/>
 		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
+			<File
+				RelativePath="C:\Proj\PDF4Ax\poppler\CMakeLists.txt">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/Proj/PDF4Ax/poppler/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files (x86)\CMake 2.8\bin\cmake.exe&quot; -HC:/Proj/PDF4Ax/poppler -BC:/Proj/PDF4Ax/poppler --check-stamp-file C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="C:\Proj\PDF4Ax\poppler\CMakeLists.txt;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeSystem.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCCompiler.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerDefaults.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerMacros.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroEnsureVersion.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\FindLCMS.cmake;C:\Proj\PDF4Ax\poppler\ConfigureChecks.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\Proj\PDF4Ax\poppler\config.h.cmake;C:\Proj\PDF4Ax\poppler\poppler\poppler-config.h.cmake;C:\Proj\PDF4Ax\poppler\CMakeLists.txt;"
+					Outputs="C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/Proj/PDF4Ax/poppler/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files (x86)\CMake 2.8\bin\cmake.exe&quot; -HC:/Proj/PDF4Ax/poppler -BC:/Proj/PDF4Ax/poppler --check-stamp-file C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="C:\Proj\PDF4Ax\poppler\CMakeLists.txt;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeSystem.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCCompiler.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerDefaults.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerMacros.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroEnsureVersion.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\FindLCMS.cmake;C:\Proj\PDF4Ax\poppler\ConfigureChecks.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\Proj\PDF4Ax\poppler\config.h.cmake;C:\Proj\PDF4Ax\poppler\poppler\poppler-config.h.cmake;C:\Proj\PDF4Ax\poppler\CMakeLists.txt;"
+					Outputs="C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MinSizeRel|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/Proj/PDF4Ax/poppler/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files (x86)\CMake 2.8\bin\cmake.exe&quot; -HC:/Proj/PDF4Ax/poppler -BC:/Proj/PDF4Ax/poppler --check-stamp-file C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="C:\Proj\PDF4Ax\poppler\CMakeLists.txt;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeSystem.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCCompiler.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerDefaults.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerMacros.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroEnsureVersion.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\FindLCMS.cmake;C:\Proj\PDF4Ax\poppler\ConfigureChecks.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\Proj\PDF4Ax\poppler\config.h.cmake;C:\Proj\PDF4Ax\poppler\poppler\poppler-config.h.cmake;C:\Proj\PDF4Ax\poppler\CMakeLists.txt;"
+					Outputs="C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="RelWithDebInfo|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/Proj/PDF4Ax/poppler/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files (x86)\CMake 2.8\bin\cmake.exe&quot; -HC:/Proj/PDF4Ax/poppler -BC:/Proj/PDF4Ax/poppler --check-stamp-file C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto :VCReportError"
+					AdditionalDependencies="C:\Proj\PDF4Ax\poppler\CMakeLists.txt;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeSystem.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCCompiler.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCPlatform.cmake;C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerDefaults.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\PopplerMacros.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroEnsureVersion.cmake;C:\Proj\PDF4Ax\poppler\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\Proj\PDF4Ax\poppler\cmake\modules\FindLCMS.cmake;C:\Proj\PDF4Ax\poppler\ConfigureChecks.cmake;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\Proj\PDF4Ax\poppler\config.h.cmake;C:\Proj\PDF4Ax\poppler\poppler\poppler-config.h.cmake;C:\Proj\PDF4Ax\poppler\CMakeLists.txt;"
+					Outputs="C:\Proj\PDF4Ax\poppler\CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+			</File>
 		<Filter
 			Name="Source Files"
-			>
+			Filter="">
 			<File
-				RelativePath="poppler\Annot.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\gfile.cc">
 			</File>
 			<File
-				RelativePath="poppler\Array.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\gmempp.cc">
 			</File>
 			<File
-				RelativePath="poppler\BuiltinFont.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\GooHash.cc">
 			</File>
 			<File
-				RelativePath="poppler\BuiltinFontTables.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\GooList.cc">
 			</File>
 			<File
-				RelativePath="poppler\CachedFile.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\GooTimer.cc">
 			</File>
 			<File
-				RelativePath="poppler\Catalog.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\GooString.cc">
 			</File>
 			<File
-				RelativePath="poppler\CharCodeToUnicode.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\gmem.cc">
 			</File>
 			<File
-				RelativePath="poppler\CMap.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\FixedPoint.cc">
 			</File>
 			<File
-				RelativePath="poppler\DateInfo.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\PNGWriter.cc">
 			</File>
 			<File
-				RelativePath="poppler\DCTStream.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\TiffWriter.cc">
 			</File>
 			<File
-				RelativePath="poppler\Decrypt.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\JpegWriter.cc">
 			</File>
 			<File
-				RelativePath="poppler\Dict.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\ImgWriter.cc">
 			</File>
 			<File
-				RelativePath="poppler\Error.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\goo\gstrtod.cc">
 			</File>
 			<File
-				RelativePath="poppler\FileSpec.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\fofi\FoFiBase.cc">
 			</File>
 			<File
-				RelativePath="goo\FixedPoint.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\fofi\FoFiEncodings.cc">
 			</File>
 			<File
-				RelativePath="poppler\FlateStream.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\fofi\FoFiTrueType.cc">
 			</File>
 			<File
-				RelativePath="fofi\FoFiBase.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\fofi\FoFiType1.cc">
 			</File>
 			<File
-				RelativePath="fofi\FoFiEncodings.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\fofi\FoFiType1C.cc">
 			</File>
 			<File
-				RelativePath="fofi\FoFiTrueType.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Annot.cc">
 			</File>
 			<File
-				RelativePath="fofi\FoFiType1.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Array.cc">
 			</File>
 			<File
-				RelativePath="fofi\FoFiType1C.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\BuiltinFont.cc">
 			</File>
 			<File
-				RelativePath="poppler\FontEncodingTables.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\BuiltinFontTables.cc">
 			</File>
 			<File
-				RelativePath="poppler\FontInfo.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\CachedFile.cc">
 			</File>
 			<File
-				RelativePath="poppler\Form.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Catalog.cc">
 			</File>
 			<File
-				RelativePath="poppler\Function.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\CharCodeToUnicode.cc">
 			</File>
 			<File
-				RelativePath="goo\gfile.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\CMap.cc">
 			</File>
 			<File
-				RelativePath="poppler\Gfx.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\DateInfo.cc">
 			</File>
 			<File
-				RelativePath="poppler\GfxFont.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Decrypt.cc">
 			</File>
 			<File
-				RelativePath="poppler\GfxState.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Dict.cc">
 			</File>
 			<File
-				RelativePath="poppler\GlobalParams.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Error.cc">
 			</File>
 			<File
-				RelativePath="goo\gmem.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\FileSpec.cc">
 			</File>
 			<File
-				RelativePath="goo\gmempp.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\FontEncodingTables.cc">
 			</File>
 			<File
-				RelativePath="goo\GooHash.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Form.cc">
 			</File>
 			<File
-				RelativePath="goo\GooList.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\FontInfo.cc">
 			</File>
 			<File
-				RelativePath="goo\GooString.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Function.cc">
 			</File>
 			<File
-				RelativePath="goo\GooTimer.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Gfx.cc">
 			</File>
 			<File
-				RelativePath="goo\gstrtod.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\GfxFont.cc">
 			</File>
 			<File
-				RelativePath="poppler\Hints.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\GfxState.cc">
 			</File>
 			<File
-				RelativePath="goo\ImgWriter.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\GlobalParams.cc">
 			</File>
 			<File
-				RelativePath="poppler\JArithmeticDecoder.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Hints.cc">
 			</File>
 			<File
-				RelativePath="poppler\JBIG2Stream.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\JArithmeticDecoder.cc">
 			</File>
 			<File
-				RelativePath="goo\JpegWriter.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\JBIG2Stream.cc">
 			</File>
 			<File
-				RelativePath="poppler\JPXStream.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Lexer.cc">
 			</File>
 			<File
-				RelativePath="poppler\Lexer.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Link.cc">
 			</File>
 			<File
-				RelativePath="poppler\Linearization.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Linearization.cc">
 			</File>
 			<File
-				RelativePath="poppler\Link.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\LocalPDFDocBuilder.cc">
 			</File>
 			<File
-				RelativePath="poppler\LocalPDFDocBuilder.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\NameToCharCode.cc">
 			</File>
 			<File
-				RelativePath="poppler\Movie.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Object.cc">
 			</File>
 			<File
-				RelativePath="poppler\NameToCharCode.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\OptionalContent.cc">
 			</File>
 			<File
-				RelativePath="poppler\Object.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Outline.cc">
 			</File>
 			<File
-				RelativePath="poppler\OptionalContent.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\OutputDev.cc">
 			</File>
 			<File
-				RelativePath="poppler\Outline.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Page.cc">
 			</File>
 			<File
-				RelativePath="poppler\OutputDev.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PageTransition.cc">
 			</File>
 			<File
-				RelativePath="poppler\Page.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Parser.cc">
 			</File>
 			<File
-				RelativePath="poppler\PageLabelInfo.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PDFDoc.cc">
 			</File>
 			<File
-				RelativePath="poppler\PageTransition.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PDFDocEncoding.cc">
 			</File>
 			<File
-				RelativePath="poppler\Parser.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PDFDocFactory.cc">
 			</File>
 			<File
-				RelativePath="poppler\PDFDoc.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PopplerCache.cc">
 			</File>
 			<File
-				RelativePath="poppler\PDFDocEncoding.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\ProfileData.cc">
 			</File>
 			<File
-				RelativePath="poppler\PDFDocFactory.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PreScanOutputDev.cc">
 			</File>
 			<File
-				RelativePath="goo\PNGWriter.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PSTokenizer.cc">
 			</File>
 			<File
-				RelativePath="poppler\PopplerCache.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Stream.cc">
 			</File>
 			<File
-				RelativePath="poppler\PreScanOutputDev.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\strtok_r.cpp">
 			</File>
 			<File
-				RelativePath="poppler\ProfileData.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\UnicodeMap.cc">
 			</File>
 			<File
-				RelativePath="poppler\PSOutputDev.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\UnicodeTypeTable.cc">
 			</File>
 			<File
-				RelativePath="poppler\PSTokenizer.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\XRef.cc">
 			</File>
 			<File
-				RelativePath="poppler\Rendition.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PSOutputDev.cc">
 			</File>
 			<File
-				RelativePath="poppler\SecurityHandler.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\TextOutputDev.cc">
 			</File>
 			<File
-				RelativePath="poppler\Sound.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\PageLabelInfo.cc">
 			</File>
 			<File
-				RelativePath="splash\Splash.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\SecurityHandler.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashBitmap.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\StdinCachedFile.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashClip.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\StdinPDFDocBuilder.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashFont.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Sound.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashFontEngine.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\ViewerPreferences.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashFontFile.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\XpdfPluginAPI.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashFontFileID.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Movie.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashFTFont.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\Rendition.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashFTFontEngine.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\SplashOutputDev.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashFTFontFile.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\Splash.cc">
 			</File>
 			<File
-				RelativePath="poppler\SplashOutputDev.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashBitmap.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashPath.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashClip.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashPattern.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashFTFont.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashScreen.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashFTFontEngine.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashState.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashFTFontFile.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashT1Font.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashFont.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashT1FontEngine.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashFontEngine.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashT1FontFile.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashFontFile.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashXPath.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashFontFileID.cc">
 			</File>
 			<File
-				RelativePath="splash\SplashXPathScanner.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashPath.cc">
 			</File>
 			<File
-				RelativePath="poppler\StdinCachedFile.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashPattern.cc">
 			</File>
 			<File
-				RelativePath="poppler\StdinPDFDocBuilder.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashScreen.cc">
 			</File>
 			<File
-				RelativePath="poppler\Stream.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashState.cc">
 			</File>
 			<File
-				RelativePath="poppler\strtok_r.cpp"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashT1Font.cc">
 			</File>
 			<File
-				RelativePath="poppler\TextOutputDev.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashT1FontEngine.cc">
 			</File>
 			<File
-				RelativePath="poppler\UnicodeMap.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashT1FontFile.cc">
 			</File>
 			<File
-				RelativePath="poppler\UnicodeTypeTable.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashXPath.cc">
 			</File>
 			<File
-				RelativePath="poppler\XpdfPluginAPI.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\splash\SplashXPathScanner.cc">
 			</File>
 			<File
-				RelativePath="poppler\XRef.cc"
-				>
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\DCTStream.cc">
+			</File>
+			<File
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\FlateStream.cc">
+			</File>
+			<File
+				RelativePath="C:\Proj\PDF4Ax\poppler\poppler\JPXStream.cc">
 			</File>
 		</Filter>
-		<File
-			RelativePath="CMakeLists.txt"
-			>
-			<FileConfiguration
-				Name="Debug|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeSystem.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCCompiler.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerDefaults.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerMacros.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroEnsureVersion.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\FindLCMS.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\ConfigureChecks.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\poppler-config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="Release|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeSystem.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCCompiler.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerDefaults.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerMacros.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroEnsureVersion.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\FindLCMS.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\ConfigureChecks.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\poppler-config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="MinSizeRel|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeSystem.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCCompiler.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerDefaults.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerMacros.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroEnsureVersion.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\FindLCMS.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\ConfigureChecks.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\poppler-config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="RelWithDebInfo|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-					Description="Building Custom Rule C:/msys/1.0/home/KU/2/poppler-0.16.7/CMakeLists.txt"
-					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/msys/1.0/home/KU/2/poppler-0.16.7 -BC:/msys/1.0/home/KU/2/poppler-0.16.7 --check-stamp-file C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp&#x0D;&#x0A;if errorlevel 1 goto VCReportError&#x0D;&#x0A;"
-					AdditionalDependencies="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeSystem.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCCompiler.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCPlatform.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\CMakeCXXPlatform.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerDefaults.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\PopplerMacros.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroOptionalFindPackage.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroEnsureVersion.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\MacroBoolTo01.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindThreads.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindFreetype.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindJPEG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\cmake\modules\FindLCMS.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\ConfigureChecks.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;C:\msys\1.0\home\KU\2\poppler-0.16.7\config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\poppler\poppler-config.h.cmake;C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeLists.txt;"
-					Outputs="C:\msys\1.0\home\KU\2\poppler-0.16.7\CMakeFiles\generate.stamp"
-				/>
-			</FileConfiguration>
-		</File>
 	</Files>
 	<Globals>
 	</Globals>

@@ -24,6 +24,11 @@
 /* #undef USE_FIXEDPOINT */
 #endif
 
+/* Use single precision arithmetic in the Splash backend */
+#ifndef USE_FLOAT
+/* #undef USE_FLOAT */
+#endif
+
 /* Include support for OPI comments. */
 #ifndef OPI_SUPPORT
 #define OPI_SUPPORT 1
@@ -49,8 +54,68 @@
 /* #undef POPPLER_HAS_CURL_SUPPORT */
 #endif
 
-// Also, there's a couple of preprocessor symbols in the header files
-// that are used but never defined: DISABLE_OUTLINE, DEBUG_MEM and
+/* Use libjpeg instead of builtin jpeg decoder. */
+#ifndef ENABLE_LIBJPEG
+#define ENABLE_LIBJPEG 1
+#endif
+
+/* Build against libtiff. */
+#ifndef ENABLE_LIBTIFF
+/* #undef ENABLE_LIBTIFF */
+#endif
+
+/* Build against libpng. */
+#ifndef ENABLE_LIBPNG
+#define ENABLE_LIBPNG 1
+#endif
+
+/* Use zlib instead of builtin zlib decoder. */
+#ifndef ENABLE_ZLIB
+#define ENABLE_ZLIB 1
+#endif
+
+/* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
+   */
+#ifndef HAVE_DIRENT_H
+/* #undef HAVE_DIRENT_H */
+#endif
+
+/* Defines if gettimeofday is available on your system */
+#ifndef HAVE_GETTIMEOFDAY
+/* #undef HAVE_GETTIMEOFDAY */
+#endif
+
+/* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
+#ifndef HAVE_NDIR_H
+/* #undef HAVE_NDIR_H */
+#endif
+
+/* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
+   */
+#ifndef HAVE_SYS_DIR_H
+/* #undef HAVE_SYS_DIR_H */
+#endif
+
+/* Define to 1 if you have the <sys/ndir.h> header file, and it defines `DIR'.
+   */
+#ifndef HAVE_SYS_NDIR_H
+/* #undef HAVE_SYS_NDIR_H */
+#endif
+
+/* Have FreeType2 include files */
+#ifndef HAVE_FREETYPE_H
+#define HAVE_FREETYPE_H 1
+#endif
+
+/* Defines if use cms */
+#ifndef USE_CMS
+#define USE_CMS 1
+#endif
+
+// Also, there are preprocessor symbols in the header files
+// that are used but never defined when building poppler using configure
+// or cmake: DISABLE_OUTLINE, DEBUG_MEM, SPLASH_CMYK, HAVE_T1LIB_H,
+// ENABLE_PLUGINS, DEBUG_FORMS, HAVE_FREETYPE_FREETYPE_H
 
 //------------------------------------------------------------------------
 // version

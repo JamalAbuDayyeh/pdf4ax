@@ -71,11 +71,11 @@ int CAxFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 //	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() | CBRS_TOOLTIPS | CBRS_FLYBY);
 
-	//m_wndView.LoadPDF(_T("C:\\Documents and Settings\\KU\\My Documents\\PDFs\\デジタルドルフィンズバージョンアップ.pdf.pdf"));
-	//m_wndView.LoadPDF(_T("O:\\DL\\saitama.pdf"));
-	m_wndView.LoadPDF(_T("O:\\DL\\map_tokyo.pdf"));
+	m_wndView.LoadPDF(_T("C:\\Proj\\TestConvPdfs2\\JP.pdf"));
+	//m_wndView.LoadPDF(_T("E:\\DL\\saitama.pdf"));
+	//m_wndView.LoadPDF(_T("E:\\DL\\map_tokyo.pdf"));
 	//m_wndView.LoadPDF(_T("H:\\DL\\OpenGL\\GDC2003_OGL_ARBFragmentProgram.pdf"));
-	//m_wndView.LoadPDF(_T("O:\\DL\\TIFF6.pdf"));
+	//m_wndView.LoadPDF(_T("E:\\DL\\TIFF6.pdf"));
 
 	return 0;
 }

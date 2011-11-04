@@ -482,7 +482,7 @@ HRESULT CAxVw::LoadPDF(LPCTSTR newVal) {
 	}
 
 	m_prefpdf.Release();
-	m_prefpdf.Attach(new CPDFRef(m_pdfdoc));
+	m_prefpdf = new CPDFRef(m_pdfdoc);
 
 	m_iPage = 0;
 	m_ft = ftW;

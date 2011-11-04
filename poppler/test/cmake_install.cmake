@@ -1,8 +1,8 @@
-# Install script for directory: C:/msys/1.0/home/KU/2/poppler-0.16.7/test
+# Install script for directory: C:/Proj/PDF4Ax/poppler/test
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "C:/Program Files/poppler")
+  SET(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/poppler")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

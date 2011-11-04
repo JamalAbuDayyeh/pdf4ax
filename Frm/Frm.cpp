@@ -46,7 +46,7 @@ BOOL CFrmApp::InitInstance()
 	// TODO: 会社名または組織名などの適切な文字列に
 	// この文字列を変更してください。
 
-	//_CrtSetBreakAlloc(3616);
+	//_CrtSetBreakAlloc(1601);
 
 	TCHAR tcMe[MAX_PATH] = {0};
 	GetModuleFileName(AfxGetInstanceHandle(), tcMe, MAX_PATH);

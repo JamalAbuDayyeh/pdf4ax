@@ -21,6 +21,7 @@
 // Copyright (C) 2010 Hib Eris <hib@hiberis.nl>
 // Copyright (C) 2010 Kenneth Berland <ken@hero.com>
 // Copyright (C) 2011 Tom Gleason <tom@buildadam.com>
+// Copyright (C) 2011 Steven Murdoch <Steven.Murdoch@cl.cam.ac.uk>
 //
 // To see a description of the changes please see the Changelog file that
 // came with your tarball or type make ChangeLog if you are building from git
@@ -50,6 +51,7 @@
 #include "TextOutputDev.h"
 #include "CharTypes.h"
 #include "UnicodeMap.h"
+#include "PDFDocEncoding.h"
 #include "Error.h"
 #include <string>
 
@@ -452,7 +454,7 @@ static void printInfoString(FILE *f, Dict *infoDict, char *key,
 	    (s1->getChar(i+1) & 0xff);
 	i += 2;
       } else {
-	u = s1->getChar(i) & 0xff;
+	u = pdfDocEncoding[s1->getChar(i) & 0xff];
 	++i;
       }
       n = uMap->mapUnicode(u, buf, sizeof(buf));
