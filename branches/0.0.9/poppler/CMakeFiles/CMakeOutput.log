@@ -1,0 +1,313 @@
+The system is: Windows - 6.1 - x86
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\testCCompiler.c
+1>testCCompiler.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+1>CMakeCCompilerABI.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /EHsc /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TP   /Zm1000
+1>   .\testCXXCompiler.cxx
+1>testCXXCompiler.cxx
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /EHsc /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TP   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
+1>CMakeCXXCompilerABI.cpp
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFile.c
+1>CheckIncludeFile.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFile.c
+1>CheckIncludeFile.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   ..\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c
+1>CMAKE_SIZEOF_UNSIGNED_SHORT.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if files memory.h exist passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if files string.h exist passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+

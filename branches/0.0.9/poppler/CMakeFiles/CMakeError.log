@@ -1,0 +1,613 @@
+Determining if files pthread.h exist failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>.\CheckIncludeFiles.c(2) : fatal error C1083: include ファイルを開けません。'pthread.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source:
+/* */
+#include <pthread.h>
+
+
+int main(){return 0;}
+
+Determining if the include file stdint.h exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFile.c
+1>CheckIncludeFile.c
+1>.\CheckIncludeFile.c(1) : fatal error C1083: include ファイルを開けません。'stdint.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\TestEndianess.c
+1>TestEndianess.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>マニフェストを埋め込んでいます...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 0、警告 0
+========== ビルド: 1 正常終了、0 失敗、0 更新、0 スキップ ==========
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if files dlfcn.h exist failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>.\CheckIncludeFiles.c(2) : fatal error C1083: include ファイルを開けません。'dlfcn.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source:
+/* */
+#include <dlfcn.h>
+
+
+int main(){return 0;}
+
+Determining if files inttypes.h exist failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>.\CheckIncludeFiles.c(2) : fatal error C1083: include ファイルを開けません。'inttypes.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source:
+/* */
+#include <inttypes.h>
+
+
+int main(){return 0;}
+
+Determining if files strings.h exist failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>.\CheckIncludeFiles.c(2) : fatal error C1083: include ファイルを開けません。'strings.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source:
+/* */
+#include <strings.h>
+
+
+int main(){return 0;}
+
+Determining if files sys/mman.h exist failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>.\CheckIncludeFiles.c(2) : fatal error C1083: include ファイルを開けません。'sys/mman.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source:
+/* */
+#include <sys/mman.h>
+
+
+int main(){return 0;}
+
+Determining if files unistd.h exist failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\CheckIncludeFiles.c
+1>CheckIncludeFiles.c
+1>.\CheckIncludeFiles.c(2) : fatal error C1083: include ファイルを開けません。'unistd.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source:
+/* */
+#include <unistd.h>
+
+
+int main(){return 0;}
+
+Determining if the function fseek64 exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=fseek64" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _fseek64 が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function fseeko exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=fseeko" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _fseeko が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function ftell64 exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=ftell64" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _ftell64 が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function gmtime_r exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=gmtime_r" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _gmtime_r が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function gettimeofday exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=gettimeofday" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _gettimeofday が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function localtime_r exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=localtime_r" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _localtime_r が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function popen exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=popen" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _popen が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function mkstemp exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=mkstemp" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _mkstemp が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function mkstemps exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=mkstemps" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _mkstemps が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Performing C SOURCE FILE Test HAVE_DIRENT_H failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "HAVE_DIRENT_H" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\src.c
+1>src.c
+1>.\src.c(1) : fatal error C1083: include ファイルを開けません。'dirent.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source file was:
+#include <dirent.h>
+
+int main(int argc, char *argv[])
+{
+  DIR* d = 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_NDIR_H failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "HAVE_NDIR_H" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\src.c
+1>src.c
+1>.\src.c(1) : fatal error C1083: include ファイルを開けません。'ndir.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source file was:
+#include <ndir.h>
+
+int main(int argc, char *argv[])
+{
+  DIR* d = 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_SYS_DIR_H failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "HAVE_SYS_DIR_H" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\src.c
+1>src.c
+1>.\src.c(1) : fatal error C1083: include ファイルを開けません。'sys/dir.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source file was:
+#include <sys/dir.h>
+
+int main(int argc, char *argv[])
+{
+  DIR* d = 0;
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_SYS_NDIR_H failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "HAVE_SYS_NDIR_H" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   .\src.c
+1>src.c
+1>.\src.c(1) : fatal error C1083: include ファイルを開けません。'sys/ndir.h': No such file or directory
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+Source file was:
+#include <sys/ndir.h>
+
+int main(int argc, char *argv[])
+{
+  DIR* d = 0;
+  return 0;
+}
+
+Determining if the function nanosleep exists failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=nanosleep" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>CheckFunctionExists.obj : error LNK2019: 未解決の外部シンボル _nanosleep が関数 _main で参照されました。
+1>C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe : fatal error LNK1120: 外部参照 1 が未解決です。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 2、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
+Determining if the function nanosleep exists in the rt failed with the following output:
+Change Dir: C:/Proj/PDF4Ax/poppler/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~1\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec
+
+Microsoft(R) Visual Studio Version 8.0.50727.867.
+Copyright (C) Microsoft Corp 1984-2005. All rights reserved.
+1>------ ビルド開始: プロジェクト: cmTryCompileExec, 構成: Debug Win32 ------
+1>コンパイルしています...
+1>Microsoft(R) 32-bit C/C++ Optimizing Compiler Version 14.00.50727.762 for 80x86
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>cl /Od /D "WIN32" /D "_WINDOWS" /D "CHECK_FUNCTION_EXISTS=nanosleep" /D "_DEBUG" /D "CMAKE_INTDIR=\"Debug\"" /D "_MBCS" /FD /RTC1 /MDd /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /W3 /c /Zi /TC   /Zm1000
+1>   "..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+1>CheckFunctionExists.c
+1>マニフェストをリソースにコンパイルしています...
+1>Microsoft (R) Windows (R) Resource Compiler Version 6.1.6723.1
+1>Copyright (C) Microsoft Corporation.  All rights reserved.
+1>リンクしています...
+1>LINK : fatal error LNK1104: ファイル 'rt.lib' を開くことができません。
+1>ビルドログは "file://c:\Proj\PDF4Ax\poppler\CMakeFiles\CMakeTmp\cmTryCompileExec.dir\Debug\BuildLog.htm" に保存されました。
+1>cmTryCompileExec - エラー 1、警告 0
+========== ビルド: 0 正常終了、1 失敗、0 更新、0 スキップ ==========
+
+
