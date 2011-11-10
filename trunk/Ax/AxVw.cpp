@@ -485,7 +485,7 @@ HRESULT CAxVw::LoadPDF(LPCTSTR newVal) {
 	m_prefpdf = new CPDFRef(m_pdfdoc);
 
 	m_iPage = 0;
-	m_ft = ftW;
+	m_ft = ftWH;
 	m_fZoom = 1;
 
 	SetPage(0, true);
