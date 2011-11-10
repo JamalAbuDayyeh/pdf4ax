@@ -106,7 +106,7 @@ protected:
 	CScrollBar m_sbH, m_sbV;
 	bool m_fFitOnSmall;
 	CAutoPtrArray<CBitmap> m_pThumbs;
-	HCURSOR m_hcZoom;
+	HCURSOR m_hcZoomIn, m_hcZoomOut;
 	int cntBGDraw;
 
 // ëÄçÏ

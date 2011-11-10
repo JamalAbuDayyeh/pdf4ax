@@ -567,7 +567,8 @@ int CAxVw::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 
 	if (false
-		|| (m_hcZoom = AfxGetApp()->LoadCursor(IDC_ZOOM)) == NULL
+		|| (m_hcZoomIn = AfxGetApp()->LoadCursor(IDC_ZOOM_IN)) == NULL
+		|| (m_hcZoomOut = AfxGetApp()->LoadCursor(IDC_ZOOM_OUT)) == NULL
 		)
 		return -1;
 
@@ -845,7 +846,8 @@ void CAxVw::OnLButtonDown(UINT nFlags, CPoint point) {
 	if (IsActive()) {
 		if (false) { }
 		if (m_toolZoom && m_rcPaint.PtInRect(point)) {
-			Zoomat(true, point);
+			bool fShift = (0x8000 & GetKeyState(VK_SHIFT)) != 0;
+			Zoomat(!fShift, point);
 		}
 		else if (!m_toolZoom && m_rcPaint.PtInRect(point)) {
 			m_ptBegin = point;
@@ -1228,8 +1230,9 @@ BOOL CAxVw::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message) {
 		CPoint pt(GET_X_LPARAM(xy), GET_Y_LPARAM(xy));
 		ScreenToClient(&pt);
 		if (m_rcPaint.PtInRect(pt)) {
+			bool fShift = (0x8000 & GetKeyState(VK_SHIFT)) != 0;
 			if (m_toolZoom) {
-				SetCursor(m_hcZoom);
+				SetCursor(fShift ? m_hcZoomOut : m_hcZoomIn);
 				return true;
 			}
 		}
