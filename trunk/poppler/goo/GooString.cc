@@ -130,7 +130,7 @@ void inline GooString::resize(int newLength) {
         memcpy(s1, s, length);
       }
       if (s != sStatic)
-        delete[] s;
+        gfree(s);
     }
   }
 
