@@ -17,6 +17,7 @@
 #define IDR_MENU_P                      309
 #define IDB_PAGE_DISP                   310
 #define IDB_MASK10                      311
+#define IDB_MASKS50                     312
 #define IDC_MAG                         40001
 #define IDC_MOVE                        40002
 #define IDC_P6                          40003

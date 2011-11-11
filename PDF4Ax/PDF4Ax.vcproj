@@ -370,6 +370,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\res\mask50.bmp"
+				>
+			</File>
+			<File
 				RelativePath="..\res\move.bmp"
 				>
 			</File>

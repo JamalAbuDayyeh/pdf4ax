@@ -1,4 +1,4 @@
-// PDF4AxPropPage.cpp : CPDF4AxPropPage ƒvƒƒpƒeƒB ƒy[ƒW ƒNƒ‰ƒX‚ÌŽÀ‘•
+ï»¿// PDF4AxPropPage.cpp : CPDF4AxPropPage ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ ãƒšãƒ¼ã‚¸ ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…
 
 #include "stdafx.h"
 #include "PDF4Ax.h"
@@ -13,14 +13,14 @@ IMPLEMENT_DYNCREATE(CPDF4AxPropPage, COlePropertyPage)
 
 
 
-// ƒƒbƒZ[ƒW ƒ}ƒbƒv
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒžãƒƒãƒ—
 
 BEGIN_MESSAGE_MAP(CPDF4AxPropPage, COlePropertyPage)
 END_MESSAGE_MAP()
 
 
 
-// ƒNƒ‰ƒX ƒtƒ@ƒNƒgƒŠ‚¨‚æ‚Ñ GUID ‚ð‰Šú‰»‚µ‚Ü‚·B
+// ã‚¯ãƒ©ã‚¹ ãƒ•ã‚¡ã‚¯ãƒˆãƒªãŠã‚ˆã³ GUID ã‚’åˆæœŸåŒ–ã—ã¾ã™ã€‚
 
 IMPLEMENT_OLECREATE_EX(CPDF4AxPropPage, "PDF4AX.PDF4AxPropPage.1",
 	0xa6444baf, 0xab0d, 0x4ea1, 0xb3, 0xc5, 0xa0, 0x9b, 0x67, 0xa6, 0x46, 0xa4)
@@ -28,7 +28,7 @@ IMPLEMENT_OLECREATE_EX(CPDF4AxPropPage, "PDF4AX.PDF4AxPropPage.1",
 
 
 // CPDF4AxPropPage::CPDF4AxPropPageFactory::UpdateRegistry -
-// CPDF4AxPropPage ‚ÌƒVƒXƒeƒ€ ƒŒƒWƒXƒgƒŠ ƒGƒ“ƒgƒŠ‚ð’Ç‰Á‚Ü‚½‚Ííœ‚µ‚Ü‚·B
+// CPDF4AxPropPage ã®ã‚·ã‚¹ãƒ†ãƒ  ãƒ¬ã‚¸ã‚¹ãƒˆãƒª ã‚¨ãƒ³ãƒˆãƒªã‚’è¿½åŠ ã¾ãŸã¯å‰Šé™¤ã—ã¾ã™ã€‚
 
 BOOL CPDF4AxPropPage::CPDF4AxPropPageFactory::UpdateRegistry(BOOL bRegister)
 {
@@ -41,7 +41,7 @@ BOOL CPDF4AxPropPage::CPDF4AxPropPageFactory::UpdateRegistry(BOOL bRegister)
 
 
 
-// CPDF4AxPropPage::CPDF4AxPropPage - ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+// CPDF4AxPropPage::CPDF4AxPropPage - ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 
 CPDF4AxPropPage::CPDF4AxPropPage() :
 	COlePropertyPage(IDD, IDS_PDF4AX_PPG_CAPTION)
@@ -50,7 +50,7 @@ CPDF4AxPropPage::CPDF4AxPropPage() :
 
 
 
-// CPDF4AxPropPage::DoDataExchange - ƒy[ƒW‚¨‚æ‚ÑƒvƒƒpƒeƒBŠÔ‚Åƒf[ƒ^‚ðˆÚ“®‚µ‚Ü‚·B
+// CPDF4AxPropPage::DoDataExchange - ãƒšãƒ¼ã‚¸ãŠã‚ˆã³ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£é–“ã§ãƒ‡ãƒ¼ã‚¿ã‚’ç§»å‹•ã—ã¾ã™ã€‚
 
 void CPDF4AxPropPage::DoDataExchange(CDataExchange* pDX)
 {
@@ -59,4 +59,4 @@ void CPDF4AxPropPage::DoDataExchange(CDataExchange* pDX)
 
 
 
-// CPDF4AxPropPage ƒƒbƒZ[ƒW ƒnƒ“ƒhƒ‰
+// CPDF4AxPropPage ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒ³ãƒ‰ãƒ©

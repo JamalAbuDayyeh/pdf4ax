@@ -1,4 +1,4 @@
-// AxFrm.h : CAxFrame ƒNƒ‰ƒX‚ÌƒCƒ“ƒ^[ƒtƒFƒCƒX
+ï»¿// AxFrm.h : CAxFrame ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹
 //
 
 
@@ -13,18 +13,18 @@ public:
 	CAxFrame();
 protected: 
 
-// ‘®«
+// å±æ€§
 public:
 
-// ‘€ì
+// æ“ä½œ
 public:
 
-// ƒI[ƒo[ƒ‰ƒCƒh
+// ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰
 public:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 	virtual BOOL OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO* pHandlerInfo);
 
-// À‘•
+// å®Ÿè£…
 public:
 	virtual ~CAxFrame();
 #ifdef _DEBUG
@@ -32,7 +32,7 @@ public:
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-protected:  // ƒRƒ“ƒgƒ[ƒ‹ ƒo[—pƒƒ“ƒo
+protected:  // ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ« ãƒãƒ¼ç”¨ãƒ¡ãƒ³ãƒ
 //	CStatusBar  m_wndStatusBar;
 //	CReBar      m_wndReBar;
 //	CToolBar    m_wndToolBar;
@@ -40,15 +40,16 @@ protected:  // ƒRƒ“ƒgƒ[ƒ‹ ƒo[—pƒƒ“ƒo
 public:
 	CAxVw    m_wndView;
 
-// ¶¬‚³‚ê‚½AƒƒbƒZ[ƒWŠ„‚è“–‚ÄŠÖ”
+// ç”Ÿæˆã•ã‚ŒãŸã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å‰²ã‚Šå½“ã¦é–¢æ•°
 protected:
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-	afx_msg void OnSetFocus(CWnd *pOldWnd);
 	DECLARE_MESSAGE_MAP()
-	virtual void PostNcDestroy();
-	afx_msg void OnAppAbout();
 public:
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	afx_msg void OnKillFocus(CWnd* pNewWnd);
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnSetFocus(CWnd *pOldWnd);
+	virtual void PostNcDestroy();
+	afx_msg void OnAppAbout();
 };
 
 

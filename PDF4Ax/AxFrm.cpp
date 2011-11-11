@@ -1,4 +1,4 @@
-// AxFrm.cpp : CAxFrame ƒNƒ‰ƒX‚ÌÀ‘•
+ï»¿// AxFrm.cpp : CAxFrame ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…
 //
 
 #include "stdafx.h"
@@ -19,17 +19,18 @@ BEGIN_MESSAGE_MAP(CAxFrame, CFrameWnd)
 	ON_WM_SETFOCUS()
 	ON_COMMAND(ID_APP_ABOUT, OnAppAbout)
 	ON_WM_TIMER()
+	ON_WM_KILLFOCUS()
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
 {
-	ID_SEPARATOR,           // ƒXƒe[ƒ^ƒX ƒ‰ƒCƒ“ ƒCƒ“ƒWƒP[ƒ^
+	ID_SEPARATOR,           // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ ãƒ©ã‚¤ãƒ³ ã‚¤ãƒ³ã‚¸ã‚±ãƒ¼ã‚¿
 	ID_INDICATOR_CAPS,
 	ID_INDICATOR_NUM,
 	ID_INDICATOR_SCRL,
 };
 
-// CAxFrame ƒRƒ“ƒXƒgƒ‰ƒNƒVƒ‡ƒ“/ƒfƒXƒgƒ‰ƒNƒVƒ‡ƒ“
+// CAxFrame ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³/ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³
 
 CAxFrame::CAxFrame()
 {
@@ -61,21 +62,21 @@ int CAxFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 //		|| !m_wndReBar.Create(this)
 //		|| !m_wndReBar.AddBar(&m_wndToolBar)
 //	) {
-//		return -1;      // ì¬‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B
+//		return -1;      // ä½œæˆã§ãã¾ã›ã‚“ã§ã—ãŸã€‚
 //	}
 
 //	if (false
 //		|| !m_wndStatusBar.Create(this)
 //		|| !m_wndStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT))
 //	) {
-//		return -1;      // ì¬‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B
+//		return -1;      // ä½œæˆã§ãã¾ã›ã‚“ã§ã—ãŸã€‚
 //	}
 
 //	SetTimer(0x0100, 100, NULL);
 
 //	m_wndToolBar.SetBarStyle(m_wndToolBar.GetBarStyle() | CBRS_TOOLTIPS | CBRS_FLYBY);
 
-	//m_wndView.LoadPDF(_T("C:\\Documents and Settings\\KU\\My Documents\\PDFs\\ƒfƒWƒ^ƒ‹ƒhƒ‹ƒtƒBƒ“ƒYƒo[ƒWƒ‡ƒ“ƒAƒbƒv.pdf.pdf"));
+	//m_wndView.LoadPDF(_T("C:\\Documents and Settings\\KU\\My Documents\\PDFs\\ãƒ‡ã‚¸ã‚¿ãƒ«ãƒ‰ãƒ«ãƒ•ã‚£ãƒ³ã‚ºãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ãƒƒãƒ—.pdf.pdf"));
 
 	return 0;
 }
@@ -84,8 +85,8 @@ BOOL CAxFrame::PreCreateWindow(CREATESTRUCT& cs)
 {
 	if( !CFrameWnd::PreCreateWindow(cs) )
 		return FALSE;
-	// TODO: ‚±‚ÌˆÊ’u‚Å CREATESTRUCT cs ‚ğC³‚µ‚Ä Window ƒNƒ‰ƒX‚Ü‚½‚ÍƒXƒ^ƒCƒ‹‚ğ
-	//  C³‚µ‚Ä‚­‚¾‚³‚¢B
+	// TODO: ã“ã®ä½ç½®ã§ CREATESTRUCT cs ã‚’ä¿®æ­£ã—ã¦ Window ã‚¯ãƒ©ã‚¹ã¾ãŸã¯ã‚¹ã‚¿ã‚¤ãƒ«ã‚’
+	//  ä¿®æ­£ã—ã¦ãã ã•ã„ã€‚
 
 	cs.dwExStyle &= ~WS_EX_CLIENTEDGE;
 	cs.lpszClass = AfxRegisterWndClass(0);
@@ -94,7 +95,7 @@ BOOL CAxFrame::PreCreateWindow(CREATESTRUCT& cs)
 }
 
 
-// CAxFrame f’f
+// CAxFrame è¨ºæ–­
 
 #ifdef _DEBUG
 void CAxFrame::AssertValid() const
@@ -110,10 +111,10 @@ void CAxFrame::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 
-// CAxFrame ƒƒbƒZ[ƒW ƒnƒ“ƒhƒ‰
+// CAxFrame ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒ³ãƒ‰ãƒ©
 
 void CAxFrame::OnSetFocus(CWnd* /*pOldWnd*/) {
-	// ƒrƒ…[ ƒEƒBƒ“ƒhƒE‚ÉƒtƒH[ƒJƒX‚ğ—^‚¦‚Ü‚·B
+	// ãƒ“ãƒ¥ãƒ¼ ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚’ä¸ãˆã¾ã™ã€‚
 	m_wndView.SetFocus();
 }
 
@@ -142,4 +143,9 @@ void CAxFrame::OnTimer(UINT_PTR nIDEvent) {
 //	}
 
 	CFrameWnd::OnTimer(nIDEvent);
+}
+
+void CAxFrame::OnKillFocus(CWnd* pNewWnd) {
+	CFrameWnd::OnKillFocus(pNewWnd);
+	m_wndView.OnKillFocus(pNewWnd);
 }

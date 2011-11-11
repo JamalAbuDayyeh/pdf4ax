@@ -1,5 +1,5 @@
-// stdafx.cpp : �W���C���N���[�h PDF4Ax.pch �݂̂�
-//  �܂ރ\�[�X �t�@�C���́A�v���R���p�C���ς݃w�b�_�[�ɂȂ�܂��B
-//  stdafx.obj �ɂ̓v���R���p�C���^��񂪊܂܂�܂��B
+﻿// stdafx.cpp : 標準インクルード PDF4Ax.pch のみを
+//  含むソース ファイルは、プリコンパイル済みヘッダーになります。
+//  stdafx.obj にはプリコンパイル型情報が含まれます。
 
 #include "stdafx.h"

@@ -1,27 +1,27 @@
-#pragma once
+ï»¿#pragma once
 
-// PDF4AxPropPage.h : CPDF4AxPropPage ƒvƒƒpƒeƒB ƒy[ƒW ƒNƒ‰ƒX‚ÌéŒ¾‚Å‚·B
+// PDF4AxPropPage.h : CPDF4AxPropPage ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ ãƒšãƒ¼ã‚¸ ã‚¯ãƒ©ã‚¹ã®å®£è¨€ã§ã™ã€‚
 
 
-// CPDF4AxPropPage : ŽÀ‘•‚ÉŠÖ‚µ‚Ä‚Í PDF4AxPropPage.cpp ‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+// CPDF4AxPropPage : å®Ÿè£…ã«é–¢ã—ã¦ã¯ PDF4AxPropPage.cpp ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
 class CPDF4AxPropPage : public COlePropertyPage
 {
 	DECLARE_DYNCREATE(CPDF4AxPropPage)
 	DECLARE_OLECREATE_EX(CPDF4AxPropPage)
 
-// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 public:
 	CPDF4AxPropPage();
 
-// ƒ_ƒCƒAƒƒO ƒf[ƒ^
+// ãƒ€ã‚¤ã‚¢ãƒ­ã‚° ãƒ‡ãƒ¼ã‚¿
 	enum { IDD = IDD_PROPPAGE_PDF4AX };
 
-// ŽÀ‘•
+// å®Ÿè£…
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV ƒTƒ|[ƒg
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV ã‚µãƒãƒ¼ãƒˆ
 
-// ƒƒbƒZ[ƒW ƒ}ƒbƒv
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒžãƒƒãƒ—
 protected:
 	DECLARE_MESSAGE_MAP()
 };
