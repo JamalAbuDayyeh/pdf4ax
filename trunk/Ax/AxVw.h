@@ -1,4 +1,4 @@
-// AxVw.h : CAxVw ƒNƒ‰ƒX‚ÌƒCƒ“ƒ^[ƒtƒFƒCƒX
+ï»¿// AxVw.h : CAxVw ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹
 //
 
 #pragma once
@@ -26,7 +26,7 @@ public:
 	UINT nMsg; // in
 };
 
-// CAxVw ƒEƒBƒ“ƒhƒE
+// CAxVw ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦
 
 class CPDFRef : public IUnknown {
 public:
@@ -73,11 +73,11 @@ public:
 
 class CAxVw : public CWnd, public CPvRender
 {
-// ƒRƒ“ƒXƒgƒ‰ƒNƒVƒ‡ƒ“
+// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚·ãƒ§ãƒ³
 public:
 	CAxVw();
 
-// ‘®«
+// å±æ€§
 public:
 	CString m_strUrl;
 
@@ -100,7 +100,7 @@ protected:
 
 	CBitmap m_bmPrev, m_bmNext, m_bmAbout, m_bmMag, m_bmMagBtn, m_bmMove, m_bmMoveBtn, m_bmZoomVal, m_bmPageDisp;
 	CRect m_rcPaint, m_rcPrev, m_rcNext, m_rcDisp, m_rcAbout, m_rcFitWH, m_rcFitW;
-	CRect m_rcMMSel, m_rcZoomVal;
+	CRect m_rcMMSel, m_rcZoomVal, m_rcCmdBar;
 	bool m_toolZoom;
 	CPoint m_ptBegin, m_ptScrollFrm;
 	bool m_fDrag;
@@ -109,7 +109,7 @@ protected:
 	CAutoPtrArray<CBitmap> m_pThumbs;
 	HCURSOR m_hcZoomIn, m_hcZoomOut;
 
-// ‘€ì
+// æ“ä½œ
 public:
 	HRESULT LoadPDF(LPCTSTR psz);
 	bool MovePage(int iDelta, bool force = false);
@@ -155,14 +155,7 @@ public:
 	CSize GetZoomedSize();
 
 	bool IsActive() {
-		CWnd *p = GetFocus();
-		CWnd *p2 = this;
-		while (p2 != NULL) {
-			if (p == p2)
-				return true;
-			p2 = p2->GetParent();
-		}
-		return false;
+		return GetFocus() == this;
 	}
 
 	class Fitrect {
@@ -175,7 +168,7 @@ public:
             float centerx = ((float)rcMax.left + rcMax.right) / 2;
 			float centery = ((float)rcMax.top + rcMax.bottom) / 2;
             if (frMax >= frBox) {
-                // c’·
+                // ç¸¦é•·
                 float v = (float)rcBox.cx * rcMax.Height() / rcBox.cy / 2;
                 return CRect(
                     int(centerx - v),
@@ -185,7 +178,7 @@ public:
                     );
             }
             else {
-                // ‰¡’·
+                // æ¨ªé•·
                 float v = (float)rcBox.cy * rcMax.Width() / rcBox.cx / 2;
                 return CRect(
                     int(rcMax.left),
@@ -199,11 +192,13 @@ public:
 
 	CBitmap *GetThumb(int iPage, int cx);
 
-// ƒI[ƒo[ƒ‰ƒCƒh
+	void FillHatch(CDC &dc, CRect rc);
+
+// ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰
 protected:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
-// À‘•
+// å®Ÿè£…
 public:
 	virtual ~CAxVw();
 
@@ -218,7 +213,7 @@ protected:
 		return m_threadRenderer == NULL;
 	}
 
-	// ¶¬‚³‚ê‚½AƒƒbƒZ[ƒWŠ„‚è“–‚ÄŠÖ”
+	// ç”Ÿæˆã•ã‚ŒãŸã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å‰²ã‚Šå½“ã¦é–¢æ•°
 protected:
 	afx_msg void OnPaint();
 	afx_msg BOOL OnPageUp(UINT nID);
@@ -244,4 +239,6 @@ public:
 	afx_msg int OnMouseActivate(CWnd* pDesktopWnd, UINT nHitTest, UINT message);
 	afx_msg BOOL OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);
 	afx_msg LRESULT OnSetRenderInf(WPARAM, LPARAM);
+	afx_msg void OnKillFocus(CWnd* pNewWnd);
+	afx_msg void OnSetFocus(CWnd* pOldWnd);
 };

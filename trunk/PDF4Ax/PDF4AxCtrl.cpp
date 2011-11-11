@@ -1,4 +1,4 @@
-// PDF4AxCtrl.cpp :  CPDF4AxCtrl ActiveX ƒRƒ“ƒgƒ[ƒ‹ ƒNƒ‰ƒX‚ÌÀ‘•
+ï»¿// PDF4AxCtrl.cpp :  CPDF4AxCtrl ActiveX ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ« ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…
 
 #include "stdafx.h"
 #include "PDF4Ax.h"
@@ -17,19 +17,23 @@ IMPLEMENT_DYNCREATE(CPDF4AxCtrl, COleControl)
 
 BEGIN_INTERFACE_MAP(CPDF4AxCtrl, COleControl)
   INTERFACE_PART(CPDF4AxCtrl, IID_IObjectSafety, ObjectSafety)
+  INTERFACE_PART(CPDF4AxCtrl, IID_IBindStatusCallback, BSC)
 END_INTERFACE_MAP()
 
-// ƒƒbƒZ[ƒW ƒ}ƒbƒv
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒƒãƒ—
 
 BEGIN_MESSAGE_MAP(CPDF4AxCtrl, COleControl)
 	ON_OLEVERB(AFX_IDS_VERB_PROPERTIES, OnProperties)
 	ON_WM_CREATE()
 	ON_WM_SIZE()
+	ON_WM_SETFOCUS()
+	ON_WM_KILLFOCUS()
+	ON_WM_ACTIVATE()
 END_MESSAGE_MAP()
 
 
 
-// ƒfƒBƒXƒpƒbƒ` ƒ}ƒbƒv
+// ãƒ‡ã‚£ã‚¹ãƒ‘ãƒƒãƒ ãƒãƒƒãƒ—
 
 BEGIN_DISPATCH_MAP(CPDF4AxCtrl, COleControl)
 	DISP_FUNCTION_ID(CPDF4AxCtrl, "AboutBox", DISPID_ABOUTBOX, AboutBox, VT_EMPTY, VTS_NONE)
@@ -38,36 +42,36 @@ END_DISPATCH_MAP()
 
 
 
-// ƒCƒxƒ“ƒg ƒ}ƒbƒv
+// ã‚¤ãƒ™ãƒ³ãƒˆ ãƒãƒƒãƒ—
 
 BEGIN_EVENT_MAP(CPDF4AxCtrl, COleControl)
 END_EVENT_MAP()
 
 
 
-// ƒvƒƒpƒeƒB ƒy[ƒW
+// ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ ãƒšãƒ¼ã‚¸
 
-// TODO: ƒvƒƒpƒeƒB ƒy[ƒW‚ğ’Ç‰Á‚µ‚ÄABEGIN s‚ÌÅŒã‚É‚ ‚éƒJƒEƒ“ƒg‚ğ‘‚â‚µ‚Ä‚­‚¾‚³‚¢B
+// TODO: ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ ãƒšãƒ¼ã‚¸ã‚’è¿½åŠ ã—ã¦ã€BEGIN è¡Œã®æœ€å¾Œã«ã‚ã‚‹ã‚«ã‚¦ãƒ³ãƒˆã‚’å¢—ã‚„ã—ã¦ãã ã•ã„ã€‚
 BEGIN_PROPPAGEIDS(CPDF4AxCtrl, 1)
 	PROPPAGEID(CPDF4AxPropPage::guid)
 END_PROPPAGEIDS(CPDF4AxCtrl)
 
 
 
-// ƒNƒ‰ƒX ƒtƒ@ƒNƒgƒŠ‚¨‚æ‚Ñ GUID ‚ğ‰Šú‰»‚µ‚Ü‚·B
+// ã‚¯ãƒ©ã‚¹ ãƒ•ã‚¡ã‚¯ãƒˆãƒªãŠã‚ˆã³ GUID ã‚’åˆæœŸåŒ–ã—ã¾ã™ã€‚
 
 IMPLEMENT_OLECREATE_EX(CPDF4AxCtrl, "PDF4Ax.PDFVw.1",
 	0xfe687896, 0xf410, 0x4d10, 0x87, 0x40, 0xd5, 0x84, 0xda, 0x23, 0xc7, 0x4d)
 
 
 
-// ƒ^ƒCƒv ƒ‰ƒCƒuƒ‰ƒŠ ID ‚¨‚æ‚Ñƒo[ƒWƒ‡ƒ“
+// ã‚¿ã‚¤ãƒ— ãƒ©ã‚¤ãƒ–ãƒ©ãƒª ID ãŠã‚ˆã³ãƒãƒ¼ã‚¸ãƒ§ãƒ³
 
 IMPLEMENT_OLETYPELIB(CPDF4AxCtrl, _tlid, _wVerMajor, _wVerMinor)
 
 
 
-// ƒCƒ“ƒ^[ƒtƒFƒCƒX ID
+// ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ ID
 
 const IID BASED_CODE IID_DPDF4Ax =
 		{ 0x3FF92EA8, 0x9206, 0x48D0, { 0x90, 0xF2, 0x0, 0xF8, 0xA9, 0xA9, 0x8E, 0x16 } };
@@ -76,7 +80,7 @@ const IID BASED_CODE IID_DPDF4AxEvents =
 
 
 
-// ƒRƒ“ƒgƒ[ƒ‹‚Ìí—Ş‚Ìî•ñ
+// ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®ç¨®é¡ã®æƒ…å ±
 
 static const DWORD BASED_CODE _dwPDF4AxOleMisc =
 	OLEMISC_ACTIVATEWHENVISIBLE |
@@ -90,15 +94,15 @@ IMPLEMENT_OLECTLTYPE(CPDF4AxCtrl, IDS_PDF4AX, _dwPDF4AxOleMisc)
 
 
 // CPDF4AxCtrl::CPDF4AxCtrlFactory::UpdateRegistry -
-// CPDF4AxCtrl ‚ÌƒVƒXƒeƒ€ ƒŒƒWƒXƒgƒŠ ƒGƒ“ƒgƒŠ‚ğ’Ç‰Á‚Ü‚½‚Ííœ‚µ‚Ü‚·B
+// CPDF4AxCtrl ã®ã‚·ã‚¹ãƒ†ãƒ  ãƒ¬ã‚¸ã‚¹ãƒˆãƒª ã‚¨ãƒ³ãƒˆãƒªã‚’è¿½åŠ ã¾ãŸã¯å‰Šé™¤ã—ã¾ã™ã€‚
 
 BOOL CPDF4AxCtrl::CPDF4AxCtrlFactory::UpdateRegistry(BOOL bRegister)
 {
-	// TODO: ƒRƒ“ƒgƒ[ƒ‹‚ª apartment ƒ‚ƒfƒ‹‚ÌƒXƒŒƒbƒhˆ—‚Ì‹K‘¥‚É]‚Á‚Ä‚¢‚é‚±‚Æ‚ğ
-	// Šm”F‚µ‚Ä‚­‚¾‚³‚¢BÚ×‚É‚Â‚¢‚Ä‚Í MFC ‚ÌƒeƒNƒjƒJƒ‹ ƒm[ƒg 64 ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
-	// ƒAƒp[ƒgƒƒ“ƒg ƒ‚ƒfƒ‹‚ÌƒXƒŒƒbƒhˆ—‚Ì‹K‘¥‚É]‚í‚È‚¢ƒRƒ“ƒgƒ[ƒ‹‚Ìê‡‚ÍA6 ”Ô–Ú
-	// ‚Ìƒpƒ‰ƒ[ƒ^‚ğˆÈ‰º‚Ì‚æ‚¤‚É•ÏX‚µ‚Ä‚­‚¾‚³‚¢B
-	// afxRegApartmentThreading ‚ğ 0 ‚Éİ’è‚µ‚Ü‚·B
+	// TODO: ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ãŒ apartment ãƒ¢ãƒ‡ãƒ«ã®ã‚¹ãƒ¬ãƒƒãƒ‰å‡¦ç†ã®è¦å‰‡ã«å¾“ã£ã¦ã„ã‚‹ã“ã¨ã‚’
+	// ç¢ºèªã—ã¦ãã ã•ã„ã€‚è©³ç´°ã«ã¤ã„ã¦ã¯ MFC ã®ãƒ†ã‚¯ãƒ‹ã‚«ãƒ« ãƒãƒ¼ãƒˆ 64 ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
+	// ã‚¢ãƒ‘ãƒ¼ãƒˆãƒ¡ãƒ³ãƒˆ ãƒ¢ãƒ‡ãƒ«ã®ã‚¹ãƒ¬ãƒƒãƒ‰å‡¦ç†ã®è¦å‰‡ã«å¾“ã‚ãªã„ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®å ´åˆã¯ã€6 ç•ªç›®
+	// ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ä»¥ä¸‹ã®ã‚ˆã†ã«å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚
+	// afxRegApartmentThreading ã‚’ 0 ã«è¨­å®šã—ã¾ã™ã€‚
 
 	if (bRegister)
 		return AfxOleRegisterControlClass(
@@ -118,38 +122,100 @@ BOOL CPDF4AxCtrl::CPDF4AxCtrlFactory::UpdateRegistry(BOOL bRegister)
 
 
 
-// CPDF4AxCtrl::CPDF4AxCtrl - ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+// CPDF4AxCtrl::CPDF4AxCtrl - ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 
 CPDF4AxCtrl::CPDF4AxCtrl()
 {
 	InitializeIIDs(&IID_DPDF4Ax, &IID_DPDF4AxEvents);
+	// ctor
 	m_dwSafety = 0;
+	m_fAsyncDownload = false;
+	m_tickLastInv = 0;
 }
 
 
 
-// CPDF4AxCtrl::~CPDF4AxCtrl - ƒfƒXƒgƒ‰ƒNƒ^
+// CPDF4AxCtrl::~CPDF4AxCtrl - ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 
 CPDF4AxCtrl::~CPDF4AxCtrl()
 {
-	// TODO: ‚±‚ÌˆÊ’u‚ÉƒRƒ“ƒgƒ[ƒ‹‚ÌƒCƒ“ƒXƒ^ƒ“ƒX ƒf[ƒ^‚ÌŒãˆ——p‚ÌƒR[ƒh‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢
+	// TODO: ã“ã®ä½ç½®ã«ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ ãƒ‡ãƒ¼ã‚¿ã®å¾Œå‡¦ç†ç”¨ã®ã‚³ãƒ¼ãƒ‰ã‚’è¿½åŠ ã—ã¦ãã ã•ã„
 }
 
 
 
-// CPDF4AxCtrl::OnDraw - •`‰æŠÖ”
+// CPDF4AxCtrl::OnDraw - æç”»é–¢æ•°
 
-void CPDF4AxCtrl::OnDraw(
-			CDC* pDC, const CRect& rcBounds, const CRect& rcInvalid)
+void CPDF4AxCtrl::OnDraw(CDC* pDC, const CRect& rcBounds, const CRect& rcInvalid)
 {
+	class Ut {
+	public:
+		static CString GetGoodSize(ULONG x) {
+			CString str;
+			if (x < 1024) {
+				str.Format(_T("%u B"), x);
+				return str;
+			}
+			x /= 1024;
+			if (x < 1024) {
+				str.Format(_T("%u KB"), x);
+				return str;
+			}
+			x /= 1024;
+			if (x < 1024) {
+				str.Format(_T("%u MB"), x);
+				return str;
+			}
+			x /= 1024;
+			{
+				str.Format(_T("%u GB"), x);
+				return str;
+			}
+		}
+	};
+
 	if (!pDC)
 		return;
+	if (!m_fAsyncDownload)
+		return;
 
+	CDC &dc = *pDC;
+
+	int bkMode = dc.SetBkMode(OPAQUE);
+	COLORREF bkClr = dc.SetBkColor(GetSysColor(COLOR_3DDKSHADOW));
+	COLORREF fgClr = dc.SetTextColor(GetSysColor(COLOR_3DLIGHT));
+	int ta = dc.SetTextAlign(TA_CENTER|TA_BASELINE);
+
+	CFont font;
+	font.CreateStockObject(DEFAULT_GUI_FONT);
+	LOGFONT lf;
+	if (0 != font.GetLogFont(&lf)) {
+		lf.lfHeight *= 3;
+		font.DeleteObject();
+		font.CreateFontIndirect(&lf);
+	}
+
+	CFont *oldFont = dc.SelectObject(&font);
+
+	CSize size = dc.GetTextExtent(_T("1234567890"));
+
+	CString str; str.Format(_T("èª­ã¿è¾¼ã¿ä¸­: %s / %s")
+		, static_cast<LPCTSTR>(Ut::GetGoodSize(m_curPos))
+		, static_cast<LPCTSTR>(Ut::GetGoodSize(m_maxPos))
+		);
+	CPoint pt = rcBounds.CenterPoint();
+	ExtTextOut(dc, pt.x, pt.y, ETO_CLIPPED|ETO_OPAQUE, rcBounds, str, str.GetLength(), NULL);
+
+	dc.SelectObject(oldFont);
+	dc.SetTextAlign(ta);
+	dc.SetTextColor(fgClr);
+	dc.SetBkColor(bkClr);
+	dc.SetBkMode(bkMode);
 }
 
 
 
-// CPDF4AxCtrl::DoPropExchange - ‰i‘±«‚ÌƒTƒ|[ƒg
+// CPDF4AxCtrl::DoPropExchange - æ°¸ç¶šæ€§ã®ã‚µãƒãƒ¼ãƒˆ
 
 void CPDF4AxCtrl::DoPropExchange(CPropExchange* pPX)
 {
@@ -157,9 +223,145 @@ void CPDF4AxCtrl::DoPropExchange(CPropExchange* pPX)
 	COleControl::DoPropExchange(pPX);
 
 	CString &m_src = m_frm.m_wndView.m_strUrl;
-	CString m_title;
 
 	PX_String(pPX, _T("src"), m_src);
+}
+
+#pragma comment(lib, "shlwapi.lib")
+
+void CPDF4AxCtrl::LoadFromMoniker(LPBC pibc, LPMONIKER pimkDL) {
+	HRESULT hr;
+
+	bool ok = false;
+
+	if (pimkDL != NULL) {
+		if (!ok) {
+			// ãƒ•ã‚¡ã‚¤ãƒ«åãŒå‡ºãŸâ†’Setsrc
+			// URLãŒå‡ºãŸâ†’ä»Šã¯ä½•ã‚‚ã—ãªã„
+			LPOLESTR lpcw = NULL;
+			if (SUCCEEDED(hr = pimkDL->GetDisplayName(pibc, NULL, &lpcw))) {
+				WCHAR wcfp[1000] = {0};
+				DWORD cchfp = 256;
+				if (!ok && UrlIsFileUrl(lpcw)) {
+					if (SUCCEEDED(hr = PathCreateFromUrl(lpcw, wcfp, &cchfp, NULL))) {
+						Setsrc(CW2T(wcfp));
+						ok = true;
+					}
+				}
+				if (!ok && PathIsURL(lpcw)) {
+
+				}
+				CoTaskMemFree(lpcw);
+			}
+		}
+		if (!ok) {
+			// URLç­‰ã®ãƒ¢ãƒ‹ã‚«èª­ã¿è¾¼ã¿(asynchronous moniker)
+			CComPtr<IBindCtx> pibcAsync;
+			if (SUCCEEDED(hr = CreateAsyncBindCtx(0, &m_xBSC, NULL, &pibcAsync))) {
+				CComPtr<IStream> pSt;
+				hr = pimkDL->BindToStorage(pibcAsync, NULL, IID_IStream, reinterpret_cast<void **>(&pSt));
+				if (hr == S_OK) {
+					if (LoadSyncSt(pSt))
+						ok = true;
+				}
+				else if (hr == MK_S_ASYNCHRONOUS) {
+					if (m_frm.m_hWnd != NULL)
+						m_frm.ShowWindow(SW_HIDE);
+					m_fAsyncDownload = true;
+					m_curPos = m_maxPos = 0;
+					m_statusText.Empty();
+					m_pStAsync.Release();
+					ok = true;
+				}
+			}
+		}
+		if (!ok) {
+			// URLç­‰ã®ãƒ¢ãƒ‹ã‚«èª­ã¿è¾¼ã¿(not asynchronous moniker)
+			CComPtr<IStream> pSt;
+			if (SUCCEEDED(hr = pimkDL->BindToStorage(pibc, NULL, IID_IStream, reinterpret_cast<void **>(&pSt)))) {
+				if (LoadSyncSt(pSt))
+					return;
+			}
+		}
+		if (ok)
+			return;
+	}
+	AfxThrowFileException(CFileException::fileNotFound);
+}
+
+
+// CPDF4AxCtrl::GetControlFlags -
+// MFC ã® ActiveX ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®å®Ÿè£…ã®ã‚«ã‚¹ã‚¿ãƒã‚¤ã‚ºç”¨ãƒ•ãƒ©ã‚°ã§ã™ã€‚
+//
+//DWORD CPDF4AxCtrl::GetControlFlags()
+//{
+//	DWORD dwFlags = COleControl::GetControlFlags();
+//
+//
+//	// ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã¯ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’ä½œæˆã›ãšã«ã‚¢ã‚¯ãƒ†ã‚£ãƒ™ãƒ¼ãƒˆå¯èƒ½ã§ã™ã€‚
+//	// TODO: ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒ³ãƒ‰ãƒ©ã‚’ä½œæˆã™ã‚‹å ´åˆã€m_hWnd
+//	//		m_hWnd ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ãŒ NULL ä»¥å¤–ã§ã‚ã‚‹ã“ã¨ã‚’æœ€åˆã«ç¢ºèª
+//	//		ã—ã¦ã‹ã‚‰ä½¿ç”¨ã—ã¦ãã ã•ã„ã€‚
+//	dwFlags |= 0;
+//	return dwFlags;
+//}
+
+
+
+// CPDF4AxCtrl::OnResetState - ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã‚’æ—¢å®šã®çŠ¶æ…‹ã«ãƒªã‚»ãƒƒãƒˆã—ã¾ã™ã€‚
+
+void CPDF4AxCtrl::OnResetState()
+{
+	COleControl::OnResetState();  // DoPropExchange ã‚’å‘¼ã³å‡ºã—ã¦æ—¢å®šå€¤ã«ãƒªã‚»ãƒƒãƒˆ
+
+	// TODO: ã“ã®ä½ç½®ã«ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®çŠ¶æ…‹ã‚’ãƒªã‚»ãƒƒãƒˆã™ã‚‹å‡¦ç†ã‚’è¿½åŠ ã—ã¦ãã ã•ã„
+}
+
+
+
+// CPDF4AxCtrl::AboutBox - "ãƒãƒ¼ã‚¸ãƒ§ãƒ³æƒ…å ±" ãƒœãƒƒã‚¯ã‚¹ã‚’ãƒ¦ãƒ¼ã‚¶ãƒ¼ã«è¡¨ç¤ºã—ã¾ã™ã€‚
+
+void CPDF4AxCtrl::AboutBox() {
+	CAboutDlg wndDlg;
+	wndDlg.DoModal();
+}
+
+
+
+// CPDF4AxCtrl ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒ³ãƒ‰ãƒ©
+
+BSTR CPDF4AxCtrl::Getsrc(void)
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
+	CString strResult = m_frm.m_wndView.m_strUrl;
+
+	return strResult.AllocSysString();
+}
+
+void CPDF4AxCtrl::Setsrc(LPCTSTR newVal)
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
+	HRESULT hr;
+	if (FAILED(hr = m_frm.m_wndView.LoadPDF(newVal)))
+		AfxThrowOleException(hr);
+
+	if (!m_frm.IsWindowVisible())
+		m_frm.ShowWindow(SW_SHOW);
+}
+
+int CPDF4AxCtrl::OnCreate(LPCREATESTRUCT lpCreateStruct) {
+	if (COleControl::OnCreate(lpCreateStruct) == -1)
+		return -1;
+
+	if (!m_frm.LoadFrame(IDR_MAINFRAME, WS_CHILD, this))
+		return -1;
+
+	m_frm.InitialUpdateFrame(NULL, true);
+
+	CString &m_src = m_frm.m_wndView.m_strUrl;
+	CString m_title;
 
 	HRESULT hr;
 
@@ -201,128 +403,6 @@ void CPDF4AxCtrl::DoPropExchange(CPropExchange* pPX)
 			LoadFromMoniker(pibc, pimkDL);
 		}
 	}
-}
-
-#pragma comment(lib, "shlwapi.lib")
-
-void CPDF4AxCtrl::LoadFromMoniker(LPBC pibc, LPMONIKER pimkDL) {
-	HRESULT hr;
-
-	bool ok = false;
-
-	if (pimkDL != NULL) {
-		if (!ok) {
-			LPOLESTR lpcw = NULL;
-			if (SUCCEEDED(hr = pimkDL->GetDisplayName(pibc, NULL, &lpcw))) {
-				WCHAR wcfp[1000] = {0};
-				DWORD cchfp = 256;
-				if (UrlIsFileUrl(lpcw)) {
-					if (SUCCEEDED(hr = PathCreateFromUrl(lpcw, wcfp, &cchfp, NULL))) {
-						Setsrc(CW2T(wcfp));
-						ok = true;
-					}
-				}
-				CoTaskMemFree(lpcw);
-			}
-		}
-		if (!ok) {
-			CComPtr<IStream> pSt;
-			if (SUCCEEDED(hr = pimkDL->BindToStorage(pibc, NULL, IID_IStream, reinterpret_cast<void **>(&pSt)))) {
-				TRY
-					TCHAR tcdir[MAX_PATH] = {0};
-					GetTempPath(256, tcdir);
-					TCHAR tctmp[MAX_PATH] = {0};
-					GetTempFileName(tcdir, _T("pdf"), 0, tctmp);
-
-					COleStreamFile fIn(pSt);
-					CFile fOut;
-					if (fOut.Open(tctmp, CFile::modeCreate|CFile::modeReadWrite|CFile::shareDenyWrite)) {
-						BYTE buff[4000];
-						while (true) {
-							UINT r = fIn.Read(buff, 4000);
-							if (r == 0)
-								break;
-							fOut.Write(buff, r);
-						}
-						Setsrc(CW2T(tctmp));
-						ok = true;
-					}
-				CATCH_ALL(e) 
-				END_CATCH_ALL
-			}
-		}
-	}
-	AfxThrowFileException(CFileException::fileNotFound);
-}
-
-
-// CPDF4AxCtrl::GetControlFlags -
-// MFC ‚Ì ActiveX ƒRƒ“ƒgƒ[ƒ‹‚ÌÀ‘•‚ÌƒJƒXƒ^ƒ}ƒCƒY—pƒtƒ‰ƒO‚Å‚·B
-//
-//DWORD CPDF4AxCtrl::GetControlFlags()
-//{
-//	DWORD dwFlags = COleControl::GetControlFlags();
-//
-//
-//	// ƒRƒ“ƒgƒ[ƒ‹‚ÍƒEƒBƒ“ƒhƒE‚ğì¬‚¹‚¸‚ÉƒAƒNƒeƒBƒx[ƒg‰Â”\‚Å‚·B
-//	// TODO: ƒRƒ“ƒgƒ[ƒ‹‚ÌƒƒbƒZ[ƒW ƒnƒ“ƒhƒ‰‚ğì¬‚·‚éê‡Am_hWnd
-//	//		m_hWnd ƒƒ“ƒo•Ï”‚Ì’l‚ª NULL ˆÈŠO‚Å‚ ‚é‚±‚Æ‚ğÅ‰‚ÉŠm”F
-//	//		‚µ‚Ä‚©‚çg—p‚µ‚Ä‚­‚¾‚³‚¢B
-//	dwFlags |= 0;
-//	return dwFlags;
-//}
-
-
-
-// CPDF4AxCtrl::OnResetState - ƒRƒ“ƒgƒ[ƒ‹‚ğŠù’è‚Ìó‘Ô‚ÉƒŠƒZƒbƒg‚µ‚Ü‚·B
-
-void CPDF4AxCtrl::OnResetState()
-{
-	COleControl::OnResetState();  // DoPropExchange ‚ğŒÄ‚Ño‚µ‚ÄŠù’è’l‚ÉƒŠƒZƒbƒg
-
-	// TODO: ‚±‚ÌˆÊ’u‚ÉƒRƒ“ƒgƒ[ƒ‹‚Ìó‘Ô‚ğƒŠƒZƒbƒg‚·‚éˆ—‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢
-}
-
-
-
-// CPDF4AxCtrl::AboutBox - "ƒo[ƒWƒ‡ƒ“î•ñ" ƒ{ƒbƒNƒX‚ğƒ†[ƒU[‚É•\¦‚µ‚Ü‚·B
-
-void CPDF4AxCtrl::AboutBox() {
-	CAboutDlg wndDlg;
-	wndDlg.DoModal();
-}
-
-
-
-// CPDF4AxCtrl ƒƒbƒZ[ƒW ƒnƒ“ƒhƒ‰
-
-BSTR CPDF4AxCtrl::Getsrc(void)
-{
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-
-	CString strResult = m_frm.m_wndView.m_strUrl;
-
-	return strResult.AllocSysString();
-}
-
-void CPDF4AxCtrl::Setsrc(LPCTSTR newVal)
-{
-	AFX_MANAGE_STATE(AfxGetStaticModuleState());
-
-	HRESULT hr;
-	if (FAILED(hr = m_frm.m_wndView.LoadPDF(newVal)))
-		AfxThrowOleException(hr);
-}
-
-int CPDF4AxCtrl::OnCreate(LPCREATESTRUCT lpCreateStruct) {
-	if (COleControl::OnCreate(lpCreateStruct) == -1)
-		return -1;
-
-	if (!m_frm.LoadFrame(IDR_MAINFRAME, WS_CHILD, this))
-		return -1;
-
-	m_frm.InitialUpdateFrame(NULL, true);
-
 	return 0;
 }
 
@@ -332,6 +412,35 @@ void CPDF4AxCtrl::OnSize(UINT nType, int cx, int cy) {
 	if (m_frm.m_hWnd != NULL)
 		m_frm.MoveWindow(0, 0, cx, cy);
 }
+
+bool CPDF4AxCtrl::LoadSyncSt(IStream *pSt) {
+	TRY
+		TCHAR tcdir[MAX_PATH] = {0};
+		GetTempPath(256, tcdir);
+		TCHAR tctmp[MAX_PATH] = {0};
+		GetTempFileName(tcdir, _T("pdf"), 0, tctmp);
+
+		COleStreamFile fIn(pSt);
+		CFile fOut;
+		if (fOut.Open(tctmp, CFile::modeCreate|CFile::modeReadWrite|CFile::shareDenyWrite)) {
+			BYTE buff[4000];
+			while (true) {
+				UINT r = fIn.Read(buff, 4000);
+				if (r == 0)
+					break;
+				fOut.Write(buff, r);
+			}
+			Setsrc(CW2T(tctmp));
+			return true;
+		}
+	CATCH_ALL(e) 
+	END_CATCH_ALL
+	return false;
+}
+
+// -*- -*- -*-
+// CPDF4AxCtrl::XObjectSafety
+// -*- -*- -*-
 
 STDMETHODIMP CPDF4AxCtrl::XObjectSafety::GetInterfaceSafetyOptions(
             REFIID riid, 
@@ -452,4 +561,98 @@ BOOL CPDF4AxCtrl::PreCreateWindow(CREATESTRUCT& cs) {
 
 	cs.dwExStyle &= ~WS_EX_CLIENTEDGE;
 	return true;
+}
+
+// -*- -*- -*-
+// CPDF4AxCtrl::XBSC
+// -*- -*- -*-
+
+STDMETHODIMP_(ULONG) CPDF4AxCtrl::XBSC::AddRef()
+{
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    return (ULONG)pThis->ExternalAddRef();
+}
+
+STDMETHODIMP_(ULONG) CPDF4AxCtrl::XBSC::Release()
+{
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    return (ULONG)pThis->ExternalRelease();
+}
+
+STDMETHODIMP CPDF4AxCtrl::XBSC::QueryInterface(
+    REFIID iid, LPVOID* ppvObj)
+{
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    return (HRESULT)pThis->ExternalQueryInterface(&iid, ppvObj);
+}
+
+STDMETHODIMP CPDF4AxCtrl::XBSC::OnStartBinding(/* [in] */ DWORD dwReserved,/* [in] */ __RPC__in_opt IBinding *pib) {
+	return S_OK;
+}
+STDMETHODIMP CPDF4AxCtrl::XBSC::GetPriority(/* [out] */ __RPC__out LONG *pnPriority) {
+	return S_OK;
+}
+STDMETHODIMP CPDF4AxCtrl::XBSC::OnLowResource(/* [in] */ DWORD reserved) {
+	return S_OK;
+}
+STDMETHODIMP CPDF4AxCtrl::XBSC::OnProgress(/* [in] */ ULONG ulProgress,/* [in] */ ULONG ulProgressMax,/* [in] */ ULONG ulStatusCode,/* [unique][in] */ __RPC__in_opt LPCWSTR szStatusText) {
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+
+	pThis->m_statusText = szStatusText;
+	pThis->m_curPos = ulProgress;
+	pThis->m_maxPos = ulProgressMax;
+
+	DWORD t = GetTickCount();
+	if (pThis->m_hWnd != NULL && (ulProgress == ulProgressMax || pThis->m_tickLastInv + 500 < t)) {
+		pThis->Invalidate();
+		pThis->m_tickLastInv = t;
+	}
+	return S_OK;
+}
+STDMETHODIMP CPDF4AxCtrl::XBSC::OnStopBinding(/* [in] */ HRESULT hresult,/* [unique][in] */ __RPC__in_opt LPCWSTR szError) {
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+
+	if (hresult == S_OK && pThis->m_pStAsync != NULL) {
+		pThis->LoadSyncSt(pThis->m_pStAsync);
+	}
+	return S_OK;
+}
+STDMETHODIMP CPDF4AxCtrl::XBSC::GetBindInfo(/* [out] */ DWORD *grfBINDF,/* [unique][out][in] */ BINDINFO *pbindinfo) {
+	if (grfBINDF == NULL)
+		return E_POINTER;
+	*grfBINDF |= BINDF_ASYNCHRONOUS | BINDF_NEEDFILE;
+	return S_OK;
+}
+STDMETHODIMP CPDF4AxCtrl::XBSC::OnDataAvailable(/* [in] */ DWORD grfBSCF,/* [in] */ DWORD dwSize,/* [in] */ FORMATETC *pformatetc,/* [in] */ STGMEDIUM *pstgmed) {
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+
+	if (0 != (grfBSCF & (BSCF_DATAFULLYAVAILABLE|BSCF_LASTDATANOTIFICATION)) && pstgmed->tymed == TYMED_ISTREAM) {
+		pThis->m_pStAsync = pstgmed->pstm;
+	}
+
+	ReleaseStgMedium(pstgmed);
+	return S_OK;
+}
+STDMETHODIMP CPDF4AxCtrl::XBSC::OnObjectAvailable(/* [in] */ __RPC__in REFIID riid,/* [iid_is][in] */ __RPC__in_opt IUnknown *punk) {
+	return S_OK;
+}
+
+
+void CPDF4AxCtrl::OnSetFocus(CWnd* pOldWnd) {
+	COleControl::OnSetFocus(pOldWnd);
+	if (m_frm.m_hWnd != NULL)
+		m_frm.SetFocus();
+}
+
+void CPDF4AxCtrl::OnKillFocus(CWnd* pNewWnd) {
+	COleControl::OnKillFocus(pNewWnd);
+	m_frm.OnKillFocus(pNewWnd);
+}
+
+void CPDF4AxCtrl::OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized) {
+	COleControl::OnActivate(nState, pWndOther, bMinimized);
+	if (nState == WA_ACTIVE || nState == WA_CLICKACTIVE)
+		m_frm.OnSetFocus(pWndOther);
+	else if (nState == WA_INACTIVE)
+		m_frm.OnKillFocus(NULL);
 }

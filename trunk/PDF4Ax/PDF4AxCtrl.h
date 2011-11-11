@@ -1,20 +1,20 @@
-#pragma once
+ï»¿#pragma once
 
-// PDF4AxCtrl.h : CPDF4AxCtrl ActiveX ƒRƒ“ƒgƒ[ƒ‹ ƒNƒ‰ƒX‚ÌéŒ¾‚Å‚·B
+// PDF4AxCtrl.h : CPDF4AxCtrl ActiveX ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ« ã‚¯ãƒ©ã‚¹ã®å®£è¨€ã§ã™ã€‚
 
 #include "AxFrm.h"
 
-// CPDF4AxCtrl : À‘•‚ÉŠÖ‚µ‚Ä‚Í PDF4AxCtrl.cpp ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+// CPDF4AxCtrl : å®Ÿè£…ã«é–¢ã—ã¦ã¯ PDF4AxCtrl.cpp ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
 class CPDF4AxCtrl : public COleControl
 {
 	DECLARE_DYNCREATE(CPDF4AxCtrl)
 
-// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 public:
 	CPDF4AxCtrl();
 
-// ƒI[ƒo[ƒ‰ƒCƒh
+// ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰
 public:
 	virtual void OnDraw(CDC* pdc, const CRect& rcBounds, const CRect& rcInvalid);
 	virtual void DoPropExchange(CPropExchange* pPX);
@@ -23,7 +23,7 @@ public:
 		return TRUE;
 	}
 
-// À‘•
+// å®Ÿè£…
 protected:
 	~CPDF4AxCtrl();
 
@@ -34,13 +34,20 @@ protected:
 	CComPtr<IMoniker> m_pimkDL;
 
 	void LoadFromMoniker(LPBC pibc, LPMONIKER pimkDL);
+	bool LoadSyncSt(IStream *pSt);
 
-	DECLARE_OLECREATE_EX(CPDF4AxCtrl)    // ƒNƒ‰ƒX ƒtƒ@ƒNƒgƒŠ ‚Æ guid
+	bool m_fAsyncDownload;
+	ULONG m_curPos, m_maxPos;
+	CString m_statusText;
+	CComPtr<IStream> m_pStAsync;
+	DWORD m_tickLastInv;
+
+	DECLARE_OLECREATE_EX(CPDF4AxCtrl)    // ã‚¯ãƒ©ã‚¹ ãƒ•ã‚¡ã‚¯ãƒˆãƒª ã¨ guid
 	DECLARE_OLETYPELIB(CPDF4AxCtrl)      // GetTypeInfo
-	DECLARE_PROPPAGEIDS(CPDF4AxCtrl)     // ƒvƒƒpƒeƒB ƒy[ƒW ID
-	DECLARE_OLECTLTYPE(CPDF4AxCtrl)		// ƒ^ƒCƒv–¼‚Æ‚»‚Ì‘¼‚ÌƒXƒe[ƒ^ƒX
+	DECLARE_PROPPAGEIDS(CPDF4AxCtrl)     // ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ ãƒšãƒ¼ã‚¸ ID
+	DECLARE_OLECTLTYPE(CPDF4AxCtrl)		// ã‚¿ã‚¤ãƒ—åã¨ãã®ä»–ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
 
-// ƒƒbƒZ[ƒW ƒ}ƒbƒv
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒƒãƒ—
 	DECLARE_MESSAGE_MAP()
 
 	BEGIN_INTERFACE_PART(ObjectSafety, IObjectSafety)
@@ -48,17 +55,28 @@ protected:
 		STDMETHOD(SetInterfaceSafetyOptions)(REFIID riid, DWORD dwOptionSetMask, DWORD dwEnabledOptions);
 	END_INTERFACE_PART(ObjectSafety)
 
+	BEGIN_INTERFACE_PART(BSC, IBindStatusCallback)
+        STDMETHOD(OnStartBinding)(/* [in] */ DWORD dwReserved,/* [in] */ __RPC__in_opt IBinding *pib);
+		STDMETHOD(GetPriority)(/* [out] */ __RPC__out LONG *pnPriority);
+		STDMETHOD(OnLowResource)(/* [in] */ DWORD reserved);
+        STDMETHOD(OnProgress)(/* [in] */ ULONG ulProgress,/* [in] */ ULONG ulProgressMax,/* [in] */ ULONG ulStatusCode,/* [unique][in] */ __RPC__in_opt LPCWSTR szStatusText);
+		STDMETHOD(OnStopBinding)(/* [in] */ HRESULT hresult,/* [unique][in] */ __RPC__in_opt LPCWSTR szError);
+        STDMETHOD(GetBindInfo)(/* [out] */ DWORD *grfBINDF,/* [unique][out][in] */ BINDINFO *pbindinfo);
+        STDMETHOD(OnDataAvailable)(/* [in] */ DWORD grfBSCF,/* [in] */ DWORD dwSize,/* [in] */ FORMATETC *pformatetc,/* [in] */ STGMEDIUM *pstgmed);
+        STDMETHOD(OnObjectAvailable)(/* [in] */ __RPC__in REFIID riid,/* [iid_is][in] */ __RPC__in_opt IUnknown *punk);
+	END_INTERFACE_PART(BSC)
+
     DECLARE_INTERFACE_MAP()
 
-// ƒfƒBƒXƒpƒbƒ` ƒ}ƒbƒv
+// ãƒ‡ã‚£ã‚¹ãƒ‘ãƒƒãƒ ãƒãƒƒãƒ—
 	DECLARE_DISPATCH_MAP()
 
 	afx_msg void AboutBox();
 
-// ƒCƒxƒ“ƒg ƒ}ƒbƒv
+// ã‚¤ãƒ™ãƒ³ãƒˆ ãƒãƒƒãƒ—
 	DECLARE_EVENT_MAP()
 
-// ƒfƒBƒXƒpƒbƒ` ‚Æ ƒCƒxƒ“ƒg ID
+// ãƒ‡ã‚£ã‚¹ãƒ‘ãƒƒãƒ ã¨ ã‚¤ãƒ™ãƒ³ãƒˆ ID
 public:
 	enum {
 		dispidsrc = 1001
@@ -71,5 +89,9 @@ public:
 	afx_msg void OnSize(UINT nType, int cx, int cy);
 protected:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+public:
+	afx_msg void OnSetFocus(CWnd* pOldWnd);
+	afx_msg void OnKillFocus(CWnd* pNewWnd);
+	afx_msg void OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized);
 };
 

@@ -1,4 +1,4 @@
-// AxVw.cpp : CAxVw ƒNƒ‰ƒX‚ÌŽÀ‘•
+ï»¿// AxVw.cpp : CAxVw ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…
 //
 
 #include "stdafx.h"
@@ -108,9 +108,11 @@ BEGIN_MESSAGE_MAP(CAxVw, CWnd)
 	ON_WM_MOUSEACTIVATE()
 	ON_WM_SETCURSOR()
 	ON_MESSAGE(WM_SET_RENDERINF, OnSetRenderInf)
+	ON_WM_KILLFOCUS()
+	ON_WM_SETFOCUS()
 END_MESSAGE_MAP()
 
-// CAxVw ƒƒbƒZ[ƒW ƒnƒ“ƒhƒ‰
+// CAxVw ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ ãƒãƒ³ãƒ‰ãƒ©
 
 BOOL CAxVw::PreCreateWindow(CREATESTRUCT& cs) 
 {
@@ -281,7 +283,7 @@ void CAxVw::OnPaint()
 				);
 			if (state != 0) dc.RestoreDC(state);
 		}
-		else if (m_renderAll.get() != NULL) {
+		else if (m_renderAll.get() != NULL && m_renderAll->iPage == m_iPage) {
 			SplashBitmap *bitmap = m_renderAll->splashOut->getBitmap();
 			int pcx = bitmap->getWidth();
 			int pcy = bitmap->getHeight();
@@ -359,7 +361,7 @@ void CAxVw::OnPaint()
 			}
 			{
 				CFont *pOrg = dc.SelectObject(&font);
-				dc.DrawText(_T("‚¨‘Ò‚¿‚­‚¾‚³‚¢..."), rc, DT_SINGLELINE|DT_CENTER|DT_VCENTER);
+				dc.DrawText(_T("ãŠå¾…ã¡ãã ã•ã„..."), rc, DT_SINGLELINE|DT_CENTER|DT_VCENTER);
 				dc.SelectObject(pOrg);
 			}
 		}
@@ -367,12 +369,14 @@ void CAxVw::OnPaint()
 		int state = dc.SaveDC();
 		dc.ExcludeClipRect(dx, dy, dx + cx, dy + cy);
 		CBrush br;
-		br.CreateStockObject(GRAY_BRUSH);
+		br.CreateSysColorBrush(COLOR_3DDKSHADOW);
 		dc.FillRect(m_rcPaint, &br);
 		dc.RestoreDC(state);
 
 		dc.ExcludeClipRect(m_rcPaint);
 	}
+
+	bool fHatch = !IsActive();
 
 	if (dc.RectVisible(m_rcPrev)) {
 		CDC dcMem;
@@ -380,6 +384,7 @@ void CAxVw::OnPaint()
 		CBitmap* pOrg = dcMem.SelectObject(&m_bmPrev);
 		dc.BitBlt(m_rcPrev.left, m_rcPrev.top, m_rcPrev.Width(), m_rcPrev.Height(), &dcMem, 0, 0, SRCCOPY);
 		dcMem.SelectObject(pOrg);
+		if (fHatch) FillHatch(dc, m_rcPrev);
 		dc.ExcludeClipRect(m_rcPrev);
 	}
 	if (dc.RectVisible(m_rcNext)) {
@@ -388,6 +393,7 @@ void CAxVw::OnPaint()
 		CBitmap* pOrg = dcMem.SelectObject(&m_bmNext);
 		dc.BitBlt(m_rcNext.left, m_rcNext.top, m_rcNext.Width(), m_rcNext.Height(), &dcMem, 0, 0, SRCCOPY);
 		dcMem.SelectObject(pOrg);
+		if (fHatch) FillHatch(dc, m_rcNext);
 		dc.ExcludeClipRect(m_rcNext);
 	}
 	if (dc.RectVisible(m_rcDisp)) {
@@ -410,6 +416,7 @@ void CAxVw::OnPaint()
 		dc.SetTextAlign(lastMode);
 		//dc.SetBkColor(lastBkClr);
 
+		if (fHatch) FillHatch(dc, m_rcDisp);
 		dc.ExcludeClipRect(m_rcDisp);
 	}
 	if (dc.RectVisible(m_rcAbout)) {
@@ -418,6 +425,7 @@ void CAxVw::OnPaint()
 		CBitmap* pOrg = dcMem.SelectObject(&m_bmAbout);
 		dc.BitBlt(m_rcAbout.left, m_rcAbout.top, m_rcAbout.Width(), m_rcAbout.Height(), &dcMem, 0, 0, SRCCOPY);
 		dcMem.SelectObject(pOrg);
+		if (fHatch) FillHatch(dc, m_rcAbout);
 		dc.ExcludeClipRect(m_rcAbout);
 	}
 	if (dc.RectVisible(m_rcMMSel)) {
@@ -426,6 +434,7 @@ void CAxVw::OnPaint()
 		CBitmap* pOrg = dcMem.SelectObject(m_toolZoom ? &m_bmMagBtn : &m_bmMoveBtn);
 		dc.BitBlt(m_rcMMSel.left, m_rcMMSel.top, m_rcMMSel.Width(), m_rcMMSel.Height(), &dcMem, 0, 0, SRCCOPY);
 		dcMem.SelectObject(pOrg);
+		if (fHatch) FillHatch(dc, m_rcMMSel);
 		dc.ExcludeClipRect(m_rcMMSel);
 	}
 	if (dc.RectVisible(m_rcZoomVal)) {
@@ -449,6 +458,7 @@ void CAxVw::OnPaint()
 		dc.SetTextAlign(lastMode);
 		//dc.SetBkColor(lastBkClr);
 
+		if (fHatch) FillHatch(dc, m_rcZoomVal);
 		dc.ExcludeClipRect(m_rcZoomVal);
 	}
 
@@ -678,6 +688,10 @@ void CAxVw::LayoutClient() {
 	const int cxBMNext = 32;
 	const int cxBMDisp = 55;
 
+	m_rcCmdBar.left = curx;
+	m_rcCmdBar.top = rc.bottom - cyBar;
+	m_rcCmdBar.bottom = rc.bottom;
+
 	{
 		m_rcMMSel.left = curx;
 		m_rcMMSel.bottom = rc.bottom;
@@ -710,6 +724,8 @@ void CAxVw::LayoutClient() {
 		m_rcAbout.top = rc.bottom - cyBar;
 	}
 
+	m_rcCmdBar.right = curx;
+
 	int cex = (rc.Width() - curx) / 2;
 	if (cex > 0) {
 		m_rcMMSel.OffsetRect(cex, 0);
@@ -718,6 +734,8 @@ void CAxVw::LayoutClient() {
 		m_rcDisp.OffsetRect(cex, 0);
 		m_rcNext.OffsetRect(cex, 0);
 		m_rcAbout.OffsetRect(cex, 0);
+
+		m_rcCmdBar.OffsetRect(cex, 0);
 	}
 
 	rc.bottom -= cyBar;
@@ -1225,7 +1243,14 @@ CBitmap *CAxVw::GetThumb(int iPage, int cx) {
 }
 
 int CAxVw::OnMouseActivate(CWnd* pDesktopWnd, UINT nHitTest, UINT message) {
-	return CWnd::OnMouseActivate(pDesktopWnd, nHitTest, message);
+	int r = CWnd::OnMouseActivate(pDesktopWnd, nHitTest, message);
+	if (r == MA_ACTIVATE) {
+		if (GetFocus() != this) {
+			SetFocus();
+			r = MA_ACTIVATEANDEAT;
+		}
+	}
+	return r;
 }
 
 BOOL CAxVw::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message) {
@@ -1254,4 +1279,25 @@ LRESULT CAxVw::OnSetRenderInf(WPARAM, LPARAM lParam) {
 	}
 	InvalidateRect(m_rcPaint);
 	return 0;
+}
+
+void CAxVw::FillHatch(CDC &dc, CRect rc) {
+	CBitmap bm;
+	bm.LoadBitmap(IDB_MASKS50);
+	ASSERT(bm.m_hObject != NULL);
+	CBrush br(&bm);
+	ASSERT(br.m_hObject != NULL);
+	CBrush *pbr = dc.SelectObject(&br);
+	dc.BitBlt(rc.left, rc.top, rc.Width(), rc.Height(), &dc, rc.left, rc.top, 0x00FC008A); // PSo
+	dc.SelectObject(pbr);
+}
+
+void CAxVw::OnKillFocus(CWnd* pNewWnd) {
+	CWnd::OnKillFocus(pNewWnd);
+	InvalidateRect(m_rcCmdBar);
+}
+
+void CAxVw::OnSetFocus(CWnd* pOldWnd) {
+	CWnd::OnSetFocus(pOldWnd);
+	InvalidateRect(m_rcCmdBar);
 }

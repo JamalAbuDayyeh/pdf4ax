@@ -1,15 +1,15 @@
-#pragma once
+ï»¿#pragma once
 
-// PDF4Ax.h : PDF4Ax.DLL ‚ÌƒƒCƒ“ ƒwƒbƒ_[ ƒtƒ@ƒCƒ‹
+// PDF4Ax.h : PDF4Ax.DLL ã®ãƒ¡ã‚¤ãƒ³ ãƒ˜ãƒƒãƒ€ãƒ¼ ãƒ•ã‚¡ã‚¤ãƒ«
 
 #if !defined( __AFXCTL_H__ )
-#error "‚±‚Ìƒtƒ@ƒCƒ‹‚ðƒCƒ“ƒNƒ‹[ƒh‚·‚é‘O‚É 'afxctl.h' ‚ðƒCƒ“ƒNƒ‹[ƒh‚µ‚Ä‚­‚¾‚³‚¢B"
+#error "ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã™ã‚‹å‰ã« 'afxctl.h' ã‚’ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã—ã¦ãã ã•ã„ã€‚"
 #endif
 
-#include "resource.h"       // ƒƒCƒ“ ƒVƒ“ƒ{ƒ‹
+#include "resource.h"       // ãƒ¡ã‚¤ãƒ³ ã‚·ãƒ³ãƒœãƒ«
 
 
-// CPDF4AxApp : ŽÀ‘•‚ÉŠÖ‚µ‚Ä‚Í PDF4Ax.cpp ‚ðŽQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+// CPDF4AxApp : å®Ÿè£…ã«é–¢ã—ã¦ã¯ PDF4Ax.cpp ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
 class CPDF4AxApp : public COleControlModule
 {

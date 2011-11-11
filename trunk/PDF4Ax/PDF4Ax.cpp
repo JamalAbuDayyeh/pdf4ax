@@ -1,4 +1,4 @@
-// PDF4Ax.cpp : CPDF4AxApp ‚¨‚æ‚Ñ DLL “o˜^‚ÌÀ‘•
+ï»¿// PDF4Ax.cpp : CPDF4AxApp ãŠã‚ˆã³ DLL ç™»éŒ²ã®å®Ÿè£…
 
 #include "stdafx.h"
 #include "PDF4Ax.h"
@@ -19,7 +19,7 @@ const WORD _wVerMinor = 0;
 
 
 
-// CPDF4AxApp::InitInstance - DLL ‰Šú‰»
+// CPDF4AxApp::InitInstance - DLL åˆæœŸåŒ–
 
 BOOL CPDF4AxApp::InitInstance()
 {
@@ -39,7 +39,7 @@ BOOL CPDF4AxApp::InitInstance()
 
 
 
-// CPDF4AxApp::ExitInstance - DLL I—¹
+// CPDF4AxApp::ExitInstance - DLL çµ‚äº†
 
 int CPDF4AxApp::ExitInstance()
 {
@@ -50,7 +50,7 @@ int CPDF4AxApp::ExitInstance()
 
 
 
-// DllRegisterServer - ƒGƒ“ƒgƒŠ‚ğƒVƒXƒeƒ€ ƒŒƒWƒXƒgƒŠ‚É’Ç‰Á‚µ‚Ü‚·B
+// DllRegisterServer - ã‚¨ãƒ³ãƒˆãƒªã‚’ã‚·ã‚¹ãƒ†ãƒ  ãƒ¬ã‚¸ã‚¹ãƒˆãƒªã«è¿½åŠ ã—ã¾ã™ã€‚
 
 STDAPI DllRegisterServer(void)
 {
@@ -67,7 +67,7 @@ STDAPI DllRegisterServer(void)
 
 
 
-// DllUnregisterServer - ƒGƒ“ƒgƒŠ‚ğƒŒƒWƒXƒgƒŠ‚©‚çíœ‚µ‚Ü‚·B
+// DllUnregisterServer - ã‚¨ãƒ³ãƒˆãƒªã‚’ãƒ¬ã‚¸ã‚¹ãƒˆãƒªã‹ã‚‰å‰Šé™¤ã—ã¾ã™ã€‚
 
 STDAPI DllUnregisterServer(void)
 {

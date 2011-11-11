@@ -62,6 +62,7 @@ IDB_MAG                 BITMAP                  "mag.bmp"
 IDB_MOVE                BITMAP                  "move.bmp"
 IDB_PAGE_DISP           BITMAP                  "disp.bmp"
 IDB_MASK10              BITMAP                  "mask10.bmp"
+IDB_MASKS50             BITMAP                  "mask50.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //
