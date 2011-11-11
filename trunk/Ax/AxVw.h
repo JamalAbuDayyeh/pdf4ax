@@ -96,6 +96,7 @@ protected:
 	std::auto_ptr<CRenderInf> m_renderAll;
 	std::auto_ptr<CRenderInf> m_renderPart;
 	CBitmap m_bmMask10;
+	CWinThread *m_threadRenderer;
 
 	CBitmap m_bmPrev, m_bmNext, m_bmAbout, m_bmMag, m_bmMagBtn, m_bmMove, m_bmMoveBtn, m_bmZoomVal, m_bmPageDisp;
 	CRect m_rcPaint, m_rcPrev, m_rcNext, m_rcDisp, m_rcAbout, m_rcFitWH, m_rcFitW;
@@ -107,7 +108,6 @@ protected:
 	bool m_fFitOnSmall;
 	CAutoPtrArray<CBitmap> m_pThumbs;
 	HCURSOR m_hcZoomIn, m_hcZoomOut;
-	int cntBGDraw;
 
 // 操作
 public:
@@ -206,6 +206,17 @@ protected:
 // 実装
 public:
 	virtual ~CAxVw();
+
+protected:
+	bool WaitRendererThreadDone(DWORD milliseconds = 1) {
+		if (m_threadRenderer != NULL) {
+			if (WaitForSingleObject(m_threadRenderer->m_hThread, milliseconds) == WAIT_OBJECT_0) {
+				delete m_threadRenderer;
+				m_threadRenderer = NULL;
+			}
+		}
+		return m_threadRenderer == NULL;
+	}
 
 	// 生成された、メッセージ割り当て関数
 protected:
