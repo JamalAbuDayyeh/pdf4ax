@@ -73,6 +73,7 @@ public:
 
 CAxVw::CAxVw() {
 	m_pdfdoc = NULL;
+	m_threadRenderer = NULL;
 }
 
 CAxVw::~CAxVw() {
@@ -309,7 +310,7 @@ void CAxVw::OnPaint()
 		}
 
 		if (need) {
-			if (cntBGDraw == 0) {
+			if (WaitRendererThreadDone(1)) {
 				CRenderInf *inf = new CRenderInf();
 				inf->sizeIn = size;
 				inf->rcPartial = rcPartial;
@@ -319,9 +320,10 @@ void CAxVw::OnPaint()
 				inf->hwndCb = *this;
 				inf->nMsg = WM_SET_RENDERINF;
 
-				AfxBeginThread(DrawPDFProc, inf);
+				m_threadRenderer = AfxBeginThread(DrawPDFProc, inf, 0, 0, CREATE_SUSPENDED);
+				m_threadRenderer->m_bAutoDelete = false;
+				m_threadRenderer->ResumeThread();
 			}
-			cntBGDraw++;
 		}
 
 		if (drawwip) {
@@ -460,6 +462,8 @@ void CAxVw::OnPaint()
 }
 
 void CAxVw::UnloadPDF() {
+	WaitRendererThreadDone(INFINITE);
+
 	m_pdfdoc = NULL;
 	m_prefpdf.Release();
 
@@ -587,7 +591,7 @@ int CAxVw::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_iPage = 0;
 	m_pThumbs.RemoveAll();
 
-	cntBGDraw = 0;
+	m_threadRenderer = NULL;
 
 	LayoutClient();
 	return 0;
@@ -1241,7 +1245,6 @@ BOOL CAxVw::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message) {
 }
 
 LRESULT CAxVw::OnSetRenderInf(WPARAM, LPARAM lParam) {
-	cntBGDraw = 0;
 	CRenderInf *inf = reinterpret_cast<CRenderInf *>(lParam);
 	if (inf->partial) {
 		m_renderPart.reset(inf);
