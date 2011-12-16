@@ -1,6 +1,6 @@
 m4_define([poppler_version_major],[0])
 m4_define([poppler_version_minor],[18])
-m4_define([poppler_version_micro],[1])
+m4_define([poppler_version_micro],[2])
 m4_define([poppler_version],[poppler_version_major.poppler_version_minor.poppler_version_micro])
 
 AC_PREREQ(2.59)
@@ -409,6 +409,7 @@ if test x$enable_cairo_output = xyes; then
   POPPLER_GLIB_DISABLE_SINGLE_INCLUDES=""
 
   GLIB_REQUIRED=2.18
+  AC_SUBST(GLIB_REQUIRED)
   AC_ARG_ENABLE(poppler-glib,
 	        AC_HELP_STRING([--disable-poppler-glib],
 		               [Don't compile poppler glib wrapper.]),

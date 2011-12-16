@@ -148,7 +148,7 @@
 #define PACKAGE_NAME "poppler"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "poppler 0.18.1"
+#define PACKAGE_STRING "poppler 0.18.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "poppler"
@@ -157,7 +157,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.18.1"
+#define PACKAGE_VERSION "0.18.2"
 
 /* Poppler data dir */
 #define POPPLER_DATADIR "C:/Program Files (x86)/poppler/share/poppler"
@@ -181,7 +181,7 @@
 /* #undef USE_FLOAT */
 
 /* Version number of package */
-#define VERSION "0.18.1"
+#define VERSION "0.18.2"
 
 /* Use fontconfig font configuration backend */
 /* #undef WITH_FONTCONFIGURATION_FONTCONFIG */
