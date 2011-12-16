@@ -9,12 +9,15 @@
 
 !define APP "PDF4Ax"
 
-!define VER "0.0.10"
-!define APV "0_0_10"
+!define VER "0.0.11"
+!define APV "0_0_11"
 
 !define CLSID "{FE687896-F410-4D10-8740-D584DA23C74D}"
 !define EXT ".pdf"
 !define MIME "application/pdf"
+
+!define EXT2 ".fdp"
+!define MIME2 "application/fdp"
 
 !include "LogicLib.nsh"
 
@@ -52,9 +55,16 @@ InstType "再導入"
 Section "PDF ActiveX 関連付け 削除"
   SectionIn 2 3
 
+  ; ext
   WriteRegStr HKCR "${EXT}" "Content Type" "${MIME}"
 
   DeleteRegValue HKCR "Mime\Database\Content Type\${MIME}" "CLSID"
+  
+  ; ext2
+  WriteRegStr HKCR "${EXT2}" "Content Type" "${MIME2}"
+
+  DeleteRegValue HKCR "Mime\Database\Content Type\${MIME2}" "CLSID"
+  
 SectionEnd
 
 Section "PDF4Ax 削除"
@@ -131,10 +141,19 @@ SectionEnd ; end the section
 Section "PDF ActiveX 関連付け 設定"
   SectionIn 1 3
 
+  ; ext
   WriteRegStr HKCR "${EXT}" "Content Type" "${MIME}"
-  
+
   WriteRegStr HKCR "Mime\Database\Content Type\${MIME}" "CLSID" "${CLSID}"
   WriteRegStr HKCR "Mime\Database\Content Type\${MIME}" "Extension" "${EXT}"
 
   WriteRegStr HKCR "CLSID\${CLSID}\EnableFullPage\${EXT}" "" ""
+
+  ; ext2
+  WriteRegStr HKCR "${EXT2}" "Content Type" "${MIME2}"
+
+  WriteRegStr HKCR "Mime\Database\Content Type\${MIME2}" "CLSID" "${CLSID}"
+  WriteRegStr HKCR "Mime\Database\Content Type\${MIME2}" "Extension" "${EXT2}"
+
+  WriteRegStr HKCR "CLSID\${CLSID}\EnableFullPage\${EXT2}" "" ""
 SectionEnd
