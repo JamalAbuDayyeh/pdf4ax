@@ -16,7 +16,7 @@ test_big_endian(WORDS_BIGENDIAN)
 
 set(POPPLER_MAJOR_VERSION "0")
 set(POPPLER_MINOR_VERSION "18")
-set(POPPLER_MICRO_VERSION "1")
+set(POPPLER_MICRO_VERSION "2")
 set(POPPLER_VERSION "${POPPLER_MAJOR_VERSION}.${POPPLER_MINOR_VERSION}.${POPPLER_MICRO_VERSION}")
 
 # command line switches
@@ -347,6 +347,7 @@ endif(TIFF_FOUND)
 
 if(MSVC)
 add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+set(CMAKE_CXX_FLAGS "/Zc:wchar_t- ${CMAKE_CXX_FLAGS}")
 add_library(poppler STATIC ${poppler_SRCS})
 else(MSVC)
 add_library(poppler SHARED ${poppler_SRCS})
