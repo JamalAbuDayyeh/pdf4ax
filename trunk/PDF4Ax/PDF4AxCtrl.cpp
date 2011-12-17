@@ -176,10 +176,20 @@ void CPDF4AxCtrl::OnDraw(CDC* pDC, const CRect& rcBounds, const CRect& rcInvalid
 
 	if (!pDC)
 		return;
-	if (!m_fAsyncDownload)
-		return;
 
 	CDC &dc = *pDC;
+
+	if (AmbientUserMode() || !m_fAsyncDownload) {
+		// Design Mode -> m_frm is hidden.
+		// Sync Download -> m_frm already displays.
+		dc.SelectStockObject(WHITE_BRUSH);
+		dc.SelectStockObject(BLACK_PEN);
+		dc.SelectStockObject(DEFAULT_GUI_FONT);
+		dc.Rectangle(rcBounds);
+		dc.SetTextColor(RGB(0,0,0));
+		dc.DrawText(_T("(PDF4Ax Control)"), CRect(rcBounds), DT_SINGLELINE|DT_VCENTER|DT_CENTER);
+		return;
+	}
 
 	int bkMode = dc.SetBkMode(OPAQUE);
 	COLORREF bkClr = dc.SetBkColor(GetSysColor(COLOR_3DDKSHADOW));
@@ -363,6 +373,9 @@ int CPDF4AxCtrl::OnCreate(LPCREATESTRUCT lpCreateStruct) {
 	CString &m_src = m_frm.m_wndView.m_strUrl;
 	CString m_title;
 
+	if (m_src.IsEmpty())
+		return 0;
+
 	HRESULT hr;
 
 	CComPtr<IBindCtx> pibc;
@@ -436,6 +449,38 @@ bool CPDF4AxCtrl::LoadSyncSt(IStream *pSt) {
 	CATCH_ALL(e) 
 	END_CATCH_ALL
 	return false;
+}
+
+void CPDF4AxCtrl::OnSetFocus(CWnd* pOldWnd) {
+	COleControl::OnSetFocus(pOldWnd);
+	if (m_frm.m_hWnd != NULL)
+		m_frm.SetFocus();
+}
+
+void CPDF4AxCtrl::OnKillFocus(CWnd* pNewWnd) {
+	COleControl::OnKillFocus(pNewWnd);
+	m_frm.OnKillFocus(pNewWnd);
+}
+
+void CPDF4AxCtrl::OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized) {
+	COleControl::OnActivate(nState, pWndOther, bMinimized);
+	if (nState == WA_ACTIVE || nState == WA_CLICKACTIVE)
+		m_frm.OnSetFocus(pWndOther);
+	else if (nState == WA_INACTIVE)
+		m_frm.OnKillFocus(NULL);
+}
+
+void CPDF4AxCtrl::OnAmbientPropertyChange(DISPID dispid) {
+	COleControl::OnAmbientPropertyChange(dispid);
+
+	if (dispid == DISPID_AMBIENT_UIDEAD) {
+		if (AmbientUIDead()) {
+			m_frm.ShowWindow(SW_HIDE);
+		}
+		else {
+			m_frm.ShowWindow(SW_SHOW);
+		}
+	}
 }
 
 // -*- -*- -*-
@@ -635,24 +680,4 @@ STDMETHODIMP CPDF4AxCtrl::XBSC::OnDataAvailable(/* [in] */ DWORD grfBSCF,/* [in]
 }
 STDMETHODIMP CPDF4AxCtrl::XBSC::OnObjectAvailable(/* [in] */ __RPC__in REFIID riid,/* [iid_is][in] */ __RPC__in_opt IUnknown *punk) {
 	return S_OK;
-}
-
-
-void CPDF4AxCtrl::OnSetFocus(CWnd* pOldWnd) {
-	COleControl::OnSetFocus(pOldWnd);
-	if (m_frm.m_hWnd != NULL)
-		m_frm.SetFocus();
-}
-
-void CPDF4AxCtrl::OnKillFocus(CWnd* pNewWnd) {
-	COleControl::OnKillFocus(pNewWnd);
-	m_frm.OnKillFocus(pNewWnd);
-}
-
-void CPDF4AxCtrl::OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized) {
-	COleControl::OnActivate(nState, pWndOther, bMinimized);
-	if (nState == WA_ACTIVE || nState == WA_CLICKACTIVE)
-		m_frm.OnSetFocus(pWndOther);
-	else if (nState == WA_INACTIVE)
-		m_frm.OnKillFocus(NULL);
 }

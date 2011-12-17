@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Fri Nov 11 16:00:48 2011
+/* at Sat Dec 17 09:52:14 2011
  */
 /* Compiler settings for .\PDF4Ax.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
