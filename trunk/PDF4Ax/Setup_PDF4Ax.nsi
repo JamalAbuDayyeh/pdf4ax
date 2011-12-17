@@ -20,6 +20,7 @@
 !define MIME2 "application/fdp"
 
 !include "LogicLib.nsh"
+!include "FileFunc.nsh"
 
 ; The name of the installer
 Name "${APP} ${VER}"
@@ -48,26 +49,27 @@ LicenseData GNUGPL2.txt
 
 ;--------------------------------
 
-InstType "導入"
+InstType "導入(PDF)"
 InstType "削除"
 InstType "再導入"
+InstType "導入(fdp)"
 
-Section "PDF ActiveX 関連付け 削除"
+Section "ActiveX 関連付け 削除 (PDF/fdp)"
   SectionIn 2 3
 
   ; ext
   WriteRegStr HKCR "${EXT}" "Content Type" "${MIME}"
 
   DeleteRegValue HKCR "Mime\Database\Content Type\${MIME}" "CLSID"
-  
+
   ; ext2
   WriteRegStr HKCR "${EXT2}" "Content Type" "${MIME2}"
 
   DeleteRegValue HKCR "Mime\Database\Content Type\${MIME2}" "CLSID"
-  
+
 SectionEnd
 
-Section "PDF4Ax 削除"
+Section "本体 削除"
   SectionIn 2 3
 
   UnRegDLL "$INSTDIR\PDF4Ax.ocx"
@@ -101,8 +103,8 @@ Section "PDF4Ax 削除"
 SectionEnd
 
 ; The stuff to install
-Section "PDF4Ax 本体" ;No components page, name is not important
-  SectionIn 1 3
+Section "本体 導入" ;No components page, name is not important
+  SectionIn 1 3 4
 
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
@@ -138,7 +140,7 @@ Section "PDF4Ax 本体" ;No components page, name is not important
 
 SectionEnd ; end the section
 
-Section "PDF ActiveX 関連付け 設定"
+Section "ActiveX 関連付け 設定 (PDF)" vPDF
   SectionIn 1 3
 
   ; ext
@@ -149,6 +151,11 @@ Section "PDF ActiveX 関連付け 設定"
 
   WriteRegStr HKCR "CLSID\${CLSID}\EnableFullPage\${EXT}" "" ""
 
+SectionEnd
+
+Section "ActiveX 関連付け 設定 (fdp)" vFDP
+  SectionIn 4
+
   ; ext2
   WriteRegStr HKCR "${EXT2}" "Content Type" "${MIME2}"
 
@@ -157,3 +164,14 @@ Section "PDF ActiveX 関連付け 設定"
 
   WriteRegStr HKCR "CLSID\${CLSID}\EnableFullPage\${EXT2}" "" ""
 SectionEnd
+
+;--------------------------------
+
+Function .onInit
+  ${GetParameters} $R0
+  ${GetOptions} $R0 "/onlyfdp" $R1
+
+  ${IfNot} ${Errors}
+    SetCurInstType 3
+  ${EndIf}
+FunctionEnd
