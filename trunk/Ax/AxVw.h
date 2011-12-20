@@ -26,8 +26,6 @@ public:
 	UINT nMsg; // in
 };
 
-// CAxVw ウィンドウ
-
 class CPDFRef : public IUnknown {
 public:
 	LONG locks;
@@ -71,6 +69,18 @@ public:
 	}
 };
 
+class CPPSummary { // pdf page summary
+public:
+	CRect mediaBox;
+	int rotate;
+
+	CPPSummary() {
+		rotate = 0;
+	}
+};
+
+// CAxVw ウィンドウ
+
 class CAxVw : public CWnd, public CPvRender
 {
 // コンストラクション
@@ -108,10 +118,12 @@ protected:
 	bool m_fFitOnSmall;
 	CAutoPtrArray<CBitmap> m_pThumbs;
 	HCURSOR m_hcZoomIn, m_hcZoomOut;
+	CArray<CPPSummary> m_pps;
 
 // 操作
 public:
 	HRESULT LoadPDF(LPCTSTR psz);
+	HRESULT LoadTruePDF(LPCTSTR psz);
 	bool MovePage(int iDelta, bool force = false);
 	bool SetPage(int iPage, bool force = false);
 	void Setft(FitMode ft);

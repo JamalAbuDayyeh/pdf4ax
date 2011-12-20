@@ -41,6 +41,7 @@ protected:
 	CString m_statusText;
 	CComPtr<IStream> m_pStAsync;
 	DWORD m_tickLastInv;
+	CComPtr<IBinding> m_binding;
 
 	DECLARE_OLECREATE_EX(CPDF4AxCtrl)    // クラス ファクトリ と guid
 	DECLARE_OLETYPELIB(CPDF4AxCtrl)      // GetTypeInfo
@@ -79,6 +80,7 @@ protected:
 // ディスパッチ と イベント ID
 public:
 	enum {
+		dispidiv = 1002,
 		dispidsrc = 1001
 	};
 protected:
@@ -94,5 +96,8 @@ public:
 	afx_msg void OnKillFocus(CWnd* pNewWnd);
 	afx_msg void OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized);
 	virtual void OnAmbientPropertyChange(DISPID dispid);
+protected:
+	void OnivChanged(void);
+	CString m_iv;
 };
 

@@ -64,3 +64,4 @@
 #include <SplashOutputDev.h>
 
 #include <shlwapi.h>
+#include <Wininet.h>

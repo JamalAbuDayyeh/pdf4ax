@@ -5,6 +5,7 @@
 #include "PDF4AxCtrl.h"
 #include "PDF4AxPropPage.h"
 #include "AboutDlg.h"
+#include "TUt.h"
 
 #pragma comment(lib, "Version.lib")
 
@@ -38,6 +39,7 @@ END_MESSAGE_MAP()
 BEGIN_DISPATCH_MAP(CPDF4AxCtrl, COleControl)
 	DISP_FUNCTION_ID(CPDF4AxCtrl, "AboutBox", DISPID_ABOUTBOX, AboutBox, VT_EMPTY, VTS_NONE)
 	DISP_PROPERTY_EX_ID(CPDF4AxCtrl, "src", dispidsrc, Getsrc, Setsrc, VT_BSTR)
+	DISP_PROPERTY_NOTIFY_ID(CPDF4AxCtrl, "iv", dispidiv, m_iv, OnivChanged, VT_BSTR)
 END_DISPATCH_MAP()
 
 
@@ -428,10 +430,8 @@ void CPDF4AxCtrl::OnSize(UINT nType, int cx, int cy) {
 
 bool CPDF4AxCtrl::LoadSyncSt(IStream *pSt) {
 	TRY
-		TCHAR tcdir[MAX_PATH] = {0};
-		GetTempPath(256, tcdir);
 		TCHAR tctmp[MAX_PATH] = {0};
-		GetTempFileName(tcdir, _T("pdf"), 0, tctmp);
+		TUt::GetTempPathName(tctmp);
 
 		COleStreamFile fIn(pSt);
 		CFile fOut;
@@ -443,6 +443,7 @@ bool CPDF4AxCtrl::LoadSyncSt(IStream *pSt) {
 					break;
 				fOut.Write(buff, r);
 			}
+			fOut.Close();
 			Setsrc(CW2T(tctmp));
 			return true;
 		}
@@ -481,6 +482,11 @@ void CPDF4AxCtrl::OnAmbientPropertyChange(DISPID dispid) {
 			m_frm.ShowWindow(SW_SHOW);
 		}
 	}
+}
+
+void CPDF4AxCtrl::OnivChanged(void)
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
 }
 
 // -*- -*- -*-
@@ -583,20 +589,20 @@ STDMETHODIMP CPDF4AxCtrl::XObjectSafety::SetInterfaceSafetyOptions(
 
 STDMETHODIMP_(ULONG) CPDF4AxCtrl::XObjectSafety::AddRef()
 {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, ObjectSafety)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, ObjectSafety);
     return (ULONG)pThis->ExternalAddRef();
 }
 
 STDMETHODIMP_(ULONG) CPDF4AxCtrl::XObjectSafety::Release()
 {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, ObjectSafety)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, ObjectSafety);
     return (ULONG)pThis->ExternalRelease();
 }
 
 STDMETHODIMP CPDF4AxCtrl::XObjectSafety::QueryInterface(
     REFIID iid, LPVOID* ppvObj)
 {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, ObjectSafety)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, ObjectSafety);
     return (HRESULT)pThis->ExternalQueryInterface(&iid, ppvObj);
 }
 
@@ -614,24 +620,26 @@ BOOL CPDF4AxCtrl::PreCreateWindow(CREATESTRUCT& cs) {
 
 STDMETHODIMP_(ULONG) CPDF4AxCtrl::XBSC::AddRef()
 {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC);
     return (ULONG)pThis->ExternalAddRef();
 }
 
 STDMETHODIMP_(ULONG) CPDF4AxCtrl::XBSC::Release()
 {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC);
     return (ULONG)pThis->ExternalRelease();
 }
 
 STDMETHODIMP CPDF4AxCtrl::XBSC::QueryInterface(
     REFIID iid, LPVOID* ppvObj)
 {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC);
     return (HRESULT)pThis->ExternalQueryInterface(&iid, ppvObj);
 }
 
 STDMETHODIMP CPDF4AxCtrl::XBSC::OnStartBinding(/* [in] */ DWORD dwReserved,/* [in] */ __RPC__in_opt IBinding *pib) {
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC);
+	pThis->m_binding = pib;
 	return S_OK;
 }
 STDMETHODIMP CPDF4AxCtrl::XBSC::GetPriority(/* [out] */ __RPC__out LONG *pnPriority) {
@@ -641,7 +649,7 @@ STDMETHODIMP CPDF4AxCtrl::XBSC::OnLowResource(/* [in] */ DWORD reserved) {
 	return S_OK;
 }
 STDMETHODIMP CPDF4AxCtrl::XBSC::OnProgress(/* [in] */ ULONG ulProgress,/* [in] */ ULONG ulProgressMax,/* [in] */ ULONG ulStatusCode,/* [unique][in] */ __RPC__in_opt LPCWSTR szStatusText) {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC);
 
 	pThis->m_statusText = szStatusText;
 	pThis->m_curPos = ulProgress;
@@ -655,7 +663,28 @@ STDMETHODIMP CPDF4AxCtrl::XBSC::OnProgress(/* [in] */ ULONG ulProgress,/* [in] *
 	return S_OK;
 }
 STDMETHODIMP CPDF4AxCtrl::XBSC::OnStopBinding(/* [in] */ HRESULT hresult,/* [unique][in] */ __RPC__in_opt LPCWSTR szError) {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC);
+
+	HRESULT hr;
+	if (pThis->m_binding != NULL) {
+		CComQIPtr<IWinInetHttpInfo> http = pThis->m_binding;
+		if (http != NULL) {
+			CHAR cBuf[1000] = {"X-iv"};
+			DWORD cbBuf = 1000;
+			DWORD flags = 0;
+			if (S_OK == (hr = http->QueryInfo(HTTP_QUERY_CUSTOM, cBuf, &cbBuf, &flags, NULL))) {
+				TRY {
+					pThis->m_iv = cBuf;
+					pThis->OnivChanged();
+				}
+				CATCH_ALL(e) {
+
+				}
+				END_CATCH_ALL;
+			}
+		}
+	}
+	pThis->m_binding.Release();
 
 	if (hresult == S_OK && pThis->m_pStAsync != NULL) {
 		pThis->LoadSyncSt(pThis->m_pStAsync);
@@ -669,7 +698,7 @@ STDMETHODIMP CPDF4AxCtrl::XBSC::GetBindInfo(/* [out] */ DWORD *grfBINDF,/* [uniq
 	return S_OK;
 }
 STDMETHODIMP CPDF4AxCtrl::XBSC::OnDataAvailable(/* [in] */ DWORD grfBSCF,/* [in] */ DWORD dwSize,/* [in] */ FORMATETC *pformatetc,/* [in] */ STGMEDIUM *pstgmed) {
-    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC)
+    METHOD_PROLOGUE_EX_(CPDF4AxCtrl, BSC);
 
 	if (0 != (grfBSCF & (BSCF_DATAFULLYAVAILABLE|BSCF_LASTDATANOTIFICATION)) && pstgmed->tymed == TYMED_ISTREAM) {
 		pThis->m_pStAsync = pstgmed->pstm;
