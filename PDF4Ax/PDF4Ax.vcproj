@@ -270,6 +270,26 @@
 				>
 			</File>
 			<File
+				RelativePath=".\rijndael-alg-fst.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="0"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -288,6 +308,10 @@
 						UsePrecompiledHeader="1"
 					/>
 				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\TUt.cpp"
+				>
 			</File>
 		</Filter>
 		<Filter
@@ -332,7 +356,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\rijndael-alg-fst.h"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.h"
+				>
+			</File>
+			<File
+				RelativePath=".\TUt.h"
 				>
 			</File>
 		</Filter>

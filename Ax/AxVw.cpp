@@ -11,6 +11,10 @@
 
 #include <algorithm>
 
+#include "rijndael-alg-fst.h"
+
+#include "TUt.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -129,26 +133,23 @@ BOOL CAxVw::PreCreateWindow(CREATESTRUCT& cs)
 }
 
 CRect CAxVw::GetPageRect(int top) const {
-	Page *page = NULL;
-	if (m_pdfdoc != NULL)
-		page = m_pdfdoc->getPage(1 +top);
-	if (page != NULL) {
-		PDFRectangle *prc = page->getMediaBox();
-		switch (page->getRotate()) {
+	if (top < m_pps.GetSize()) {
+		const CPPSummary &pps = m_pps[top];
+		switch (pps.rotate) {
 			case 90:
 			case 270:
 				return CRect(
-					int(prc->y1),
-					int(prc->x1),
-					int(prc->y2),
-					int(prc->x2)
+					int(pps.mediaBox.top),
+					int(pps.mediaBox.left),
+					int(pps.mediaBox.bottom),
+					int(pps.mediaBox.right)
 					);
 			default:
 				return CRect(
-					int(prc->x1),
-					int(prc->y1),
-					int(prc->x2),
-					int(prc->y2)
+					int(pps.mediaBox.left),
+					int(pps.mediaBox.top),
+					int(pps.mediaBox.right),
+					int(pps.mediaBox.bottom)
 					);
 		}
 	}
@@ -226,7 +227,7 @@ UINT DrawPDFProc(LPVOID lpv) {
 void CAxVw::OnPaint() 
 {
 	CPaintDC dc(this);
-	
+
 	CRect rc = m_rcPaint;
 
 	if (m_pdfdoc == NULL) {
@@ -481,6 +482,50 @@ void CAxVw::UnloadPDF() {
 }
 
 HRESULT CAxVw::LoadPDF(LPCTSTR newVal) {
+	bool maybePDF = false;
+	bool maybeItsPDF = false;
+
+	CFile fUnk;
+	if (!fUnk.Open(newVal, CFile::modeRead|CFile::shareDenyWrite))
+		return E_FAIL;
+
+	BYTE buff[4];
+	if (fUnk.Read(buff, 4) != 4)
+		return E_FAIL;
+
+	if (memcmp(buff, "%PDF", 4) == 0)
+		return LoadTruePDF(newVal);
+
+	TCHAR tcTmpfp[MAX_PATH] = {0};
+	if (!TUt::GetTempPathName(tcTmpfp))
+		return E_FAIL;
+
+	CFile fTmp;
+	if (!fTmp.Open(tcTmpfp, CFile::modeCreate|CFile::modeReadWrite|CFile::shareDenyWrite))
+		return E_FAIL;
+
+	fUnk.SeekToBegin();
+	int t = 0;
+	u32 rk[100];
+	int nr = rijndaelKeySetupDec(rk, reinterpret_cast<const u8 *>(static_cast<LPCSTR>(CW2A(L"*?x" L"l%\"" L"G|`W],a$" L"2y"))), 128);
+	while (true) {
+		BYTE buffIn[16], buffOut[16];
+		if (fUnk.Read(buffIn, 16) != 16)
+			break;
+		rijndaelDecrypt(rk, nr, buffIn, buffOut);
+		if (t == 0 && memcmp(buffOut, "%PDF", 4) != 0) {
+			return E_FAIL;
+		}
+		maybeItsPDF = true;
+		fTmp.Write(buffOut, 16);
+		++t;
+	}
+	fTmp.Close();
+
+	return LoadTruePDF(tcTmpfp);
+}
+
+HRESULT CAxVw::LoadTruePDF(LPCTSTR newVal) {
 	UnloadPDF();
 
 	DWORD atts = GetFileAttributes(newVal);
@@ -502,6 +547,20 @@ HRESULT CAxVw::LoadPDF(LPCTSTR newVal) {
 	m_ft = ftWH;
 	m_fZoom = 1;
 
+	m_pps.RemoveAll();
+	int cx = std::min(1000, m_pdfdoc->getNumPages());
+	for (int x = 0; x < cx; x++) {
+		CPPSummary pps;
+		Page *page = m_pdfdoc->getPage(1 +x);
+		if (page != NULL) {
+			PDFRectangle *prc = page->getMediaBox();
+			if (prc != NULL)
+				pps.mediaBox.SetRect((int)prc->x1, (int)prc->y1, (int)prc->x2, (int)prc->y2);
+			pps.rotate = page->getRotate();
+		}
+		m_pps.Add(pps);
+	}
+
 	SetPage(0, true);
 
 	m_strUrl = newVal;
@@ -509,9 +568,7 @@ HRESULT CAxVw::LoadPDF(LPCTSTR newVal) {
 }
 
 int CAxVw::CntPages() {
-	if (m_pdfdoc != NULL)
-		return std::min(1000, m_pdfdoc->getNumPages());
-	return 0;
+	return m_pps.GetSize();
 }
 
 void CAxVw::OnUpdatePageUp(CCmdUI *pUI) {
